@@ -40,7 +40,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="sm:ml-[120px]">
           <h5 className="text-lg text-[#393632] font-bold mb-4">SOCIALS</h5>
           <ul className="space-y-2">
             <li>
@@ -70,7 +70,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="xs:ml-none sm:ml-[50px] ">
           <h5 className="text-lg text-[#393632] font-bold mb-4">RESOURCES</h5>
           <ul className="space-y-2">
             <li>
@@ -96,7 +96,7 @@ export default function Footer() {
           <div className="text-[30px] sm:text-[50px] md:text-[55px] font-bold sm:mb-[-30px] xs:mb-[-14px]">© 2024</div>
           <div className="text-[30px] sm:text-[50px] md:text-[55px] font-bold">ELLIOT KOH</div>
         </div>
-        <div className="md:mt-[67px] sm:mt-[53px] sm:ml-[200px] sm:min-w-[200px]">
+        <div className="md:mt-[67px] sm:mt-[53px] sm:ml-[120px] sm:min-w-[200px]">
           <h5 className="text-lg font-bold mb-1">LOCAL TIME</h5>
           <p className="text-base font-semibold text-[#726b64]">10:28 PM GMT+10:30</p>
         </div>
