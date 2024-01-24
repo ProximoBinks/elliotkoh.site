@@ -8,12 +8,22 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'xxs': '0px',
         'xs': '639px',
         'sm': '640px',     // Small screens (default)
         'md': '768px',     // Medium screens (default)
         'lg': '1024px',    // Large screens (default)
         'xl': '1280px',    // Extra large screens (default)
         '2xl': '1536px',   // Custom breakpoint for larger screens
+      },
+      fontSize: {
+        'h1': '2.5rem',     // Customize the 'h1' font size
+        'h2': '2rem',       // Customize the 'h2' font size
+        'h3': '1.75rem',    // Customize the 'h3' font size
+        'display-3': '4rem', // Customize the 'text-display-3' font size
+      },
+      colors: {
+        'secondary-100': '#6b645c', // Add your custom color code
       },
     },
   },
