@@ -1,111 +1,108 @@
-import styles from './Footer.module.css'
-import Link from "next/link"
+{/*import styles from './Footer.module.css'*/ }
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5f5f5] p-8 2xl:p-[200px]">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h5 className="text-lg font-bold mb-4 text-[#393632]">NAVIGATION</h5>
-          <ul className="space-y-2">
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Works
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Reviews
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Contact
-              </Link>
-            </li>
-          </ul>
+    <footer className="px-6 sm:px-[4%] 3xl:px-[8%] pb-8 3xl:pb-16 pt-8 sm:pt-[5%] relative bg-white">
+      <div className="grid grid-cols-1 gap-y-7 lg:gap-y-10 md:grid-cols-12 gap-x-10">
+        <div className="md:col-span-6 lg:col-span-6 flex flex-col">
+          <span className="flex border-b-[1.5px] link-text border-accent-500 pb-1 font-bold uppercase text-secondary-300 mb-3">Navigation</span>
+          <div className="flex flex-col gap-y-2 md:gap-y-1">
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="/">
+              <span className="link1">Home</span>
+            </a>
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#about">
+              <span className="link1">About</span>
+            </a>
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#services">
+              <span className="link1">Services</span>
+            </a>
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#works">
+              <span className="link1">Works</span>
+            </a>
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#reviews">
+              <span className="link1">Reviews</span>
+            </a>
+            <a className="leading-base font-medium block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="contact">
+              <span className="link1">Contact</span>
+            </a>
+          </div>
         </div>
-        <div className="sm:ml-[120px]">
-          <h5 className="text-lg text-[#393632] font-bold mb-4">SOCIALS</h5>
-          <ul className="space-y-2">
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                LinkedIn
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                YouTube
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Instagram
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Bento
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Github
-              </Link>
-            </li>
-          </ul>
+        <div className="md:col-span-3 lg:col-span-3 flex flex-col">
+          <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-bold uppercase link-text text-secondary-300 mb-3">Socials</span>
+          <div className="flex flex-col gap-y-2 md:gap-y-1">
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
+              <span className="link1">Linkedin</span>
+            </a>
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.youtube.com/@codekagehq">
+              <span className="link1">YouTube</span>
+            </a>
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.instagram.com/elliot.koh/">
+              <span className="link1">Instagram</span>
+            </a>
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.instagram.com/codekage/">
+              <span className="link1">CodeKage</span>
+            </a>
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://github.com/proximobinks">
+              <span className="link1">Github</span>
+            </a>
+          </div>
         </div>
-        <div className="xs:ml-none sm:ml-[50px] ">
-          <h5 className="text-lg text-[#393632] font-bold mb-4">RESOURCES</h5>
-          <ul className="space-y-2">
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Pillarstack
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Figma Templates
-              </Link>
-            </li>
-            <li>
-              <Link className="text-base hover:underline" href="#">
-                Portfolio V1
-              </Link>
-            </li>
-          </ul>
+        <div className="md:col-span-3 lg:col-span-3 flex flex-col">
+          <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-bold uppercase link-text text-secondary-300 mb-3">Resources</span>
+          <div className="flex flex-col gap-y-2 md:gap-y-1">
+            <a target="_blank" className="font-medium block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://elliotkoh1.netlify.app/">
+              <span className="link1">Portfolio V1</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
-        <div className="sm:min-w-[400px]">
-          <div className="text-[30px] sm:text-[50px] md:text-[55px] font-bold sm:mb-[-30px] xs:mb-[-14px]">© 2024</div>
-          <div className="text-[30px] sm:text-[50px] md:text-[55px] font-bold">ELLIOT KOH</div>
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-10 mt-14 items-end">
+        <span className="order-last sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-bold text-h3 sm:text-h1 lg:text-display-3 tracking-heading">
+          © 2024
+          <br className="block" />
+          ELLIOT KOH
+        </span>
+        <div className="gap-x-3 md:col-span-3 col-span-4 mb-3 sm:mb-0 lg:col-span-3 flex flex-col link-text">
+          <span className="font-bold uppercase">Local time</span>
+          <span className="font-medium text-secondary-100 uppercase">
+            11:36 AM GMT+11
+          </span>
         </div>
-        <div className="md:mt-[67px] sm:mt-[53px] sm:ml-[120px] sm:min-w-[200px]">
-          <h5 className="text-lg font-bold mb-1">LOCAL TIME</h5>
-          <p className="text-base font-semibold text-[#726b64]">10:28 PM GMT+10:30</p>
+        <div className="w-full md:col-span-3 lg:col-span-3 h-fit flex justify-end">
+          <button
+            aria-label="Scroll to top"
+            className="w-fit hidden p-10 hover:scale-90 duration-1000 ease-expo bg-accent-500 group md:flex flex-col relative items-center justify-center rounded-full overflow-hidden bg-[#bfbfb1]"
+          >
+            <span className="absolute flex group-hover:-translate-y-20 transition-all ease-in-out-cubic duration-500">
+              <img
+                alt=""
+                loading="lazy"
+                width="26"
+                height="28"
+                decoding="async"
+                data-nimg="1"
+                style={{ color: "transparent" }}
+                src="/arrow.svg"
+              />
+            </span>
+            <span className="absolute flex translate-y-20 group-hover:translate-y-0 transition-all ease-in-out-cubic duration-500">
+              <img
+                alt=""
+                loading="lazy"
+                width="26"
+                height="28"
+                decoding="async"
+                data-nimg="1"
+                style={{ color: "transparent" }}
+                src="/arrow.svg"
+              />
+            </span>
+          </button>
         </div>
-      <div className="hidden md:flex mt-8 justify-end items-center">
-        <ArrowUpIcon className="bg-[#bfbfb1] text-3xl cursor-pointer rounded-full h-[80px] w-[80px] p-5" />
-      </div>
       </div>
     </footer>
-  )
+  );
 }
 
 function ArrowUpIcon(props) {
@@ -125,5 +122,5 @@ function ArrowUpIcon(props) {
       <path d="m5 12 7-7 7 7" />
       <path d="M12 19V5" />
     </svg>
-  )
+  );
 }
