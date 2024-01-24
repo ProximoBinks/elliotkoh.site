@@ -1,0 +1,25 @@
+.avail-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Replace with your desired background color */
+    border-radius: 120px; /* Gives a pill-like shape */
+    padding: 2px 8px;
+    gap: 4px;
+    color: #000000; /* Text color */  
+}
+
+.dot-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; /* Makes it circular */
+    background-color: #32ce70; /* Replace with your desired dot color */
+    margin: 6px;
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+}
+
+/* Define the pulse keyframes */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); } /* Adjust scale value for desired effect */
+}
