@@ -4,7 +4,7 @@ import Footer from '@components/Footer'
 
 export default function Home() {
   return (
-    <div className="container min-w-full bg-black">
+    <div className="container min-w-full bg-black" id="top">
       <Head>
         <title>Elliot Koh — Developer</title>
         <link rel="icon" href="/gengar-icon.ico" />

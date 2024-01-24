@@ -25,7 +25,7 @@ export default function Header() {
           <span className="font-bold text-gray-300">, Developer</span>
         </div>
         <div className="flex items-center gap-x-20 text-secondary-300">
-          <div className="xl:mt-[-23%] mt-[-20%] hidden sm:flex ">
+          <div className="mt-[-17%] hidden sm:flex ">
             <div className={`${styles['avail-status']}`}>
               <div className={`${styles['dot-status']}`}></div>
               <p className="text-xs uppercase xl:text-lg text-gray-400">currently available for work</p>

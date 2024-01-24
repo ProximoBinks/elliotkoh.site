@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState(getAdelaideTime());
-
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top smoothly
+  };
   // Function to get the current time in Adelaide's timezone
   function getAdelaideTime() {
     const adelaideTime = new Date().toLocaleTimeString('en-AU', {
@@ -82,12 +84,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-10 mt-14 items-end">
-      <span className="order-last xs:mt-10 sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-bold text-h3 sm:text-h1 lg:text-display-3 tracking-heading uppercase leading-[90%]" style={{ wordSpacing: '-0.3em' }}>
-    © {new Date().getFullYear()}
-    <br className="block"/>
-    Elliot Koh
-</span>
-
+        <span className="order-last xs:mt-10 sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-bold text-h3 sm:text-h1 lg:text-display-3 tracking-heading uppercase leading-[90%]" style={{ wordSpacing: '-0.3em' }}>
+          © {new Date().getFullYear()}
+          <br className="block" />
+          Elliot Koh
+        </span>
         <div className="gap-x-3 md:col-span-3 col-span-4 mb-3 sm:mb-0 lg:col-span-3 flex flex-col link-text">
           <span className="font-bold uppercase">Local time</span>
           <span className="font-medium text-secondary-100 uppercase">{currentTime}</span>
@@ -95,7 +96,8 @@ export default function Footer() {
         <div className="w-full md:col-span-3 lg:col-span-3 h-fit flex justify-end">
           <button
             aria-label="Scroll to top"
-            className="w-fit hidden p-10 hover:scale-90 duration-1000 ease-expo bg-accent-500 group md:flex flex-col relative items-center justify-center rounded-full overflow-hidden bg-[#bfbfb1]"
+            className="w-fit hidden p-10 hover:scale-90 duration-1000 ease-expo bg-accent-500 group md:flex flex-col relative items-center justify-center rounded-full overflow-hidden bg-[#8fb4dc]"
+            onClick={scrollToTop} // Call the scrollToTop function on button click
           >
             <span className="absolute flex group-hover:-translate-y-20 transition-all ease-in-out-cubic duration-500">
               <img
