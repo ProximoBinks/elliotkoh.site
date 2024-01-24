@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container min-w-full bg-black">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Elliot Koh — Developer</title>
         <link rel="icon" href="/gengar-icon.ico" />
       </Head>
 
