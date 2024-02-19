@@ -29,6 +29,9 @@ module.exports = {
         'secondary-50': '#000000', // Add your custom color code
         'secondary-100': '#6b645c', // Add your custom color code
       },
+      fontFamily: {
+        'sans': ['Raleway', 'sans-serif'],
+      },
     },
   },
   variants: {},

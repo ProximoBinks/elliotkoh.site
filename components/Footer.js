@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-10 mt-14 items-end">
-        <span className="order-last xs:mt-10 sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-bold text-h3 sm:text-h1 lg:text-display-3 tracking-heading uppercase leading-[90%]" style={{ wordSpacing: '-0.3em' }}>
+        <span className="order-last xs:mt-3 sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-bold text-h3 sm:text-h1 lg:text-display-3 tracking-heading uppercase leading-[90%]" style={{ wordSpacing: '-0.3em' }}>
           © {new Date().getFullYear()}
           <br className="block" />
           Elliot Koh
