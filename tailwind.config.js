@@ -32,6 +32,9 @@ module.exports = {
       fontFamily: {
         'sans': ['Raleway', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-pattern': "url('/herosquare.webp')",
+      },
     },
   },
   variants: {},

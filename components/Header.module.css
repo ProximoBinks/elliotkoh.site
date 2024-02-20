@@ -2,11 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; /* Replace with your desired background color */
     border-radius: 120px; /* Gives a pill-like shape */
     padding: 2px 8px;
     gap: 4px;
-    color: #000000; /* Text color */  
 }
 
 .dot-status {
