@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       screens: {
         'xs': '0px',
-        'sm': '640px',     // Small screens (default)
+        'sm': '665px',     // Small screens (default)
         'md': '768px',     // Medium screens (default)
         'lg': '1024px',    // Large screens (default)
         'xl': '1280px',    // Extra large screens (default)
@@ -33,7 +33,7 @@ module.exports = {
         'sans': ['Raleway', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('/herosquare.webp')",
+        'hero-pattern': "url('/herosquare4.webp')",
       },
     },
   },

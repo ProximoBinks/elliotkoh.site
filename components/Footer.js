@@ -32,19 +32,19 @@ export default function Footer() {
         <div className="md:col-span-6 lg:col-span-6 flex flex-col">
           <span className="flex border-b-[1.5px] link-text border-accent-500 pb-1 font-extrabold uppercase text-secondary-300 mb-3">Navigation</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="/">
+            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/">
               <span className="link1">Home</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#about">
+            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#about">
               <span className="link1">About</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#works">
+            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#works">
               <span className="link1">Works</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="#reviews">
+            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#reviews">
               <span className="link1">Reviews</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-secondary-100 w-fit" href="contact">
+            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
               <span className="link1">Contact</span>
             </a>
           </div>
@@ -52,19 +52,19 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-3 flex flex-col font-[600]">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Socials</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1">
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
               <span className="link1">Linkedin</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.youtube.com/@codekagehq">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.youtube.com/@codekagehq">
               <span className="link1">YouTube</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.instagram.com/elliot.koh/">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/elliot.koh/">
               <span className="link1">Instagram</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://www.instagram.com/codekage/">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/codekage/">
               <span className="link1">CodeKage</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://github.com/proximobinks">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://github.com/proximobinks">
               <span className="link1">Github</span>
             </a>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-3 flex flex-col">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Resources</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-secondary-100 w-fit" href="https://elliotkoh1.netlify.app/">
+            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://elliotkoh1.netlify.app/">
               <span className="link1">Portfolio V1</span>
             </a>
           </div>
@@ -86,7 +86,7 @@ export default function Footer() {
         </span>
         <div className="gap-x-3 md:col-span-3 col-span-4 mb-3 sm:mb-0 lg:col-span-3 flex flex-col link-text">
           <span className="font-extrabold uppercase">Local time</span>
-          <span className="font-[600] text-secondary-100 uppercase">{currentTime}</span>
+          <span className="font-[600] text-[#6b7280] uppercase">{currentTime}</span>
         </div>
         <div className="w-full md:col-span-3 lg:col-span-3 h-fit flex justify-end">
           <button
