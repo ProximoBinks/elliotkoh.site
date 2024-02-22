@@ -15,9 +15,24 @@ const HomePage = () => {
         <>
             <Head>
                 <title>Home — Elliot Koh</title>
-                <meta name="description" content="Join keebclub™️, the ultimate destination for mechanical keyboard enthusiasts at the University of Adelaide. Explore workshops, events, and a community passionate about custom keyboards. Whether you're a seasoned builder or new to the hobby, find your click here!" />
-                <meta name="theme-color" content="#ffffff" />
+                <meta name="description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
+                <meta name="theme-color" content="#8fb4dc" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://elliotkoh.netlify.app/" />
+                <meta property="og:title" content="Home — Elliot Koh" />
+                <meta property="og:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
+                <meta property="og:image" content="https://elliotkoh.netlify.app/banner.webp" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://elliotkoh.netlify.app/" />
+                <meta property="twitter:title" content="Home — Elliot Koh" />
+                <meta property="twitter:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
+                <meta property="twitter:image" content="https://elliotkoh.netlify.app/banner.webp" />
             </Head>
+
             <div style={{ height: 'calc(100vh - 100px)' }} className="flex flex-col items-center justify-center relative select-none text-black overflow-hidden">
 
                 <div className="w-full max-w-screen-lg mx-auto px-5 py-14 text-center flex flex-col items-center justify-center h-full">
