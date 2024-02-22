@@ -16,7 +16,7 @@ const HomePage = () => {
             <Head>
                 <title>Home — Elliot Koh</title>
                 <meta name="description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-                <meta name="theme-color" content="#8fb4dc" />
+                <meta name="theme-color" content="#e8ecef" />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
@@ -35,11 +35,11 @@ const HomePage = () => {
 
             <div style={{ height: 'calc(100vh - 100px)' }} className="flex flex-col items-center justify-center relative select-none text-black overflow-hidden">
 
-                <div className="w-full max-w-screen-lg mx-auto px-5 py-14 text-center flex flex-col items-center justify-center h-full">
-                    <div className="p-10 text-4xl md:text-6xl lg:text-7xl xl:text-8xl uppercase font-extrabold justify-left">
+                <div className="w-full max-w-screen-lg mx-auto mt-[-4%] px-5 pb-14 text-center flex flex-col items-center justify-center h-full">
+                    <div className="py-10 sm:p-10 text-5xl md:text-7xl lg:text-8xl xl:text-9xl uppercase font-extrabold justify-left">
                         Hi there, I'm<br></br>Elliot Koh.
                     </div>
-                    <button onClick={scrollToAboutUs} className="text-sm sm:text-lg uppercase mt-0 sm:mt-7 px-[3%] py-3 sm:py-4 bg-white bg-opacity-10 shadow-lg shadow-black-500/50 backdrop-blur-sm rounded-full font-bold transition-all duration-300 ease-in-out hover:bg-[#8fb4dc] hover:px-[5%]">Learn more</button>
+                    <button onClick={scrollToAboutUs} className="text-lg sm:text-xl uppercase mt-0 sm:mt-7 px-[3%] py-4 sm:py-4 bg-white bg-opacity-10 shadow-lg shadow-black-500/50 backdrop-blur-sm rounded-full font-bold transition-all duration-300 ease-in-out hover:bg-[#8fb4dc] hover:px-[5%]">Learn more</button>
                 </div>
             </div>
             <div id="about" ref={aboutMeRef} className="about-class p-[3rem] 3xl:px-[14rem] md:py-[6rem] text-[#ebecf0] text-left bg-[#080807] rounded-tl-[1.6rem] rounded-tr-[1.6rem] relative">
@@ -54,22 +54,22 @@ const HomePage = () => {
                     {/* Text Container aligned to the bottom-right */}
                     <div className="absolute bottom-0 right-0 z-20 mx-[-20px] py-4 lg:px-[15%]">
                         {/* Text Content - Adjust the styling as needed */}
-                        <p className="font-[500] max-w-[500px] text-white text-lg md:text-lg lg:text-2xl text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Driven by passion and creativity, I, Elliot, fuse tech expertise with unique hobbies to innovate and inspire. From tackling coding puzzles to creating custom keyboards and my own clothing brand, my endeavors span design and technology. Committed to impactful solutions, I turn visionary ideas into tangible realities in the tech landscape.
+                        <p className="font-[600] max-w-[500px] text-[#ffffff] text-lg md:text-lg lg:text-2xl text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Driven by passion and creativity, I, Elliot, fuse tech expertise with unique hobbies to innovate and inspire. From tackling coding puzzles to creating custom keyboards and my own clothing brand, my endeavors span design and technology. Committed to impactful solutions, I turn visionary ideas into tangible realities in the tech landscape.
                         </p>
                     </div>
                 </div>
 
 
                 <h1 id="works" className="pt-[10%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">selected works.</h1>
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* First Item */}
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.com/" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.com" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
                             <img src="/work1.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">keebclub<span className="text-[#ebecf0]">&#8482;</span></h3>
                                 <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Design</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Next.js</span>
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
                                     <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
                                 </div>
@@ -79,15 +79,45 @@ const HomePage = () => {
                         </div>
                     </a>
                     {/* Additional items... */}
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/Discord-Timestamp-Generator/" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/Discord-Timestamp-Generator" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
-                            <img src="/work2.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
+                            <img src="/work2.webp" alt="Work 2" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Timestamp Generator</h3>
                                 <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Design</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML</span>
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
+                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2023</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </a>
+                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/SimCity-1989-OOP" target="_blank"> {/* Ensure this container clips the scaled image */}
+                        <div className="group">
+                            <img src="/work3.webp" alt="Work 3" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
+                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">SimCity 1989 in C++</h3>
+                                <div className="flex flex-row space-x-2">
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">C++</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </a>
+                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/University-Clubs-Website" target="_blank"> {/* Ensure this container clips the scaled image */}
+                        <div className="group">
+                            <img src="/work4.webp" alt="Work 4" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
+                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">University Clubs</h3>
+                                <div className="flex flex-row space-x-2">
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML/SQL</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
                                 </div>
                             </div>
 
@@ -95,6 +125,12 @@ const HomePage = () => {
                         </div>
                     </a>
                 </div>
+                <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
+                    <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
+                    <a href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-3xl hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-3xl focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</a>
+                </div>
+
+
 
             </div>
 

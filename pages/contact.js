@@ -8,18 +8,8 @@ export default function Contact() {
     message: '',
   });
 
-  // Function to update state for each input
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would handle the form submission, e.g., sending data to a server
-    console.log(formData);
-
-    // Reset form or show a success message
   };
 
   return (
@@ -27,22 +17,25 @@ export default function Contact() {
       <Head>
         <title>Get in touch — Elliot Koh</title>
       </Head>
-      <h1 className="text-3xl font-bold text-center mb-4">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="space-y-6 font-bold text-lg text-black">
-        <div>
-          <label htmlFor="name" className="block">Name<span className="text-3xl text-error text-[#9e2121] pl-1 asterisk">*</span></label>
-          <input type="text" name="name" id="name" required onChange={handleChange} value={formData.name} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-gray-800">Contact Me</h1>
+      <form name="contact" method="POST" data-netlify="true" className="space-y-8">
+        <input type="hidden" name="form-name" value="contact" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-lg font-semibold text-gray-700">Name<span className="text-red-500">*</span></label>
+            <input type="text" name="name" id="name" required onChange={handleChange} value={formData.name} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-blue-500 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-lg font-semibold text-gray-700">Email<span className="text-red-500">*</span></label>
+            <input type="email" name="email" id="email" required onChange={handleChange} value={formData.email} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-blue-500 focus:ring-blue-500" />
+          </div>
         </div>
         <div>
-          <label htmlFor="email" className="block">Email<span className="text-3xl text-error text-[#9e2121] pl-1 asterisk">*</span></label>
-          <input type="email" name="email" id="email" required onChange={handleChange} value={formData.email} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+          <label htmlFor="message" className="block text-lg font-semibold text-gray-700">Message<span className="text-red-500">*</span></label>
+          <textarea name="message" id="message" rows="4" required onChange={handleChange} value={formData.message} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-blue-500 focus:ring-blue-500"></textarea>
         </div>
-        <div>
-          <label htmlFor="message" className="block">Message<span className="text-3xl text-error text-[#9e2121] pl-1 asterisk">*</span></label>
-          <textarea name="message" id="message" rows="4" required onChange={handleChange} value={formData.message} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"></textarea>
-        </div>
-        <div>
-          <button type="submit" className="transition py-2 px-4 bg-[#8fb4dc] text-black font-semibold rounded-lg shadow-md hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+        <div className="flex justify-center">
+          <button type="submit" className="w-full sm:w-auto transition-all py-3 px-6 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-2 text-white font-semibold rounded-3xl hover:px-8 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2">
             Send Message
           </button>
         </div>
