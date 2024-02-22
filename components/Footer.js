@@ -1,10 +1,13 @@
-{/*import styles from './Footer.module.css'*/ }
 import React, { useState, useEffect } from 'react';
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState(getAdelaideTime());
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top smoothly
+  const scrollToHeader = () => {
+    const headerElement = document.querySelector('.header-class');
+    if (headerElement) {
+      headerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    console.log("Scrolling to header");
   };
   // Function to get the current time in Adelaide's timezone
   function getAdelaideTime() {
@@ -27,24 +30,24 @@ export default function Footer() {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <footer className="px-6 sm:px-[4%] 3xl:px-[8%] pb-8 3xl:pb-16 pt-8 sm:pt-[5%] relative bg-[#ffffff]">
+    <footer className="px-6 sm:px-[4%] 3xl:px-[8%] pb-8 3xl:pb-16 pt-8 sm:pt-[5%] relative bg-[#eff1f3]">
       <div className="grid grid-cols-1 gap-y-7 lg:gap-y-10 md:grid-cols-12 gap-x-10">
         <div className="md:col-span-6 lg:col-span-6 flex flex-col">
           <span className="flex border-b-[1.5px] link-text border-accent-500 pb-1 font-extrabold uppercase text-secondary-300 mb-3">Navigation</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/">
+            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/">
               <span className="link1">Home</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#about">
+            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#about">
               <span className="link1">About</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#works">
+            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#works">
               <span className="link1">Works</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#reviews">
-              <span className="link1">Reviews</span>
+            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/hobbies">
+              <span className="link1">Hobbies</span>
             </a>
-            <a className="leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
+            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
               <span className="link1">Contact</span>
             </a>
           </div>
@@ -52,19 +55,19 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-3 flex flex-col font-[600]">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Socials</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1">
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
               <span className="link1">Linkedin</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.youtube.com/@codekagehq">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.youtube.com/@codekagehq">
               <span className="link1">YouTube</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/elliot.koh/">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/elliot.koh/">
               <span className="link1">Instagram</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/codekage/">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/codekage/">
               <span className="link1">CodeKage</span>
             </a>
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://github.com/proximobinks">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://github.com/proximobinks">
               <span className="link1">Github</span>
             </a>
           </div>
@@ -72,7 +75,7 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-3 flex flex-col">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Resources</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a target="_blank" className="block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://elliotkoh1.netlify.app/">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://elliotkoh1.netlify.app/">
               <span className="link1">Portfolio V1</span>
             </a>
           </div>
@@ -91,8 +94,8 @@ export default function Footer() {
         <div className="w-full md:col-span-3 lg:col-span-3 h-fit flex justify-end">
           <button
             aria-label="Scroll to top"
-            className="w-fit hidden p-10 hover:scale-90 duration-1000 ease-expo bg-accent-500 group md:flex flex-col relative items-center justify-center rounded-full overflow-hidden bg-[#8fb4dc]"
-            onClick={scrollToTop} // Call the scrollToTop function on button click
+            className="z-40 w-fit hidden p-10 hover:scale-90 duration-1000 ease-expo bg-accent-500 group md:flex flex-col relative items-center justify-center rounded-full overflow-hidden bg-[#8fb4dc]"
+            onClick={scrollToHeader} // Call the scrollToTop function on button click
           >
             <span className="absolute flex group-hover:-translate-y-20 transition-all ease-in-out-cubic duration-500">
               <img

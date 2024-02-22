@@ -3,5 +3,16 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Raleway', sans-serif;
-  }
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+body {
+  scroll-behavior: smooth !important;
+}
+
+.asterisk {
+  vertical-align: sub;
+}
