@@ -30,9 +30,21 @@ const HomePage = () => {
             <div id="about" ref={aboutMeRef} className="about-class p-[3rem] 3xl:px-[14rem] md:py-[6rem] text-[#ebecf0] text-left bg-[#080807] rounded-tl-[1.6rem] rounded-tr-[1.6rem] relative">
                 <h1 className="uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">About Me.</h1>
                 <div className="my-10 flex justify-center relative">
-                    <div className="absolute inset-0 bg-[#080807] opacity-50 rounded-2xl z-10"></div>
-                    <img src="/testimg.webp" className="rounded-2xl h-[40%] w-[40%]" />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-[#080807] opacity-55 rounded-2xl z-10"></div>
+
+                    {/* Image */}
+                    <img src="/testimg.webp" className="rounded-2xl md:w-[75%] md:h-[75%] xl:h-[40%] xl:w-[40%] pb-[20%] sm:pb-[10%] md:pb-[10%] lg:pb-[10%] xl:pb-[3%]" />
+
+                    {/* Text Container aligned to the bottom-right */}
+                    <div className="absolute bottom-0 right-0 z-20 mx-[-20px] py-4 lg:px-[15%]">
+                        {/* Text Content - Adjust the styling as needed */}
+                        <p className="font-[500] max-w-[500px] text-white text-lg md:text-lg lg:text-2xl text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Driven by passion and creativity, I, Elliot, fuse tech expertise with unique hobbies to innovate and inspire. From tackling coding puzzles to creating custom keyboards and my own clothing brand, my endeavors span design and technology. Committed to impactful solutions, I turn visionary ideas into tangible realities in the tech landscape.
+                        </p>
+                    </div>
                 </div>
+
+
                 <h1 id="works" className="pt-[10%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">selected works.</h1>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* First Item */}
@@ -40,7 +52,7 @@ const HomePage = () => {
                         <div className="group">
                             <img src="/work1.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">keebclub™️</h3>
+                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">keebclub<span className="text-[#ebecf0]">&#8482;</span></h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Design</span>
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>

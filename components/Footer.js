@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Link from 'next/link';
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState(getAdelaideTime());
   const scrollToHeader = () => {
@@ -44,9 +44,9 @@ export default function Footer() {
             <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#works">
               <span className="link1">Works</span>
             </a>
-            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/hobbies">
+            <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/hobbies">
               <span className="link1">Hobbies</span>
-            </a>
+            </Link>
             <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
               <span className="link1">Contact</span>
             </a>
