@@ -63,7 +63,7 @@ const HomePage = () => {
                 <h1 id="works" className="pt-[10%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">selected works.</h1>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* First Item */}
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.com" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.com" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
                             <img src="/work1.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
@@ -77,9 +77,9 @@ const HomePage = () => {
 
 
                         </div>
-                    </a>
+                    </Link>
                     {/* Additional items... */}
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/Discord-Timestamp-Generator" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/Discord-Timestamp-Generator" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
                             <img src="/work2.webp" alt="Work 2" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
@@ -93,8 +93,8 @@ const HomePage = () => {
 
 
                         </div>
-                    </a>
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/SimCity-1989-OOP" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    </Link>
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/SimCity-1989-OOP" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
                             <img src="/work3.webp" alt="Work 3" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
@@ -108,8 +108,8 @@ const HomePage = () => {
 
 
                         </div>
-                    </a>
-                    <a className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/University-Clubs-Website" target="_blank"> {/* Ensure this container clips the scaled image */}
+                    </Link>
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/University-Clubs-Website" target="_blank"> {/* Ensure this container clips the scaled image */}
                         <div className="group">
                             <img src="/work4.webp" alt="Work 4" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
@@ -123,11 +123,11 @@ const HomePage = () => {
 
 
                         </div>
-                    </a>
+                    </Link>
                 </div>
                 <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
                     <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
-                    <a href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-3xl hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-3xl focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</a>
+                    <Link href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-3xl hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-3xl focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</Link>
                 </div>
 
 

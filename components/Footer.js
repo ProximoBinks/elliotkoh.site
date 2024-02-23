@@ -35,28 +35,28 @@ export default function Footer() {
         <div className="md:col-span-6 lg:col-span-6 flex flex-col">
           <span className="flex border-b-[1.5px] link-text border-accent-500 pb-1 font-extrabold uppercase text-secondary-300 mb-3">Navigation</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/">
+            <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/">
               <span className="link1">Home</span>
-            </a>
-            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#about">
+            </Link>
+            <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/#about">
               <span className="link1">About</span>
-            </a>
-            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="#works">
+            </Link>
+            <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/#works">
               <span className="link1">Works</span>
-            </a>
+            </Link>
             <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="/hobbies">
               <span className="link1">Hobbies</span>
             </Link>
-            <a className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
+            <Link className="hover:text-black leading-base block relative overflow-hidden group h-fit link-text text-[#6b7280] w-fit" href="contact">
               <span className="link1">Contact</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="md:col-span-3 lg:col-span-3 flex flex-col font-[600]">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Socials</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1">
             <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
-              <span className="link1">Linkedin</span>
+              <span className="link1">LinkedIn</span>
             </a>
             <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.youtube.com/@codekagehq">
               <span className="link1">YouTube</span>
@@ -68,7 +68,7 @@ export default function Footer() {
               <span className="link1">CodeKage</span>
             </a>
             <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://github.com/proximobinks">
-              <span className="link1">Github</span>
+              <span className="link1">GitHub</span>
             </a>
           </div>
         </div>
