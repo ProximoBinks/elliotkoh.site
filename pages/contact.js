@@ -35,7 +35,7 @@ export default function Contact() {
           <textarea name="message" id="message" rows="4" required onChange={handleChange} value={formData.message} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-blue-500 focus:ring-blue-500"></textarea>
         </div>
         <div className="flex justify-center">
-          <button type="submit" className="w-full sm:w-auto transition-all py-3 px-6 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-2 text-white font-semibold rounded-3xl hover:px-8 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2">
+          <button type="submit" className="w-full sm:w-auto transition-all py-3 px-6 bg-[#8fb4dc] hover:bg-[#7999ba] focus:ring-blue-500 focus:ring-offset-2 text-white font-semibold rounded-3xl hover:px-8 shadow-lg shadow-[#8fb4dc]/50 hover:shadow-[#7999ba]/50 focus:outline-none focus:ring-2">
             Send Message
           </button>
         </div>

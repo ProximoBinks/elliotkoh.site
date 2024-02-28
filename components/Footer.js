@@ -88,8 +88,8 @@ export default function Footer() {
           Elliot Koh
         </span>
         <div className="gap-x-3 md:col-span-3 col-span-4 mb-3 sm:mb-0 lg:col-span-3 flex flex-col link-text">
-          <span className="font-extrabold uppercase">Local time</span>
-          <span className="font-[600] text-[#6b7280] uppercase">{currentTime}</span>
+          <span className="font-extrabold uppercase">Local time</span>{/** 
+          <span className="font-[600] text-[#6b7280] uppercase">{currentTime}</span>*/}
         </div>
         <div className="w-full md:col-span-3 lg:col-span-3 h-fit flex justify-end">
           <button
