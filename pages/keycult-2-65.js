@@ -29,6 +29,10 @@ const KeycultPage = () => {
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
             <Head>
                 <title>Keycult 2-65</title>
+                {/* Preload all main images from keycult1.jpg to keycult8.jpg */}
+                {Array.from({ length: 8 }, (_, i) => (
+                    <link key={i} rel="preload" as="image" href={getMainImageUrl(i + 1)} />
+                ))}
             </Head>
             {/* Image Carousel */}
             <div className="mt-[1%] mx-auto pb-[5%]">
