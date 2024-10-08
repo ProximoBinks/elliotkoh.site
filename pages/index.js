@@ -103,7 +103,7 @@ const HomePage = () => {
 
                         </div>
                     </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/UCAT-Timer/r" target="_blank">
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/UCAT-Timer/" target="_blank">
                         <div className="group">
                             <img src="/timer-1.webp" alt="Work 2" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
