@@ -60,27 +60,40 @@ const HomePage = () => {
                 <h1 id="works" className="pt-[5%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">selected works.</h1>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* First Item */}
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://codekage.store" target="_blank">
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://specialistplus.com.au" target="_blank">
+                        <div className="group">
+                            <img src="/specialist-plus-1.webp" alt="Specialist Plus" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
+                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Specialist Plus</h3>
+                                <div className="flex flex-row space-x-2">
+                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Next.js</span>
+                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Client Work</span>
+                                    <span className="bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://codekage.netlify.app" target="_blank">
                         <div className="group">
                             <img src="/codekage-1.webp" alt="CodeKage 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">CodeKage</h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Gatsby.js</span>
-                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Social Media</span>
                                     <span className="bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
                                 </div>
                             </div>
                         </div>
                     </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.com" target="_blank">
+                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.netlify.app" target="_blank">
                         <div className="group">
                             <img src="/work1.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">keebclub<span className="text-[#ebecf0]">&#8482;</span></h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Next.js</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Club</span>
                                     <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
                                 </div>
                             </div>
@@ -95,7 +108,7 @@ const HomePage = () => {
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Timestamp Generator</h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Tools</span>
                                     <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2023</span>
                                 </div>
                             </div>
@@ -125,7 +138,7 @@ const HomePage = () => {
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">SimCity 1989 in C++</h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">C++</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">University</span>
                                     <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
                                 </div>
                             </div>
@@ -140,7 +153,7 @@ const HomePage = () => {
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">University Clubs</h3>
                                 <div className="flex flex-row space-x-2">
                                     <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML/SQL</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Development</span>
+                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">University</span>
                                     <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
                                 </div>
                             </div>
@@ -151,7 +164,7 @@ const HomePage = () => {
                 </div>
                 <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
                     <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
-                    <Link href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-[2rem] hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-[2rem] focus:outline-none focus:ring-2 shadow-lg hover:shadow-[#ffffff]/50 focus:ring-blue-500 focus:ring-offset-2">Get in touch</Link>
+                    <Link href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-[2rem] hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-[2rem] focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</Link>
                 </div>
 
 

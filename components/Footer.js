@@ -87,8 +87,8 @@ export default function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-10 mt-14 items-end">
         <span className="order-last xs:mt-3 sm:order-first md:col-span-6 col-span-8 lg:col-span-6 font-extrabold text-h3 sm:text-h1 lg:text-display-3 tracking-heading uppercase leading-[90%]">
           <span className="font-bold">©</span> {new Date().getFullYear()}
-          <br className="block" />
-          Elliot Koh
+          <br />
+          <span className="mt-2 block">Elliot Koh</span>
         </span>
         <div className="gap-x-3 md:col-span-3 col-span-4 mb-3 sm:mb-0 lg:col-span-3 flex flex-col link-text">
           <span className="font-extrabold uppercase">Local time</span>
