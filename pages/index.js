@@ -62,7 +62,7 @@ const HomePage = () => {
                     {/* First Item */}
                     <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://specialistplus.com.au" target="_blank">
                         <div className="group">
-                            <img src="/specialist-plus-1.webp" alt="Specialist Plus" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
+                            <img src="/specialist-plus-2.webp" alt="Specialist Plus" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Specialist Plus</h3>
                                 <div className="flex flex-row space-x-2">
