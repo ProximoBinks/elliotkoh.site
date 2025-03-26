@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 
 const KeycultPage = () => {
-    // Array of main image URLs (converted to WebP format)
+    // Array of main image URLs
     const images = [
         '/keycult1.webp',
         '/keycult2.webp',
@@ -15,7 +15,7 @@ const KeycultPage = () => {
         '/keycult8.webp',
     ];
 
-    // Array of thumbnail image URLs (converted to WebP format)
+    // Array of thumbnail image URLs
     const thumbnails = [
         '/thumb-keycult-1.webp',
         '/thumb-keycult-2.webp',
@@ -29,42 +29,55 @@ const KeycultPage = () => {
 
     // State to keep track of current image index
     const [currentIndex, setCurrentIndex] = useState(0);
-    // State to track loading progress
+    // State to track loading
     const [loading, setLoading] = useState(true);
-    const [loadedImagesCount, setLoadedImagesCount] = useState(0);
+    const [loadingProgress, setLoadingProgress] = useState(0);
 
-    // Preload images
     useEffect(() => {
-        const preloadImages = async () => {
-            try {
-                // Combine main images and thumbnails for preloading
-                const allImages = [...images, ...thumbnails];
-                
-                // Create an array of promises for each image to load
-                const imagePromises = allImages.map((src) => {
-                    return new Promise((resolve, reject) => {
-                        const img = new Image();
-                        img.src = src;
-                        img.onload = () => {
-                            setLoadedImagesCount(prev => prev + 1);
-                            resolve();
-                        };
-                        img.onerror = reject;
-                    });
-                });
-                
-                // Wait for all images to load
-                await Promise.all(imagePromises);
-                setLoading(false);
-            } catch (error) {
-                console.error('Failed to preload images:', error);
-                // Show the content even if some images fail to load
+        // Create an array to track which images are loaded
+        const totalImages = images.length + thumbnails.length;
+        let loadedCount = 0;
+
+        // Function to handle image load
+        const handleImageLoad = () => {
+            loadedCount++;
+            const progress = Math.round((loadedCount / totalImages) * 100);
+            setLoadingProgress(progress);
+            
+            if (loadedCount === totalImages) {
                 setLoading(false);
             }
         };
 
-        preloadImages();
-    }, []);
+        // Preload all images using the browser's native Image object
+        const preloadImage = (src) => {
+            return new Promise((resolve) => {
+                const img = new window.Image();
+                img.src = src;
+                img.onload = () => {
+                    handleImageLoad();
+                    resolve();
+                };
+                img.onerror = () => {
+                    handleImageLoad(); // Count errors as loaded to avoid hanging
+                    resolve();
+                };
+            });
+        };
+
+        // Only run in browser environment
+        if (typeof window !== 'undefined') {
+            const allImages = [...images, ...thumbnails];
+            Promise.all(allImages.map(src => preloadImage(src)))
+                .catch(error => {
+                    console.error('Error preloading images:', error);
+                    setLoading(false); // Show content even if preloading fails
+                });
+        } else {
+            // Server-side rendering - don't try to preload
+            setLoading(false);
+        }
+    }, [images, thumbnails]);
 
     // Function to handle clicking on thumbnail
     const handleThumbnailClick = (index) => {
@@ -85,25 +98,19 @@ const KeycultPage = () => {
         );
     };
 
-    // Calculate loading progress percentage
-    const loadingProgress = Math.round((loadedImagesCount / (images.length + thumbnails.length)) * 100);
-
-    // Loading screen component
-    const LoadingScreen = () => (
-        <div className="flex flex-col items-center justify-center h-screen bg-white">
-            <h2 className="text-2xl font-bold mb-4">Loading Keycult Gallery</h2>
-            <div className="w-64 h-4 bg-gray-200 rounded-full overflow-hidden">
-                <div 
-                    className="h-full bg-gray-800 transition-all duration-300 ease-in-out"
-                    style={{ width: `${loadingProgress}%` }}
-                ></div>
+    if (loading && typeof window !== 'undefined') {
+        return (
+            <div className="flex flex-col items-center justify-center h-screen bg-white">
+                <h2 className="text-2xl font-bold mb-4">Loading Keycult Gallery</h2>
+                <div className="w-64 h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                        className="h-full bg-gray-800 transition-all duration-300 ease-in-out"
+                        style={{ width: `${loadingProgress}%` }}
+                    ></div>
+                </div>
+                <p className="mt-2">{loadingProgress}%</p>
             </div>
-            <p className="mt-2">{loadingProgress}%</p>
-        </div>
-    );
-
-    if (loading) {
-        return <LoadingScreen />;
+        );
     }
 
     return (
@@ -122,7 +129,8 @@ const KeycultPage = () => {
                             width={1600}
                             height={1000}
                             className="object-cover rounded-xl"
-                            priority
+                            priority={true}
+                            unoptimized={true}
                         />
                         {/* Left Arrow */}
                         <button
@@ -155,6 +163,7 @@ const KeycultPage = () => {
                                     className={`object-cover rounded-lg ${
                                         index === currentIndex ? 'opacity-100' : 'opacity-50'
                                     }`}
+                                    unoptimized={true}
                                 />
                             </div>
                         ))}
