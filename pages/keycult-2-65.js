@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 
@@ -28,7 +28,43 @@ const KeycultPage = () => {
     ];
 
     // State to keep track of current image index
-    const [currentIndex, setCurrentIndex] = useState(0); // Starting index at 0
+    const [currentIndex, setCurrentIndex] = useState(0);
+    // State to track loading progress
+    const [loading, setLoading] = useState(true);
+    const [loadedImagesCount, setLoadedImagesCount] = useState(0);
+
+    // Preload images
+    useEffect(() => {
+        const preloadImages = async () => {
+            try {
+                // Combine main images and thumbnails for preloading
+                const allImages = [...images, ...thumbnails];
+                
+                // Create an array of promises for each image to load
+                const imagePromises = allImages.map((src) => {
+                    return new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.src = src;
+                        img.onload = () => {
+                            setLoadedImagesCount(prev => prev + 1);
+                            resolve();
+                        };
+                        img.onerror = reject;
+                    });
+                });
+                
+                // Wait for all images to load
+                await Promise.all(imagePromises);
+                setLoading(false);
+            } catch (error) {
+                console.error('Failed to preload images:', error);
+                // Show the content even if some images fail to load
+                setLoading(false);
+            }
+        };
+
+        preloadImages();
+    }, []);
 
     // Function to handle clicking on thumbnail
     const handleThumbnailClick = (index) => {
@@ -39,15 +75,36 @@ const KeycultPage = () => {
     const handleLeftArrowClick = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        ); // Loop to the last image if at the beginning
+        );
     };
 
     // Function to handle clicking on right arrow
     const handleRightArrowClick = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        ); // Loop to the first image if at the end
+        );
     };
+
+    // Calculate loading progress percentage
+    const loadingProgress = Math.round((loadedImagesCount / (images.length + thumbnails.length)) * 100);
+
+    // Loading screen component
+    const LoadingScreen = () => (
+        <div className="flex flex-col items-center justify-center h-screen bg-white">
+            <h2 className="text-2xl font-bold mb-4">Loading Keycult Gallery</h2>
+            <div className="w-64 h-4 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                    className="h-full bg-gray-800 transition-all duration-300 ease-in-out"
+                    style={{ width: `${loadingProgress}%` }}
+                ></div>
+            </div>
+            <p className="mt-2">{loadingProgress}%</p>
+        </div>
+    );
+
+    if (loading) {
+        return <LoadingScreen />;
+    }
 
     return (
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
@@ -60,12 +117,12 @@ const KeycultPage = () => {
                 <div className="max-w-[81rem] mx-auto">
                     <div className="relative">
                         <Image
-                            src={images[currentIndex]} // Displaying the current main image
+                            src={images[currentIndex]}
                             alt={`Keycult ${currentIndex + 1}`}
                             width={1600}
                             height={1000}
                             className="object-cover rounded-xl"
-                            priority // Prioritize loading for the main image
+                            priority
                         />
                         {/* Left Arrow */}
                         <button
@@ -91,14 +148,13 @@ const KeycultPage = () => {
                                 onClick={() => handleThumbnailClick(index)}
                             >
                                 <Image
-                                    src={thumbnail} // Displaying corresponding thumbnail images
+                                    src={thumbnail}
                                     alt={`Thumbnail ${index + 1}`}
                                     width={64}
                                     height={64}
                                     className={`object-cover rounded-lg ${
                                         index === currentIndex ? 'opacity-100' : 'opacity-50'
-                                    }`} // Change opacity for active and inactive thumbnails
-                                    loading="lazy" // Enable lazy loading for thumbnails
+                                    }`}
                                 />
                             </div>
                         ))}
