@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
-import Head from 'next/head';
 import HamburgerMenu from './HamburgerMenu';
 
 const Layout = ({ children }) => {
-  // State to track if the hamburger menu should be shown
   const [showHamburger, setShowHamburger] = useState(false);
 
   useEffect(() => {
-    // Function to handle scroll logic
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // 90% of the viewport height
-      const threshold = 0.9 * window.innerHeight;
+      // Get viewport height
+      const vh = window.innerHeight;
+      // Get current scroll position
+      const scrollPosition = window.scrollY;
+      // Calculate 90% of viewport height
+      const threshold = vh * 0.9;
 
-      if (scrollY >= threshold) {
-        setShowHamburger(true);
-      } else {
-        setShowHamburger(false);
-      }
+      // Show hamburger menu if scrolled past threshold
+      setShowHamburger(scrollPosition > threshold);
     };
 
-    // Attach scroll listener
+    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Remove listener on cleanup
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    // Initial check
+    handleScroll();
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -36,12 +35,32 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="preload" as="image" href="/herosquare5.webp" />
       </Head>
-
-      <div className="flex flex-col h-screen overflow-x-hidden bg-cover bg-top bg-hero-pattern">
+      <div 
+        className="flex flex-col min-h-screen overflow-x-hidden relative"
+        style={{
+          backgroundImage: 'url(/herosquare5.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'top',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <Header />
-        {/* Pass a prop to show or hide the menu */}
-        <HamburgerMenu isVisible={showHamburger} />
-        <main className="flex-grow">{children}</main>
+        
+        {/* Fixed position wrapper for hamburger menu */}
+        <div className="fixed top-0 right-0 z-50 pointer-events-none">
+          <div 
+            className={`transition-all duration-500 ease-in-out transform origin-top-right ${
+              showHamburger 
+                ? 'opacity-100 scale-100 pointer-events-auto' 
+                : 'opacity-0 scale-75'
+            }`}
+          >
+            <HamburgerMenu />
+          </div>
+        </div>
+        
+        <main className="flex-grow relative z-0">{children}</main>
         <Footer />
       </div>
     </>
