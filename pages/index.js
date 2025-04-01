@@ -62,10 +62,10 @@ const HomePage = () => {
                     <div className="w-full md:w-[60%]">
                         {/* Title block - right aligned on medium screens and up */}
                         <div className="">
-                            <h1 className="uppercase text-[clamp(3.5rem,9vw,5rem)] lg:text-[clamp(5.85rem,6vw,10rem)] font-bold leading-[0.9] tracking-tight mb-8 text-[#c9c9c1] md:absolute md:left-11 lg:static">
+                            <h1 className="uppercase text-[clamp(3.2rem,9vw,5rem)] lg:text-[clamp(5.85rem,6vw,10rem)] font-bold leading-[0.9] tracking-tight mb-8 text-[#c9c9c1] md:absolute md:left-11 lg:static">
                                 BUILDER,<br />
                                 CREATOR,<br />
-                                OPTIMISER /
+                                OPTIMISER<span className="text-[clamp(2.5rem,7vw,5rem)] lg:text-[clamp(5.85rem,6vw,10rem)]">/</span>
                             </h1>
                             {/* Mobile-only image - MOVED BEFORE the paragraph */}
                             <div className="block md:hidden w-full aspect-[1/1.2] relative overflow-hidden mb-10">
