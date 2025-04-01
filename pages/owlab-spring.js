@@ -101,7 +101,7 @@ const KeycultPage = () => {
     if (loading && typeof window !== 'undefined') {
         return (
             <div className="flex flex-col items-center justify-center h-screen bg-white">
-                <h2 className="text-2xl font-bold mb-4">Loading Owlab Spring Gallery</h2>
+                <h2 className="text-2xl font-bold mb-4">Loading Spring Gallery</h2>
                 <div className="w-64 h-4 bg-gray-200 rounded-full overflow-hidden">
                     <div 
                         className="h-full bg-gray-800 transition-all duration-300 ease-in-out"

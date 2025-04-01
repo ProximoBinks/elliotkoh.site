@@ -43,43 +43,51 @@ export default function Hobbies() {
           {/* Mechanical Keyboards */}
           <Hobby
             title="Mechanical Keyboards"
-            description="Exploring the tactile and auditory pleasure of custom mechanical keyboards."
+            description="Curating and customising mechanical keyboards for the perfect balance of sound, feel, and form."
             category="Technical"
             customTitle="keyboards"
             imageSrc="/keyboard.jpg"
             imageAlt="Mechanical Keyboards"
           />
-          {/* Collectibles */}
+
           <Hobby
             title="Collectibles"
-            description="Collecting a variety of items including Pokémon cards, figurines, and other memorabilia to cherish and appreciate."
+            description="Collecting iconic pieces—Pokémon cards, figures, and memorabilia that blend nostalgia with design."
             category="Recreational"
             imageSrc="/cybertruck.jpg"
             imageAlt="Collectibles"
           />
-          {/* Clothing Brand */}
+
+          <Hobby
+            title="Coding"
+            description="Building sleek, efficient software and continuously pushing boundaries in development."
+            category="Technical"
+            imageSrc="/coding.webp"
+            imageAlt="Coding"
+          />
+
+          <Hobby
+            title="Desk Setup"
+            description="Refining my workspace with high-performance peripherals and clean, intentional design."
+            category="Technical"
+            imageSrc="/setup.webp"
+            imageAlt="PC"
+          />
+
           <Hobby
             title="Clothing Brand"
-            description="Designing unique pieces that express personal style and creativity."
+            description="Designing and experimenting with fashion that reflects identity, story, and cultural influence."
             category="Creative"
             imageSrc="/prjctbks.jpg"
             imageAlt="Clothing Brand"
           />
-          {/* Origami */}
+
           <Hobby
             title="Origami"
-            description="Folding paper to create intricate designs and bring imagination to life."
+            description="Turning simple paper into complex art—combining patience, precision, and creativity."
             category="Creative"
             imageSrc="/origami.jpg"
             imageAlt="Origami"
-          />
-          {/* Coding */}
-          <Hobby
-            title="Coding"
-            description="Developing software solutions and exploring new technologies."
-            category="Technical"
-            imageSrc="/coding.webp"
-            imageAlt="Coding"
           />
         </div>
       </div>

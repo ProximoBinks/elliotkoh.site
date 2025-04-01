@@ -33,3 +33,9 @@ body {
 ::-webkit-scrollbar-thumb:hover{
   background: #7d9dc0;
 }
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .pt-md-only {
+    padding-top: clamp(13rem, 27vw, 15rem);
+  }
+}

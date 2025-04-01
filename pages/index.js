@@ -43,17 +43,67 @@ const HomePage = () => {
                 </div>
             </div>
             <div id="about" ref={aboutMeRef} className="about-class p-[3rem] 3xl:px-[14rem] md:py-[6rem] text-[#ebecf0] text-left bg-[#080807] rounded-tl-[1.6rem] rounded-tr-[1.6rem] relative">
-                <h1 className="uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">About Me.</h1>
-                <div className="mb-[7%] my-10 flex justify-center relative">
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-[#080807] opacity-55 rounded-2xl z-10"></div>
-                    {/* Image */}
-                    <img src="/testimg.webp" className="rounded-2xl md:w-[75%] md:h-[75%] xl:h-[40%] xl:w-[40%] pb-[20%] sm:pb-[10%] md:pb-[10%] lg:pb-[10%] xl:pb-[3%]" />
-                    {/* Text Container aligned to the bottom-right */}
-                    <div className="absolute bottom-0 right-0 z-20 mx-[-20px] py-4 lg:px-[15%]">
-                        {/* Text Content - Adjust the styling as needed */}
-                        <p className="font-[600] max-w-[500px] text-[#ffffff] text-lg md:text-lg lg:text-2xl text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Driven by passion and creativity, I, Elliot, fuse tech expertise with unique hobbies to innovate and inspire. From tackling coding puzzles to creating custom keyboards and my own clothing brand, my endeavors span design and technology. Committed to impactful solutions, I turn visionary ideas into tangible realities in the tech landscape.
-                        </p>
+                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                    {/* Left column (photo) - visible only on medium screens and up, aligned to bottom */}
+                    <div className="hidden md:flex md:w-[40%] relative md:items-end">
+                        <div className="aspect-[1/1.3] relative overflow-hidden w-full mb-0 md:mb-[3rem]">
+                            <Image
+                                src="/testimg.webp"
+                                alt="Profile Image"
+                                fill
+                                className="object-cover grayscale"
+                                priority
+                            />
+                            <div className="absolute bottom-4 left-4 text-xs opacity-50">39</div>
+                        </div>
+                    </div>
+
+                    {/* Right column (content) - takes full width on mobile, 60% on desktop */}
+                    <div className="w-full md:w-[60%]">
+                        {/* Title block - right aligned on medium screens and up */}
+                        <div className="">
+                            <h1 className="uppercase text-[clamp(2.5rem,9vw,5rem)] lg:text-[clamp(5.85rem,6vw,10rem)] font-bold leading-[0.9] tracking-tight mb-8 text-[#c9c9c1] md:absolute md:left-11 lg:static">
+                                DESIGNER,<br />
+                                DEVELOPER,<br />
+                                CREATOR /
+                            </h1>
+                            {/* Mobile-only image - MOVED BEFORE the paragraph */}
+                            <div className="block md:hidden w-full aspect-[1/1.2] relative overflow-hidden mb-10">
+                                <Image
+                                    src="/testimg.webp"
+                                    alt="Profile Image"
+                                    fill
+                                    className="object-cover grayscale"
+                                    priority
+                                />
+                                <div className="absolute bottom-4 left-4 text-xs opacity-50">43</div>
+                            </div>
+
+                            {/* Main description - right aligned and wider spacing on medium screens and up */}
+                            <p
+                                className="text-[clamp(1.2rem,2.5vw,1.5rem)] leading-relaxed mb-12 max-w-[90%] text-[#bdbdb4] pt-md-only lg:max-w-[750px] font-semibold"
+                            >
+                                I’m Elliot — a developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work. With a focus on clarity and intentional design, I take ideas from scratch and turn them into functional, well-crafted solutions that feel good to use.
+                            </p>
+                        </div>
+
+                        {/* About me section - closely matches screenshot with specific spacing */}
+                        <div className="mb-10 md:mt-16 text-[#787673] lg:grid lg:grid-cols-[auto_1fr] lg:gap-12 max-w-[400px] lg:max-w-[625px] font-semibold">
+                            {/* Left column (ABOUT ME) */}
+                            <div className="text-[#a09e9a] text-sm tracking-wider opacity-70 mb-4 font-bold lg:mb-0 lg:mt-1">
+                                (ABOUT ME)
+                            </div>
+
+                            {/* Right column (Paragraphs) */}
+                            <div>
+                                <p className="text-base md:text-lg leading-relaxed max-w-[90%]">
+                                I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#8fb4dc] hover:text-[#7d9dc0] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools — from visual utilities to goal trackers — designed to simplify workflows and support personal growth.
+                                </p>
+                                <p className="text-base md:text-lg leading-relaxed mt-6 max-w-[90%]">
+                                Outside of tech, you’ll find me designing pieces for my clothing brand, collecting peripherals, refining my desk setup, or deep in Japanese study as I prepare for my upcoming exchange in Tokyo.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -66,9 +116,15 @@ const HomePage = () => {
                             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
                                 <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Specialist Plus</h3>
                                 <div className="flex flex-row space-x-2">
-                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Next.js</span>
-                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Client Work</span>
-                                    <span className="bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2025</span>
+                                    <span className="flex items-center justify-center text-center whitespace-normal backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
+                                        Next.js
+                                    </span>
+                                    <span className="flex items-center justify-center text-center whitespace-normal backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
+                                        Client Work
+                                    </span>
+                                    <span className="flex items-center justify-center text-center whitespace-normal bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
+                                        2025
+                                    </span>
                                 </div>
                             </div>
                         </div>
