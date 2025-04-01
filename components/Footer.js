@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-3 flex flex-col">
           <span className="flex border-b-[1.5px] border-accent-500 pb-1 font-extrabold uppercase link-text text-secondary-300 mb-3">Resources</span>
           <div className="flex flex-col gap-y-2 md:gap-y-1 font-[600]">
-            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://elliotkoh1.netlify.app/">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://legacy.elliotkoh.dev/">
               <span className="link1">Portfolio V1</span>
             </a>
           </div>
