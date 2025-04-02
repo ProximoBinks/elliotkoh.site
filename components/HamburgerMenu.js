@@ -37,7 +37,7 @@ const HamburgerMenu = () => {
                 {/* Menu Content */}
                 <div className="h-full flex flex-col justify-center px-12">
                     <nav className="flex-1 flex items-center">
-                        <ul className="space-y-4 text-5xl w-full">
+                        <ul className="space-y-1 md:space-y-2 text-5xl md:text-6xl w-full">
                             <li>
                                 <Link
                                     href="/"
@@ -79,10 +79,10 @@ const HamburgerMenu = () => {
 
                     {/* Footer with Email and Social Links */}
                     <div className="pb-12 mt-auto">
-                        <p className="text-[#a29e9a] text-lg font-bold uppercase ">Email Address</p>
-                        <p className="text-white/90 mb-6">elliot@proximo.life</p>
+                        <p className="text-[#a29e9a] text-sm md:text-lg font-bold uppercase ">Email Address</p>
+                        <p className="text-white/90 mb-6 text-sm md:text-lg"><a href="mailto:elliot@proximo.life">elliot@proximo.life</a></p>
 
-                        <div className="flex space-x-3 text-sm">
+                        <div className="flex space-x-3 text-sm md:text-base">
                             <Link
                                 href="https://www.linkedin.com/in/elliotkoh1/"
                                 target="_blank"
