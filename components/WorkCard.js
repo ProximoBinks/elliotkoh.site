@@ -37,14 +37,14 @@ const WorkCard = ({
                 alt={title} 
                 className={`transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto ${imageClassName}`}
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col space-y-2 sm:space-y-0 sm:flex-row md:flex-col md:space-y-2 lg:flex-row lg:space-y-0 items-start sm:items-center sm:justify-between">
+            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col space-y-2 sm:space-y-0 sm:flex-row md:flex-col md:space-y-2 lg:flex-row lg:space-y-0 items-center sm:items-center sm:justify-between">
                 <h3 
-                    className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold"
+                    className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold text-center sm:text-left md:text-center lg:text-left"
                     style={{ color: titleColor }}
                 >
                     {title}
                 </h3>
-                <div className="flex flex-wrap gap-2 max-w-full">
+                <div className="flex flex-wrap gap-2 max-w-full justify-center sm:justify-start md:justify-center lg:justify-start">
                     {tags.map((tag, index) => (
                         <span 
                             key={index}
