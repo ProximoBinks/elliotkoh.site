@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const HamburgerMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
+const HamburgerMenu = ({ isOpen, setIsOpen }) => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
         document.body.style.overflow = isOpen ? 'auto' : 'hidden';
@@ -20,12 +18,12 @@ const HamburgerMenu = () => {
             {/* Hamburger Button */}
             <button
                 onClick={toggleMenu}
-                className="fixed top-6 right-6 z-[100] w-12 h-12 flex flex-col justify-center items-center group bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-all duration-300 transform hover:scale-110"
+                className="fixed top-6 right-6 z-[100] w-12 h-12 flex flex-col justify-center items-center bg-white rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
                 aria-label="Toggle menu"
             >
-                <div className={`w-5 h-0.5 bg-black transition-all duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-                <div className={`w-5 h-0.5 bg-black my-1 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></div>
-                <div className={`w-5 h-0.5 bg-black transition-all duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+                <div className={`w-5 h-0.5 bg-black transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+                <div className={`w-5 h-0.5 bg-black my-1 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></div>
+                <div className={`w-5 h-0.5 bg-black transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
             </button>
 
             {/* Slide-in Menu */}

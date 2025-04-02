@@ -2,6 +2,130 @@ import React, { useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import WorkCard from '../components/WorkCard';
+
+// Add this works data array outside your component
+const works = [
+    {
+      title: "Specialist Plus",
+      imagePath: "/specialist-plus-2.webp",
+      link: "https://specialistplus.com.au",
+      tags: ["Next.js", "Client Work"],
+      year: "2025",
+      color: "#ffffff",
+      category: "Client"
+    },
+    {
+      title: "CodeKage",
+      imagePath: "/codekage-1.webp",
+      link: "https://codekage.netlify.app",
+      tags: ["Gatsby.js", "Social Media"],
+      year: "2024",
+      color: "#ffffff",
+      category: "Personal"
+    },
+    {
+      title: "keebclub™",
+      imagePath: "/work1.webp",
+      link: "https://uoakeebclub.netlify.app",
+      tags: ["Next.js", "Club"],
+      year: "2024",
+      color: "#8fb4dc",
+      category: "Personal"
+    },
+    {
+      title: "Timestamp Generator",
+      imagePath: "/work2.webp",
+      link: "https://proximobinks.github.io/Discord-Timestamp-Generator",
+      tags: ["HTML", "Tools"],
+      year: "2023",
+      color: "#8fb4dc",
+      category: "HyperTools"
+    },
+    {
+      title: "Altitutor UCAT Timer",
+      imagePath: "/timer-1.webp",
+      link: "https://proximobinks.github.io/UCAT-Timer/",
+      tags: ["HTML/JS", "Education"],
+      year: "2023",
+      color: "#8fb4dc",
+      category: "HyperTools"
+    },
+    {
+      title: "SimCity 1989 in C++",
+      imagePath: "/work3.webp",
+      link: "https://github.com/ProximoBinks/SimCity-1989-OOP",
+      tags: ["C++", "University"],
+      year: "2022",
+      imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
+      color: "#8fb4dc",
+      category: "University"
+    },
+    {
+      title: "University Clubs",
+      imagePath: "/work4.webp",
+      link: "https://github.com/ProximoBinks/University-Clubs-Website",
+      tags: ["HTML/SQL", "University"],
+      year: "2022",
+      imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
+      color: "#8fb4dc",
+      category: "University"
+    },
+    {
+      title: "HyperStyle",
+      imagePath: "/image-eraser-tool.webp",
+      link: "https://github.com/ProximoBinks/image-eraser",
+      tags: ["Next.js", "FastAPI", "Canvas"],
+      year: "2025",
+      color: "#b48df0",
+      category: "HyperTools"
+    },
+    {
+      title: "HyperGoals",
+      imagePath: "/hypergoals.webp",
+      link: "https://hypertools.dev/hypergoals",
+      tags: ["Next.js", "Streaks", "Habit Tracker"],
+      year: "2025",
+      color: "#d2aaff",
+      category: "HyperTools"
+    },
+    {
+      title: "HyperStake",
+      imagePath: "/hyperstake.webp",
+      link: "https://hypertools.dev/hyperstake",
+      tags: ["Next.js", "Finance", "EV Calculator"],
+      year: "2025",
+      color: "#a188f5",
+      category: "HyperTools"
+    },
+    {
+      title: "HyperTrack",
+      imagePath: "/hypertrack.webp",
+      link: "https://hypertools.dev/hypertrack",
+      tags: ["Next.js", "Tracking", "Finance"],
+      year: "2025",
+      color: "#c7b8ff",
+      category: "HyperTools"
+    },
+    {
+      title: "HyperStep",
+      imagePath: "/hyperstep.webp",
+      link: "https://hypertools.dev/hyperstep",
+      tags: ["Next.js", "Gamification", "Fitness"],
+      year: "2025",
+      color: "#a9e0ff",
+      category: "HyperTools"
+    },
+    {
+      title: "HyperNotes (Obsidian Script Suite)",
+      imagePath: "/hypernotes.webp",
+      link: "https://github.com/ProximoBinks/obsidian-hypernotes",
+      tags: ["Obsidian", "Scripting", "Automation"],
+      year: "2025",
+      color: "#8fb4dc",
+      category: "HyperTools"
+    }
+  ];
 
 const HomePage = () => {
     // Create a ref for the "About Us" section
@@ -83,14 +207,14 @@ const HomePage = () => {
                             <p
                                 className="text-[clamp(1.2rem,2.5vw,1.5rem)] leading-relaxed mb-12 max-w-[90%] text-[#bdbdb4] pt-md-only lg:max-w-[750px] font-semibold"
                             >
-                                I’m Elliot — a developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work. With a focus on clarity and intentional design, I take ideas from scratch and turn them into functional, well-crafted solutions that feel good to use.
+                                I'm Elliot — a developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work. With a focus on clarity and intentional design, I take ideas from scratch and turn them into functional, well-crafted solutions that feel good to use.
                             </p>
                         </div>
 
                         {/* About me section - closely matches screenshot with specific spacing */}
                         <div className="mb-10 md:mt-16 text-[#787673] lg:grid lg:grid-cols-[auto_1fr] lg:gap-12 max-w-[400px] lg:max-w-[625px] font-semibold">
                             {/* Left column (ABOUT ME) */}
-                            <div className="text-[#a09e9a] text-sm tracking-wider opacity-70 mb-4 font-bold lg:mb-0 lg:mt-1">
+                            <div className="text-[#96928e] text-sm tracking-wider opacity-70 mb-4 font-bold lg:mb-0 lg:mt-1">
                                 (ABOUT ME)
                             </div>
 
@@ -100,134 +224,29 @@ const HomePage = () => {
                                 I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#8fb4dc] hover:text-[#7d9dc0] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools — from visual utilities to goal trackers — designed to simplify workflows and support personal growth.
                                 </p>
                                 <p className="text-base md:text-lg leading-relaxed mt-6 max-w-[90%]">
-                                Outside of tech, you’ll find me designing pieces for my clothing brand, collecting peripherals, refining my desk setup, or deep in Japanese study as I prepare for my upcoming exchange in Tokyo.
+                                Outside of tech, you'll find me designing pieces for my clothing brand, collecting peripherals, refining my desk setup, or deep in Japanese study as I prepare for my upcoming exchange in Tokyo.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h1 id="works" className="pt-[5%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">selected works.</h1>
+                <h1 id="works" className="pt-[5%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">
+                    selected works.
+                </h1>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* First Item */}
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://specialistplus.com.au" target="_blank">
-                        <div className="group">
-                            <img src="/specialist-plus-2.webp" alt="Specialist Plus" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Specialist Plus</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="flex items-center justify-center text-center whitespace-normal backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
-                                        Next.js
-                                    </span>
-                                    <span className="flex items-center justify-center text-center whitespace-normal backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
-                                        Client Work
-                                    </span>
-                                    <span className="flex items-center justify-center text-center whitespace-normal bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">
-                                        2025
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://codekage.netlify.app" target="_blank">
-                        <div className="group">
-                            <img src="/codekage-1.webp" alt="CodeKage 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">CodeKage</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Gatsby.js</span>
-                                    <span className="backdrop-blur-md bg-white bg-opacity-10 outline outline-[#ffffff] outline-[1px] text-[#ffffff] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Social Media</span>
-                                    <span className="bg-[#ffffff] text-[#895415] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://uoakeebclub.netlify.app" target="_blank">
-                        <div className="group">
-                            <img src="/work1.webp" alt="Work 1" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">keebclub<span className="text-[#ebecf0]">&#8482;</span></h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Next.js</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Club</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2024</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/Discord-Timestamp-Generator" target="_blank">
-                        <div className="group">
-                            <img src="/work2.webp" alt="Work 2" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Timestamp Generator</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Tools</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2023</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://proximobinks.github.io/UCAT-Timer/" target="_blank">
-                        <div className="group">
-                            <img src="/timer-1.webp" alt="Work 2" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">Altitutor UCAT Timer</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML/JS</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">Education</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2023</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/SimCity-1989-OOP" target="_blank">
-                        <div className="group">
-                            <img src="/work3.webp" alt="Work 3" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">SimCity 1989 in C++</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">C++</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">University</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </Link>
-                    <Link className="transition-all relative overflow-hidden rounded-lg hover:rounded-2xl" href="https://github.com/ProximoBinks/University-Clubs-Website" target="_blank">
-                        <div className="group">
-                            <img src="/work4.webp" alt="Work 4" className="transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center sm:justify-between">
-                                <h3 className="text-2xl sm:text-4xl md:text-2xl lg:text-4xl font-bold mb-2 lg:mb-0">University Clubs</h3>
-                                <div className="flex flex-row space-x-2">
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">HTML/SQL</span>
-                                    <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg">University</span>
-                                    <span className="bg-[#8fb4dc] text-[#080807] text-xs font-semibold px-2.5 py-0.5 rounded-lg">2022</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </Link>
+                    {works.map((work, index) => (
+                        <WorkCard
+                            key={index}
+                            {...work}
+                        />
+                    ))}
                 </div>
                 <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
                     <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
                     <Link href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-[2rem] hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-[2rem] focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</Link>
                 </div>
-
-
-
             </div>
-
-
         </>
     );
 };

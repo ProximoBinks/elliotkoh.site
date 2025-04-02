@@ -7,6 +7,7 @@ import HamburgerMenu from './HamburgerMenu';
 const Layout = ({ children }) => {
   const [showHamburger, setShowHamburger] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check if the device is iOS
@@ -22,7 +23,13 @@ const Layout = ({ children }) => {
       const threshold = vh * 0.9;
 
       // Show hamburger menu if scrolled past threshold
-      setShowHamburger(scrollPosition > threshold);
+      const shouldShowHamburger = scrollPosition > threshold;
+      setShowHamburger(shouldShowHamburger);
+
+      // Close menu if hamburger is hidden
+      if (!shouldShowHamburger && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
     };
 
     // Add scroll event listener
@@ -33,7 +40,7 @@ const Layout = ({ children }) => {
 
     // Cleanup
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -65,15 +72,18 @@ const Layout = ({ children }) => {
         <Header />
         
         {/* Fixed position wrapper for hamburger menu */}
-        <div className="fixed top-0 right-0 z-50 pointer-events-none">
+        <div className="fixed top-0 right-0 z-50">
           <div 
-            className={`transition-all duration-500 ease-in-out transform origin-top-right ${
+            className={`transition-transform duration-300 ease-in-out transform origin-top-right ${
               showHamburger 
-                ? 'opacity-100 scale-100 pointer-events-auto' 
-                : 'opacity-0 scale-75'
+                ? 'scale-100' 
+                : 'scale-0'
             }`}
           >
-            <HamburgerMenu />
+            <HamburgerMenu 
+              isOpen={isMenuOpen}
+              setIsOpen={setIsMenuOpen}
+            />
           </div>
         </div>
         
