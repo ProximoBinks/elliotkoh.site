@@ -65,9 +65,18 @@ const works = [
     },
     {
         title: "HyperTools",
-        imagePath: "/hypertools-snap.webp",
+        imagePath: "/hypertools-1.webp",
         link: "https://hypertools.dev",
         tags: ["Svelte", "SaaS"],
+        year: "2025",
+        color: "#b48df0",
+        category: "HyperTools"
+      },
+      {
+        title: "HyperTrack",
+        imagePath: "/hypertrack-1.webp",
+        link: "https://hypertools.dev/hypertrack",
+        tags: ["Next.js", "Tracking", "Finance"],
         year: "2025",
         color: "#b48df0",
         category: "HyperTools"
@@ -83,58 +92,60 @@ const works = [
     },
     {
       title: "HyperGoals",
-      imagePath: "/hypergoals.webp",
-      link: "https://hypertools.dev/hypergoals",
+      imagePath: "/hypergoals-1.webp",
+      link: "https://goals.hypertools.dev/",
       tags: ["Next.js", "Streaks", "Habit Tracker"],
       year: "2025",
-      color: "#d2aaff",
+      color: "#b48df0",
       category: "HyperTools"
     },
-    {
-      title: "HyperStake",
-      imagePath: "/hyperstake.webp",
-      link: "https://hypertools.dev/hyperstake",
-      tags: ["Next.js", "Finance", "EV Calculator"],
-      year: "2025",
-      color: "#a188f5",
-      category: "HyperTools"
-    },
-    {
-      title: "HyperTrack",
-      imagePath: "/hypertrack.webp",
-      link: "https://hypertools.dev/hypertrack",
-      tags: ["Next.js", "Tracking", "Finance"],
-      year: "2025",
-      color: "#c7b8ff",
-      category: "HyperTools"
-    },
+    // {
+    //   title: "HyperStake",
+    //   imagePath: "/hyperstake.webp",
+    //   link: "https://hypertools.dev/hyperstake",
+    //   tags: ["Next.js", "Finance", "EV Calculator"],
+    //   year: "2025",
+    //   color: "#b48df0",
+    //   category: "HyperTools"
+    // },
     {
       title: "HyperStep",
       imagePath: "/hyperstep.webp",
       link: "https://hypertools.dev/hyperstep",
       tags: ["Next.js", "Gamification", "Fitness"],
       year: "2025",
-      color: "#a9e0ff",
+      color: "#b48df0",
       category: "HyperTools"
     },
+    // {
+    //   title: "HyperNotes (Obsidian Script Suite)",
+    //   imagePath: "/hypernotes.webp",
+    //   link: "https://github.com/ProximoBinks/obsidian-hypernotes",
+    //   tags: ["Obsidian", "Scripting", "Automation"],
+    //   year: "2025",
+    //   color: "#b48df0",
+    //   category: "HyperTools"
+    // },
     {
-      title: "HyperNotes (Obsidian Script Suite)",
-      imagePath: "/hypernotes.webp",
-      link: "https://github.com/ProximoBinks/obsidian-hypernotes",
-      tags: ["Obsidian", "Scripting", "Automation"],
-      year: "2025",
-      color: "#8fb4dc",
-      category: "HyperTools"
-    },
-    {
-        title: "Timestamp Generator",
-        imagePath: "/work2.webp",
-        link: "https://proximobinks.github.io/Discord-Timestamp-Generator",
+        title: "HyperStamp",
+        imagePath: "/timestamp.webp",
+        link: "https://timestamp.hypertools.dev",
         tags: ["HTML", "Tools"],
         year: "2023",
-        color: "#8fb4dc",
+        color: "#b48df0",
         category: "HyperTools"
+      },
+      {
+        title: "Writer ID (Autoencoder)",
+        imagePath: "/autoencoder.webp",
+        tags: ["Python", "TensorFlow", "Neural Networks"],
+        year: "2023",
+        color: "#000000",
+        titleColor: "#000000",
+        category: "University",
+        description: "Developed a deep learning system using autoencoders to identify handwriting styles for forensic and archival purposes. Achieved notable improvements in Character Error Rate, applied advanced data preprocessing, and designed a user-friendly interface to demo results."
       }
+      
   ];
 
 const HomePage = () => {
