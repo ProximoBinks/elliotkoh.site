@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import WorkCard from '../components/WorkCard';
+import WorksSection from '../components/WorksSection';
 
 // Add this works data array outside your component
 const works = [
@@ -34,22 +35,13 @@ const works = [
       category: "Personal"
     },
     {
-      title: "Timestamp Generator",
-      imagePath: "/work2.webp",
-      link: "https://proximobinks.github.io/Discord-Timestamp-Generator",
-      tags: ["HTML", "Tools"],
-      year: "2023",
-      color: "#8fb4dc",
-      category: "HyperTools"
-    },
-    {
       title: "Altitutor UCAT Timer",
       imagePath: "/timer-1.webp",
       link: "https://proximobinks.github.io/UCAT-Timer/",
       tags: ["HTML/JS", "Education"],
       year: "2023",
       color: "#8fb4dc",
-      category: "HyperTools"
+      category: "Client"
     },
     {
       title: "SimCity 1989 in C++",
@@ -62,7 +54,7 @@ const works = [
       category: "University"
     },
     {
-      title: "University Clubs",
+      title: "University Club Portal",
       imagePath: "/work4.webp",
       link: "https://github.com/ProximoBinks/University-Clubs-Website",
       tags: ["HTML/SQL", "University"],
@@ -71,6 +63,15 @@ const works = [
       color: "#8fb4dc",
       category: "University"
     },
+    {
+        title: "HyperTools",
+        imagePath: "/hypertools-snap.webp",
+        link: "https://hypertools.dev",
+        tags: ["Svelte", "SaaS"],
+        year: "2025",
+        color: "#b48df0",
+        category: "HyperTools"
+      },
     {
       title: "HyperStyle",
       imagePath: "/image-eraser-tool.webp",
@@ -124,7 +125,16 @@ const works = [
       year: "2025",
       color: "#8fb4dc",
       category: "HyperTools"
-    }
+    },
+    {
+        title: "Timestamp Generator",
+        imagePath: "/work2.webp",
+        link: "https://proximobinks.github.io/Discord-Timestamp-Generator",
+        tags: ["HTML", "Tools"],
+        year: "2023",
+        color: "#8fb4dc",
+        category: "HyperTools"
+      }
   ];
 
 const HomePage = () => {
@@ -231,16 +241,8 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <h1 id="works" className="pt-[5%] works-class uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">
-                    selected works.
-                </h1>
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {works.map((work, index) => (
-                        <WorkCard
-                            key={index}
-                            {...work}
-                        />
-                    ))}
+                <div id="works" className="pt-[5%]">
+                    <WorksSection works={works} />
                 </div>
                 <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
                     <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
