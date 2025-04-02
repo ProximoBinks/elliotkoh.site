@@ -130,7 +130,7 @@ const works = [
         title: "HyperStamp",
         imagePath: "/timestamp.webp",
         link: "https://timestamp.hypertools.dev",
-        tags: ["HTML", "Tools"],
+        tags: ["HTML/JS", "Tools"],
         year: "2023",
         color: "#b48df0",
         category: "HyperTools"

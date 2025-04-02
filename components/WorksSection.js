@@ -16,7 +16,7 @@ const WorksSection = ({ works }) => {
             case "Client":
                 return "text-red-500"; // Red for Client
             case "Personal":
-                return "text-[#8fb4dc]"; // Original blue for Personal
+                return "text-[#23a4de]"; // Original blue for Personal
             default:
                 return "text-[#8fb4dc]";
         }
@@ -43,7 +43,6 @@ const WorksSection = ({ works }) => {
         if (category === "HyperTools") {
             return (
                 <div className="flex items-center gap-3">
-
                     <Image
                         src="/hypertools-nobackground.png"
                         alt="HyperTools"
@@ -52,12 +51,47 @@ const WorksSection = ({ works }) => {
                         className="object-contain"
                         quality={100}
                         priority
-                    /><span>HYPERTOOLS</span>
+                    />
+                    <span>HYPERTOOLS</span>
                 </div>
             );
         }
 
-        return category === "Client" ? "CLIENT WORK" : "PERSONAL PROJECTS";
+        if (category === "Client") {
+            return (
+                <div className="flex items-center gap-2">
+                    <Image
+                        src="/red-tick.png"
+                        alt="Client Work"
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                        quality={100}
+                        priority
+                    />
+                    <span>CLIENT WORK</span>
+                </div>
+            );
+        }
+
+        if (category === "Personal") {
+            return (
+                <div className="flex items-center gap-2">
+                    <Image
+                        src="/personal-projects.png"
+                        alt="Personal Projects"
+                        width={35}
+                        height={35}
+                        className="object-contain"
+                        quality={100}
+                        priority
+                    />
+                    <span className="mt-[0.3rem]">PERSONAL PROJECTS</span>
+                </div>
+            );
+        }
+
+        return "PERSONAL PROJECTS";
     };
 
     return (
