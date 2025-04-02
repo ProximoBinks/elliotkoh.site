@@ -13,7 +13,7 @@ const works = [
       link: "https://specialistplus.com.au",
       tags: ["Next.js", "Client Work"],
       year: "2025",
-      color: "#ffffff",
+      color: "#8fb4dc",
       category: "Client"
     },
     {
@@ -23,6 +23,7 @@ const works = [
       tags: ["Gatsby.js", "Social Media"],
       year: "2024",
       color: "#ffffff",
+      yearTagColor: "#895415",
       category: "Personal"
     },
     {
@@ -35,12 +36,32 @@ const works = [
       category: "Personal"
     },
     {
+      title: "portfolio v1",
+      imagePath: "/portfolio-1.webp",
+      link: "https://legacy.elliotkoh.dev",
+      tags: ["Next.js", "portfolio"],
+      year: "2022",
+      color: "#000000",
+      titleColor: "#000000",
+      category: "Personal"
+    },
+    {
       title: "Altitutor UCAT Timer",
       imagePath: "/timer-1.webp",
       link: "https://proximobinks.github.io/UCAT-Timer/",
       tags: ["HTML/JS", "Education"],
       year: "2023",
       color: "#8fb4dc",
+      category: "Client"
+    },
+    {
+      title: "Altitutor UCAT TI-108",
+      imagePath: "/altitutor-calculator.webp",
+      link: "https://proximobinks.github.io/UCAT-Calculator/",
+      tags: ["HTML/JS", "Education"],
+      year: "2023",
+      color: "#000000",
+      titleColor: "#000000",
       category: "Client"
     },
     {
@@ -76,7 +97,7 @@ const works = [
         title: "HyperTrack",
         imagePath: "/hypertrack-1.webp",
         link: "https://hypertools.dev/hypertrack",
-        tags: ["Next.js", "Tracking", "Finance"],
+        tags: ["Next.js", "Tracking"],
         year: "2025",
         color: "#b48df0",
         category: "HyperTools"
@@ -94,7 +115,7 @@ const works = [
       title: "HyperGoals",
       imagePath: "/hypergoals-1.webp",
       link: "https://goals.hypertools.dev/",
-      tags: ["Next.js", "Streaks", "Habit Tracker"],
+      tags: ["Next.js", "Habit Tracker"],
       year: "2025",
       color: "#b48df0",
       category: "HyperTools"
@@ -112,7 +133,7 @@ const works = [
       title: "HyperStep",
       imagePath: "/hyperstep.webp",
       link: "https://hypertools.dev/hyperstep",
-      tags: ["Next.js", "Gamification", "Fitness"],
+      tags: ["Next.js", "Fitness"],
       year: "2025",
       color: "#b48df0",
       category: "HyperTools"
@@ -138,14 +159,23 @@ const works = [
       {
         title: "Writer ID (Autoencoder)",
         imagePath: "/autoencoder.webp",
-        tags: ["Python", "TensorFlow", "Neural Networks"],
+        tags: ["Python", "TensorFlow", "NN"],
         year: "2023",
         color: "#000000",
         titleColor: "#000000",
         category: "University",
-        description: "Developed a deep learning system using autoencoders to identify handwriting styles for forensic and archival purposes. Achieved notable improvements in Character Error Rate, applied advanced data preprocessing, and designed a user-friendly interface to demo results."
+        description: "Developed a deep learning system using autoencoders to identify handwriting styles for forensic and archival purposes."
+      },
+      {
+        title: "Wordle in MATLAB",
+        imagePath: "/wordle-matlab.webp", // Replace with actual image path
+        link: "https://github.com/ProximoBinks/Wordle-MATLAB", // Replace with actual repo if needed
+        tags: ["MATLAB", "Game", "Recreation"],
+        year: "2023",
+        color: "#000000",
+        titleColor: "#000000",
+        category: "University"
       }
-      
   ];
 
 const HomePage = () => {
