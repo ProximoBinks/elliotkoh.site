@@ -65,26 +65,6 @@ const works = [
       category: "Client"
     },
     {
-      title: "SimCity 1989 in C++",
-      imagePath: "/work3.webp",
-      link: "https://github.com/ProximoBinks/SimCity-1989-OOP",
-      tags: ["C++", "University"],
-      year: "2022",
-      imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
-      color: "#8fb4dc",
-      category: "University"
-    },
-    {
-      title: "University Club Portal",
-      imagePath: "/work4.webp",
-      link: "https://github.com/ProximoBinks/University-Clubs-Website",
-      tags: ["HTML/SQL", "University"],
-      year: "2022",
-      imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
-      color: "#8fb4dc",
-      category: "University"
-    },
-    {
         title: "HyperTools",
         imagePath: "/hypertools-1.webp",
         link: "https://hypertools.dev",
@@ -96,7 +76,7 @@ const works = [
       {
         title: "HyperTrack",
         imagePath: "/hypertrack-1.webp",
-        link: "https://hypertools.dev/hypertrack",
+        link: "https://track.hypertools.dev",
         tags: ["Next.js", "Tracking"],
         year: "2025",
         color: "#b48df0",
@@ -114,7 +94,6 @@ const works = [
     {
       title: "HyperGoals",
       imagePath: "/hypergoals-1.webp",
-      link: "https://goals.hypertools.dev/",
       tags: ["Next.js", "Habit Tracker"],
       year: "2025",
       color: "#b48df0",
@@ -170,10 +149,30 @@ const works = [
         title: "Wordle in MATLAB",
         imagePath: "/wordle-matlab.webp", // Replace with actual image path
         link: "https://github.com/ProximoBinks/Wordle-MATLAB", // Replace with actual repo if needed
-        tags: ["MATLAB", "Game", "Recreation"],
+        tags: ["MATLAB", "Game"],
         year: "2023",
         color: "#000000",
         titleColor: "#000000",
+        category: "University"
+      },
+      {
+        title: "SimCity 1989 in C++",
+        imagePath: "/work3.webp",
+        link: "https://github.com/ProximoBinks/SimCity-1989-OOP",
+        tags: ["C++", "University"],
+        year: "2022",
+        imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
+        color: "#8fb4dc",
+        category: "University"
+      },
+      {
+        title: "University Club Portal",
+        imagePath: "/work4.webp",
+        link: "https://github.com/ProximoBinks/University-Clubs-Website",
+        tags: ["HTML/SQL", "University"],
+        year: "2022",
+        imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
+        color: "#8fb4dc",
         category: "University"
       }
   ];
