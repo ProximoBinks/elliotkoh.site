@@ -30,14 +30,14 @@ const HamburgerMenu = () => {
 
             {/* Slide-in Menu */}
             <div 
-                className={`fixed top-0 right-0 h-full w-[400px] bg-[#1a1a1a] shadow-2xl transform transition-transform duration-500 ease-in-out ${
+                className={`fixed top-0 right-0 h-screen w-screen md:w-[768px] bg-[#3a3733] shadow-2xl transform transition-transform duration-500 ease-in-out ${
                     isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
                 style={{ zIndex: 90 }}
             >
                 {/* Menu Content */}
                 <div className="h-full flex flex-col pt-32 px-12">
-                    <nav className="flex-1 bg-[#3a3733]">
+                    <nav className="flex-1">
                         <ul className="space-y-8">
                             <li>
                                 <Link 
