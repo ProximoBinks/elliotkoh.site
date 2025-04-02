@@ -82,12 +82,12 @@ const HamburgerMenu = () => {
                         <p className="text-[#a29e9a] text-sm md:text-lg font-bold uppercase ">Email Address</p>
                         <p className="text-white/90 mb-6 text-sm md:text-lg"><a href="mailto:elliot@proximo.life">elliot@proximo.life</a></p>
 
-                        <div className="flex space-x-3 text-sm md:text-base">
+                        <div className="flex space-x-2 md:space-x-4 text-sm md:text-base">
                             <Link
                                 href="https://www.linkedin.com/in/elliotkoh1/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-white/90 border border-white/30 px-4 py-[0.6rem] rounded-full hover:bg-white/10 transition-colors duration-300"
+                                className="text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/10 transition-colors duration-300"
                             >
                                 LINKEDIN
                             </Link>
@@ -95,7 +95,7 @@ const HamburgerMenu = () => {
                                 href="https://instagram.com/elliot.koh"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-white/90 border border-white/30 px-4 py-[0.6rem] rounded-full hover:bg-white/10 transition-colors duration-300"
+                                className="text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/10 transition-colors duration-300"
                             >
                                 INSTAGRAM
                             </Link>
@@ -103,7 +103,7 @@ const HamburgerMenu = () => {
                                 href="https://hypertools.dev"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative text-white/90 border border-white/30 px-4 py-[0.6rem] rounded-full hover:bg-white/5 hover:border-[#b464ff]/50 hover:text-white transition-all duration-300 overflow-hidden group"
+                                className="relative text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/5 hover:border-[#b464ff]/50 hover:text-white transition-all duration-300 overflow-hidden group"
                             >
                                 <span className="relative z-10">HYPERTOOLS</span>
                                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-[#b464ff]/20 to-transparent transition-transform duration-1000 ease-in-out"></span>

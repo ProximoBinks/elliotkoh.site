@@ -6,8 +6,13 @@ import HamburgerMenu from './HamburgerMenu';
 
 const Layout = ({ children }) => {
   const [showHamburger, setShowHamburger] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if the device is iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    setIsMobile(isIOS);
+
     const handleScroll = () => {
       // Get viewport height
       const vh = window.innerHeight;
@@ -35,9 +40,21 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="preload" as="image" href="/herosquare5.webp" />
       </Head>
+      {/* Fixed position background for iOS */}
+      {isMobile && (
+        <div 
+          className="fixed inset-0 z-[-1]"
+          style={{
+            backgroundImage: 'url(/herosquare5.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      )}
       <div 
         className="flex flex-col min-h-screen overflow-x-hidden relative"
-        style={{
+        style={isMobile ? {} : {
           backgroundImage: 'url(/herosquare5.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'top',
