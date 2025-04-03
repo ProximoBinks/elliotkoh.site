@@ -150,7 +150,7 @@ const works = [
         imagePath: "/wordle-matlab.webp", // Replace with actual image path
         link: "https://github.com/ProximoBinks/Wordle-MATLAB", // Replace with actual repo if needed
         tags: ["MATLAB", "Game"],
-        year: "2023",
+        year: "2022",
         color: "#000000",
         titleColor: "#000000",
         category: "University"
@@ -170,7 +170,7 @@ const works = [
         imagePath: "/work4.webp",
         link: "https://github.com/ProximoBinks/University-Clubs-Website",
         tags: ["HTML/SQL", "University"],
-        year: "2022",
+        year: "2023",
         imageClassName: "pb-10 sm:pb-2 md:pb-10 lg:pb-11 xl:pb-0 3xl:mb-[-2.3rem] mb-0",
         color: "#8fb4dc",
         category: "University"
