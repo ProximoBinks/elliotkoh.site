@@ -17,6 +17,14 @@ const works = [
       category: "Client"
     },
     {
+      title: "AlphaBet",
+      imagePath: "/alphabetsite.webp",
+      link: "https://alphabethq.com.au",
+      tags: ["Next.js", "Whop", "SaaS"],
+      year: "2025",
+      category: "Client"
+    },
+    {
       title: "CodeKage",
       imagePath: "/codekage-1.webp",
       link: "https://codekage.netlify.app",
@@ -70,8 +78,6 @@ const works = [
       link: "https://proximobinks.github.io/UCAT-Calculator/",
       tags: ["HTML/JS", "Education"],
       year: "2023",
-      color: "#000000",
-      titleColor: "#000000",
       category: "Client"
     },
     {
