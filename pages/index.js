@@ -36,6 +36,16 @@ const works = [
       category: "Personal"
     },
     {
+      title: "digital diary",
+      imagePath: "/proximolife.webp",
+      link: "https://proximo.life",
+      tags: ["Astro", "Blog"],
+      year: "2025",
+      color: "#000000",
+      titleColor: "#000000",
+      category: "Personal"
+    },
+    {
       title: "portfolio v1",
       imagePath: "/portfolio-1.webp",
       link: "https://legacy.elliotkoh.dev",
@@ -84,8 +94,8 @@ const works = [
       },
     {
       title: "HyperStyle",
-      imagePath: "/image-eraser-tool.webp",
-      link: "https://github.com/ProximoBinks/image-eraser",
+      imagePath: "/hyperstyle.webp",
+      // link: "https://github.com/ProximoBinks/image-eraser",
       tags: ["Next.js", "FastAPI", "Canvas"],
       year: "2025",
       color: "#b48df0",
@@ -111,8 +121,8 @@ const works = [
     {
       title: "HyperStep",
       imagePath: "/hyperstep.webp",
-      link: "https://hypertools.dev/hyperstep",
-      tags: ["Next.js", "Fitness"],
+      // link: "https://hypertools.dev/hyperstep",
+      tags: ["Swift", "Fitness"],
       year: "2025",
       color: "#b48df0",
       category: "HyperTools"
@@ -145,6 +155,17 @@ const works = [
         category: "University",
         description: "Developed a deep learning system using autoencoders to identify handwriting styles for forensic and archival purposes."
       },
+      {
+        title: "Concept Drift Forecasting",
+        imagePath: "/conceptdrift.webp",
+        tags: ["Python", "GRU", "XGBoost", "ML"],
+        year: "2024",
+        color: "#000000",
+        titleColor: "#000000",
+        category: "University",
+        link: "https://github.com/ProximoBinks/RenewableConceptDriftEnergyForecasting",
+        description: "Developed a hybrid GRU-XGBoost model to predict electricity prices while adapting to concept drift in renewable-heavy datasets. Achieved significant improvement in accuracy and reduced drift from 18 to 3 using statistical detection and retraining strategies."
+      },      
       {
         title: "Wordle in MATLAB",
         imagePath: "/wordle-matlab.webp", // Replace with actual image path
