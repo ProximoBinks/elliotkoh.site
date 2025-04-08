@@ -46,7 +46,7 @@ const works = [
     {
       title: "digital diary",
       imagePath: "/proximolife.webp",
-      link: "https://proximo.life",
+      // link: "https://proximo.life",
       tags: ["Astro", "Blog"],
       year: "2025",
       color: "#000000",
