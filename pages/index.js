@@ -11,17 +11,20 @@ const works = [
       title: "Specialist Plus",
       imagePath: "/specialist-plus-2.webp",
       link: "https://specialistplus.com.au",
-      tags: ["Next.js", "Client Work"],
+      tags: ["Next.js", "Medical"],
       year: "2025",
-      color: "#8fb4dc",
+      color: "#ffffff",
+      yearTagColor: "#7b0002",
       category: "Client"
     },
     {
       title: "AlphaBet",
       imagePath: "/alphabetsite.webp",
       link: "https://alphabethq.com.au",
-      tags: ["Next.js", "Whop", "SaaS"],
+      tags: ["Next.js", "Finance"],
       year: "2025",
+      color: "#8fb4dc",
+      yearTagColor: "#0000ba",
       category: "Client"
     },
     {
@@ -63,37 +66,38 @@ const works = [
       titleColor: "#000000",
       category: "Personal"
     },
-    {
-      title: "Altitutor UCAT Timer",
-      imagePath: "/timer-1.webp",
-      link: "https://proximobinks.github.io/UCAT-Timer/",
-      tags: ["HTML/JS", "Education"],
-      year: "2023",
-      color: "#8fb4dc",
-      category: "Client"
-    },
-    {
-      title: "Altitutor UCAT TI-108",
-      imagePath: "/altitutor-calculator.webp",
-      link: "https://proximobinks.github.io/UCAT-Calculator/",
-      tags: ["HTML/JS", "Education"],
-      year: "2023",
-      category: "Client"
-    },
+    // {
+    //   title: "Altitutor UCAT Timer",
+    //   imagePath: "/timer-1.webp",
+    //   link: "https://proximobinks.github.io/UCAT-Timer/",
+    //   tags: ["HTML/JS", "Education"],
+    //   year: "2023",
+    //   color: "#8fb4dc",
+    //   category: "Client"
+    // },
+    // {
+    //   title: "Altitutor UCAT TI-108",
+    //   imagePath: "/altitutor-calculator.webp",
+    //   link: "https://proximobinks.github.io/UCAT-Calculator/",
+    //   tags: ["HTML/JS", "Education"],
+    //   year: "2023",
+    //   category: "Client"
+    // },
     {
         title: "HyperTools",
-        imagePath: "/hypertools-1.webp",
+        imagePath: "/hypertools.webp",
         link: "https://hypertools.dev",
         tags: ["Svelte", "SaaS"],
         year: "2025",
-        color: "#b48df0",
+        color: "#399ded",
+        yearTagColor: "#001b5e",
         category: "HyperTools"
       },
       {
-        title: "HyperTrack",
-        imagePath: "/hypertrack-1.webp",
-        link: "https://track.hypertools.dev",
-        tags: ["Next.js", "Tracking"],
+        title: "HyperStake",
+        imagePath: "/hyperstake.webp",
+        link: "https://hyperstake.bet",
+        tags: ["SaaS", "Tools", "Finance"],
         year: "2025",
         color: "#b48df0",
         category: "HyperTools"
@@ -107,14 +111,14 @@ const works = [
       color: "#b48df0",
       category: "HyperTools"
     },
-    {
-      title: "HyperGoals",
-      imagePath: "/hypergoals-1.webp",
-      tags: ["Next.js", "Habit Tracker"],
-      year: "2025",
-      color: "#b48df0",
-      category: "HyperTools"
-    },
+    // {
+    //   title: "HyperGoals",
+    //   imagePath: "/hypergoals-1.webp",
+    //   tags: ["Next.js", "Habit Tracker"],
+    //   year: "2025",
+    //   color: "#b48df0",
+    //   category: "HyperTools"
+    // },
     // {
     //   title: "HyperStake",
     //   imagePath: "/hyperstake.webp",
@@ -124,15 +128,15 @@ const works = [
     //   color: "#b48df0",
     //   category: "HyperTools"
     // },
-    {
-      title: "HyperStep",
-      imagePath: "/hyperstep.webp",
-      // link: "https://hypertools.dev/hyperstep",
-      tags: ["Swift", "Fitness"],
-      year: "2025",
-      color: "#b48df0",
-      category: "HyperTools"
-    },
+    // {
+    //   title: "HyperStep",
+    //   imagePath: "/hyperstep.webp",
+    //   // link: "https://hypertools.dev/hyperstep",
+    //   tags: ["Swift", "Fitness"],
+    //   year: "2025",
+    //   color: "#b48df0",
+    //   category: "HyperTools"
+    // },
     // {
     //   title: "HyperNotes (Obsidian Script Suite)",
     //   imagePath: "/hypernotes.webp",
@@ -298,7 +302,7 @@ const HomePage = () => {
                             {/* Right column (Paragraphs) */}
                             <div>
                                 <p className="text-base md:text-lg leading-relaxed max-w-[90%]">
-                                I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#8fb4dc] hover:text-[#7d9dc0] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools — from visual utilities to goal trackers — designed to simplify workflows and support personal growth.
+                                I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#399ded] hover:text-[#78b6e9] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools — from visual utilities to goal trackers — designed to simplify workflows and support personal growth.
                                 </p>
                                 <p className="text-base md:text-lg leading-relaxed mt-6 max-w-[90%]">
                                 Outside of tech, you'll find me designing pieces for my clothing brand, collecting peripherals, refining my desk setup, or deep in Japanese study as I prepare for my upcoming exchange in Tokyo.

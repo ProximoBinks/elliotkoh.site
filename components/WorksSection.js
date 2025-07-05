@@ -10,13 +10,13 @@ const WorksSection = ({ works }) => {
     const getCategoryColor = (category) => {
         switch (category) {
             case "HyperTools":
-                return "text-[#b48df0]"; // Purple for HyperTools
+                return "text-[#399ded]"; // Purple for HyperTools
             case "University":
                 return "text-white"; // Yellow for University
             case "Client":
-                return "text-red-500"; // Red for Client
+                return "text-[#ffffff]"; // Red for Client
             case "Personal":
-                return "text-[#23a4de]"; // Original blue for Personal
+                return "text-[#2db3f5]"; // Original blue for Personal
             default:
                 return "text-[#8fb4dc]";
         }

@@ -14,12 +14,12 @@ const Keyboard = ({ title, description, imageSrc, imageAlt, category, customTitl
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col justify-end p-5">
             <div className="transform transition-all duration-300 ease-in-out group-hover:translate-y-[-4px]">
-              <h2 className="text-2xl font-bold text-white backdrop-blur-sm bg-black/30 rounded-lg px-3 py-2 inline-block">{title}</h2>
+              <h2 className="text-2xl font-bold text-white bg-black/50 rounded-lg px-3 py-2 inline-block">{title}</h2>
               <div className="mt-2">
-                <span className="backdrop-blur-sm bg-white/10 border border-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full">{category}</span>
+                <span className="bg-white/20 border border-white/30 text-white text-xs font-medium px-3 py-1.5 rounded-full">{category}</span>
               </div>
               {description && (
-                <p className="text-white/90 mt-3 backdrop-blur-sm bg-black/20 rounded-lg px-3 py-2">{description}</p>
+                <p className="text-white/90 mt-3 bg-black/40 rounded-lg px-3 py-2">{description}</p>
               )}
             </div>
           </div>

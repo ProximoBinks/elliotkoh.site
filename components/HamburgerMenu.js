@@ -101,10 +101,10 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
                                 href="https://hypertools.dev"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/5 hover:border-[#b464ff]/50 hover:text-white transition-all duration-300 overflow-hidden group"
+                                className="relative text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/5 hover:border-[#399ded]/50 hover:text-white transition-all duration-300 overflow-hidden group"
                             >
                                 <span className="relative z-10">HYPERTOOLS</span>
-                                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-[#b464ff]/20 to-transparent transition-transform duration-1000 ease-in-out"></span>
+                                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-[#399ded]/20 to-transparent transition-transform duration-1000 ease-in-out"></span>
                             </Link>
                         </div>
                     </div>
