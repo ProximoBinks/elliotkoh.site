@@ -1,26 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
 import AdvancedLoadingScreen from './AdvancedLoadingScreen';
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   const [showHamburger, setShowHamburger] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
-  // Define critical images for loading
-  const criticalImages = [
-    '/herosquare5.webp',
-    '/testimg.webp',
-    '/banner.webp',
-    '/hypertools.webp',
-    '/specialist-plus-2.webp',
-    '/alphabetsite.webp'
-  ];
+  // Define critical images based on the current page
+  const getCriticalImages = () => {
+    // Always include the base layout images
+    const baseImages = ['/herosquare5.webp'];
+    
+    // Add page-specific images
+    switch (router.pathname) {
+      case '/':
+        return [
+          ...baseImages,
+          '/testimg.webp',
+          '/banner.webp',
+          '/hypertools.webp',
+          '/specialist-plus-2.webp',
+          '/alphabetsite.webp'
+        ];
+      case '/hobbies':
+        return [
+          ...baseImages,
+          '/keyboard.jpg',
+          '/cybertruck.jpg',
+          '/coding.webp',
+          '/setup.webp',
+          '/prjctbks.jpg',
+          '/origami.jpg'
+        ];
+      case '/keyboards':
+        return [
+          ...baseImages,
+          '/spring.webp',
+          '/keycult-square.jpg',
+          '/vega-square.jpg'
+        ];
+      case '/contact':
+        return baseImages; // Only base images for contact page
+      default:
+        return baseImages;
+    }
+  };
+
+  const criticalImages = getCriticalImages();
 
   // Cache detection function
   const checkImageCache = (src) => {
@@ -93,13 +127,16 @@ const Layout = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isMenuOpen]);
 
-  // Loading screen logic
+  // Loading screen logic - re-run when route changes
   useEffect(() => {
     const checkCacheAndLoad = async () => {
       try {
+        // Get current page's critical images
+        const currentCriticalImages = getCriticalImages();
+        
         // Check if all critical images are cached
         const cacheResults = await Promise.all(
-          criticalImages.map(src => checkImageCache(src))
+          currentCriticalImages.map(src => checkImageCache(src))
         );
         
         // If all images are cached, skip loading screen
@@ -112,17 +149,23 @@ const Layout = ({ children }) => {
             setShowContent(true);
           }, 100);
         } else {
-          // Show loading screen - let AdvancedLoadingScreen handle the loading
-          // It will call handleLoadComplete when done
+          // Images need to load, show loading screen
+          setIsLoading(true);
+          setShowContent(false);
         }
       } catch (error) {
         console.warn('Cache check failed, showing loading screen');
         // If cache check fails, show loading screen
+        setIsLoading(true);
+        setShowContent(false);
       }
     };
 
-    checkCacheAndLoad();
-  }, []);
+    // Only run cache check if router is ready
+    if (router.isReady) {
+      checkCacheAndLoad();
+    }
+  }, [router.isReady, router.pathname]);
 
   return (
     <>
