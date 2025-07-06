@@ -32,6 +32,7 @@ const WorksSection = ({ works }) => {
                         width={30}
                         height={30}
                         className="object-contain"
+                        style={{ width: 'auto', height: 'auto' }}
                         quality={100}
                         priority
                     />
@@ -66,6 +67,7 @@ const WorksSection = ({ works }) => {
                         width={20}
                         height={20}
                         className="object-contain"
+                        style={{ width: 'auto', height: 'auto' }}
                         quality={100}
                         priority
                     />
@@ -83,6 +85,7 @@ const WorksSection = ({ works }) => {
                         width={35}
                         height={35}
                         className="object-contain"
+                        style={{ width: 'auto', height: 'auto' }}
                         quality={100}
                         priority
                     />
