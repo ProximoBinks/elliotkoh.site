@@ -15,7 +15,7 @@ export const works = [
       link: "https://alphabethq.com.au",
       tags: ["Next.js", "Finance"],
       year: "2025",
-      color: "#8fb4dc",
+      color: "#ffffff",
       yearTagColor: "#0000ba",
       category: "Client"
     },
@@ -93,6 +93,17 @@ export const works = [
         year: "2025",
         color: "#b48df0",
         category: "HyperTools"
+      },
+      {
+        title: "mergelytics",
+        imagePath: "/mergelytics.webp",
+        link: "https://mergelytics.app",
+        tags: ["Next.js", "Gaming Tools", "Clash Royale"],
+        year: "2025",
+        color: "#399ded",
+        yearTagColor: "#001b5e",
+        category: "HyperTools",
+        description: "Complete Clash Royale Merge Tactics strategy platform with interactive team builder, meta compositions, full card database, modifiers, real-time analysis, and save/share."
       },
     {
       title: "HyperStyle",

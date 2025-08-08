@@ -46,11 +46,11 @@ const WorkCard = ({
                 </h3>
                 <div className="flex flex-wrap gap-2 max-w-full justify-center sm:justify-start md:justify-center lg:justify-start">
                     {tags.map((tag, index) => (
-                        <span 
+                        <span
                             key={index}
-                            className="outline outline-[1px] text-xs font-semibold rounded-lg backdrop-blur-md bg-white bg-opacity-10 flex items-center justify-center min-h-[26px] px-2.5 text-center max-w-[120px] break-words"
-                            style={{ 
-                                outlineColor: color,
+                            className="border text-xs font-semibold rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center min-h-[26px] px-2.5 text-center max-w-[120px] break-words shadow-lg"
+                            style={{
+                                borderColor: color,
                                 color: color
                             }}
                         >
