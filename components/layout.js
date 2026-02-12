@@ -14,10 +14,24 @@ const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
-  // Only preload the hero background — it's the only above-the-fold image.
-  // Everything else lazy loads naturally via the browser and next/image.
+  // Preload above-the-fold hero BG + first visible work images per page.
   const getCriticalImages = () => {
-    return ['/images/hero/herosquare5.webp'];
+    const baseImages = ['/images/hero/herosquare5.webp'];
+
+    switch (router.pathname) {
+      case '/':
+        return [
+          ...baseImages,
+          '/images/hero/testimg.webp',
+          // First 2 HyperTools + first 2 Client (top of works section)
+          '/images/projects/hypertools.webp',
+          '/images/projects/hyperstake.webp',
+          '/images/projects/specialist-plus-2.webp',
+          '/images/projects/alphabetsite.webp',
+        ];
+      default:
+        return baseImages;
+    }
   };
 
   const criticalImages = getCriticalImages();

@@ -20,14 +20,19 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [handleKeyDown]);
 
-    // Lock body scroll when open
+    // Lock body scroll + signal lightbox open to header
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
+            document.body.classList.add('lightbox-open');
         } else {
             document.body.style.overflow = '';
+            document.body.classList.remove('lightbox-open');
         }
-        return () => { document.body.style.overflow = ''; };
+        return () => {
+            document.body.style.overflow = '';
+            document.body.classList.remove('lightbox-open');
+        };
     }, [isOpen]);
 
     // Reset loaded state when image changes
@@ -39,33 +44,17 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
 
     return (
         <div
-            className="fixed inset-0 z-[100] flex items-center justify-center"
+            className="fixed inset-0 z-[9999] flex items-center justify-center cursor-pointer pt-[100px]"
             onClick={onClose}
         >
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" />
 
-            {/* Close button */}
-            <button
-                className="absolute top-4 right-4 z-10 text-white/70 hover:text-white transition-colors w-10 h-10 flex items-center justify-center text-3xl font-light"
-                onClick={onClose}
-                aria-label="Close"
-            >
-                &times;
-            </button>
-
-            {/* Image counter */}
-            {images.length > 1 && (
-                <div className="absolute top-4 left-4 z-10 text-white/50 text-sm font-medium">
-                    {currentIndex + 1} / {images.length}
-                </div>
-            )}
-
             {/* Navigation arrows */}
             {images.length > 1 && (
                 <>
                     <button
-                        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl"
+                        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl cursor-pointer"
                         onClick={(e) => {
                             e.stopPropagation();
                             onNavigate((currentIndex - 1 + images.length) % images.length);
@@ -75,7 +64,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
                         &#8249;
                     </button>
                     <button
-                        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl"
+                        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl cursor-pointer"
                         onClick={(e) => {
                             e.stopPropagation();
                             onNavigate((currentIndex + 1) % images.length);
@@ -89,9 +78,15 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
 
             {/* Full resolution image */}
             <div
-                className="relative max-w-[90vw] max-h-[90vh] z-[1]"
+                className="relative max-w-[90vw] max-h-[calc(100vh-120px)] z-[1] cursor-default flex flex-col items-center"
                 onClick={(e) => e.stopPropagation()}
             >
+                {/* Image counter */}
+                {images.length > 1 && (
+                    <div className="text-white/50 text-sm font-medium mb-2">
+                        {currentIndex + 1} / {images.length}
+                    </div>
+                )}
                 {/* Loading spinner */}
                 {!loaded && (
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -103,7 +98,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
                     alt={`Full resolution ${currentIndex + 1}`}
                     width={1920}
                     height={1280}
-                    className={`object-contain max-h-[90vh] w-auto rounded-lg transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                    className={`object-contain max-h-[calc(100vh-140px)] w-auto rounded-lg transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
                     quality={95}
                     priority
                     onLoad={() => setLoaded(true)}

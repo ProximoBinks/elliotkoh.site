@@ -50,3 +50,10 @@ body {
     padding-top: clamp(13rem, 27vw, 15rem);
   }
 }
+
+/* Header turns white when lightbox is open */
+body.lightbox-open .header-class,
+body.lightbox-open .header-class * {
+  color: white !important;
+  transition: color 0.3s ease;
+}
