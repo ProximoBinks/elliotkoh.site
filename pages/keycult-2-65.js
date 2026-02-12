@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import ImageLightbox from '../components/ImageLightbox';
@@ -42,6 +42,38 @@ const KeycultPage = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [progress, setProgress] = useState(0);
+    const startTime = useRef(Date.now());
+
+    // Preload all small display images + thumbnails in parallel
+    useEffect(() => {
+        if (typeof window === 'undefined') {
+            setLoading(false);
+            return;
+        }
+
+        const allPreload = [...displayImages, ...thumbnails];
+        const total = allPreload.length;
+        let loaded = 0;
+
+        const onLoad = () => {
+            loaded++;
+            setProgress(Math.round((loaded / total) * 100));
+            if (loaded === total) {
+                const elapsed = Date.now() - startTime.current;
+                const remaining = Math.max(0, 300 - elapsed);
+                setTimeout(() => setLoading(false), remaining);
+            }
+        };
+
+        allPreload.forEach((src) => {
+            const img = new window.Image();
+            img.onload = onLoad;
+            img.onerror = onLoad;
+            img.src = src;
+        });
+    }, []);
 
     const handleLeftArrowClick = () => {
         setCurrentIndex((prev) => (prev === 0 ? displayImages.length - 1 : prev - 1));
@@ -50,6 +82,21 @@ const KeycultPage = () => {
     const handleRightArrowClick = () => {
         setCurrentIndex((prev) => (prev === displayImages.length - 1 ? 0 : prev + 1));
     };
+
+    if (loading) {
+        return (
+            <div className="flex flex-col items-center justify-center h-screen bg-white">
+                <h2 className="text-2xl font-bold mb-4">Loading Keycult Gallery</h2>
+                <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div
+                        className="h-full bg-gray-800 transition-all duration-300 ease-out"
+                        style={{ width: `${progress}%` }}
+                    />
+                </div>
+                <p className="mt-2 text-sm text-gray-400">{progress}%</p>
+            </div>
+        );
+    }
 
     return (
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
