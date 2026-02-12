@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'next/image'; // Importing Image from next/image
-import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
+import SEO from '../components/SEO';
 
 const Keyboard = ({ title, description, imageSrc, imageAlt, category, customTitle }) => {
 
@@ -45,9 +45,10 @@ const Keyboard = ({ title, description, imageSrc, imageAlt, category, customTitl
 export default function Keyboards() {
   return (
     <div className="pb-[10%] mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl flex flex-col items-center">
-      <Head>
-        <title>Keyboards — Elliot Koh</title>
-      </Head>
+      <SEO
+        title="Keyboards"
+        description="A collection of custom mechanical keyboards — from endgame builds to unique switches and keycap sets."
+      />
       <div className="max-w-8xl">
         <h1 className="text-3xl font-bold text-left my-5">Keyboards</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lowercase text-white">

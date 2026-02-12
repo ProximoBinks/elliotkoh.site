@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../components/SEO';
 
 const Hobby = ({ title, description, imageSrc, imageAlt, category, customTitle }) => (
   customTitle ? (
@@ -34,9 +34,10 @@ const Hobby = ({ title, description, imageSrc, imageAlt, category, customTitle }
 export default function Hobbies() {
   return (
     <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl flex flex-col items-center pb-10">
-      <Head>
-        <title>Hobbies — Elliot Koh</title>
-      </Head>
+      <SEO
+        title="Hobbies"
+        description="Mechanical keyboards, collectibles, desk setups, coding projects, and more — a look at what I enjoy outside of work."
+      />
       <div className="max-w-6xl">
         <h1 className="text-3xl font-bold text-left my-5">Hobbies</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lowercase text-white">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import ImageLightbox from '../components/ImageLightbox';
+import SEO from '../components/SEO';
 
 const SpringPage = () => {
     // Small display image (fast loading)
@@ -14,9 +14,11 @@ const SpringPage = () => {
 
     return (
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
-            <Head>
-                <title>Owlab Spring — Elliot Koh</title>
-            </Head>
+            <SEO
+                title="Owlab Spring"
+                description="Lilac Owlab Spring with GMK Frost Witch R1 — featuring Creamsicle Frankenswitch on a hotswap PCB."
+                ogImage="https://elliotkoh.dev/images/keyboards/spring-small.webp"
+            />
 
             <div className="mt-[1%] mx-auto pb-[5%]">
                 {/* Main Image */}
