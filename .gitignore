@@ -17,6 +17,7 @@
 
 # misc
 .DS_Store
+*.psd
 
 # debug
 npm-debug.log*

@@ -64,7 +64,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="owlab-spring"
-            imageSrc="/images/keyboards/spring.webp"
+            imageSrc="/images/keyboards/spring-small.webp"
             imageAlt="Mechanical Keyboards"
           />
           <Keyboard
@@ -72,7 +72,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="keycult-2-65"
-            imageSrc="/images/keyboards/keycult-square.jpg"
+            imageSrc="/images/keyboards/keycult-square-small.webp"
             imageAlt="Mechanical Keyboards"
           />
           <Keyboard
@@ -80,7 +80,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="ai03-vega"
-            imageSrc="/images/keyboards/vega-square.jpg"
+            imageSrc="/images/keyboards/vega-square.webp"
             imageAlt="Mechanical Keyboards"
           />
         </div>
