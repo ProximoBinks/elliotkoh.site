@@ -21,6 +21,19 @@ class MyDocument extends Document {
 
           {/* Theme color for browser chrome */}
           <meta name="theme-color" content="#080807" />
+
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJW0JEJSJH" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-MJW0JEJSJH');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
