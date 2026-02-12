@@ -17,35 +17,35 @@ const Layout = ({ children }) => {
   // Define critical images based on the current page
   const getCriticalImages = () => {
     // Always include the base layout images
-    const baseImages = ['/herosquare5.webp'];
+    const baseImages = ['/images/hero/herosquare5.webp'];
     
     // Add page-specific images
     switch (router.pathname) {
       case '/':
         return [
           ...baseImages,
-          '/testimg.webp',
-          '/banner.webp',
-          '/hypertools.webp',
-          '/specialist-plus-2.webp',
-          '/alphabetsite.webp'
+          '/images/hero/testimg.webp',
+          '/images/hero/banner.webp',
+          '/images/projects/hypertools.webp',
+          '/images/projects/specialist-plus-2.webp',
+          '/images/projects/alphabetsite.webp'
         ];
       case '/hobbies':
         return [
           ...baseImages,
-          '/keyboard.jpg',
-          '/cybertruck.jpg',
-          '/coding.webp',
-          '/setup.webp',
-          '/prjctbks.jpg',
-          '/origami.jpg'
+          '/images/hobbies/keyboard.jpg',
+          '/images/hobbies/cybertruck.jpg',
+          '/images/hobbies/coding.webp',
+          '/images/hobbies/setup.webp',
+          '/images/hobbies/prjctbks.jpg',
+          '/images/hobbies/origami.jpg'
         ];
       case '/keyboards':
         return [
           ...baseImages,
-          '/spring.webp',
-          '/keycult-square.jpg',
-          '/vega-square.jpg'
+          '/images/keyboards/spring.webp',
+          '/images/keyboards/keycult-square.jpg',
+          '/images/keyboards/vega-square.jpg'
         ];
       case '/contact':
         return baseImages; // Only base images for contact page
@@ -170,7 +170,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href="/herosquare5.webp" />
+        <link rel="preload" as="image" href="/images/hero/herosquare5.webp" />
       </Head>
 
       {/* Advanced Loading Screen */}
@@ -189,7 +189,7 @@ const Layout = ({ children }) => {
           <div 
             className="fixed inset-0 z-[-1]"
             style={{
-              backgroundImage: 'url(/herosquare5.webp)',
+              backgroundImage: 'url(/images/hero/herosquare5.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -199,7 +199,7 @@ const Layout = ({ children }) => {
         <div 
           className="flex flex-col min-h-screen overflow-x-hidden relative"
           style={isMobile ? {} : {
-            backgroundImage: 'url(/herosquare5.webp)',
+            backgroundImage: 'url(/images/hero/herosquare5.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'top',
             backgroundRepeat: 'no-repeat',

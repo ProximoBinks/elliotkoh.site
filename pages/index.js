@@ -26,14 +26,14 @@ const HomePage = () => {
         <meta property="og:url" content="https://elliotkoh.netlify.app/" />
         <meta property="og:title" content="Home — Elliot Koh" />
         <meta property="og:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-        <meta property="og:image" content="https://elliotkoh.netlify.app/banner.webp" />
+        <meta property="og:image" content="https://elliotkoh.netlify.app/images/hero/banner.webp" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://elliotkoh.netlify.app/" />
         <meta property="twitter:title" content="Home — Elliot Koh" />
         <meta property="twitter:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-        <meta property="twitter:image" content="https://elliotkoh.netlify.app/banner.webp" />
+        <meta property="twitter:image" content="https://elliotkoh.netlify.app/images/hero/banner.webp" />
       </Head>
 
       <div style={{ height: 'calc(100vh - 100px)' }} className="flex flex-col items-center justify-center relative select-none text-black overflow-hidden">
@@ -51,7 +51,7 @@ const HomePage = () => {
           <div className="hidden md:flex md:w-[40%] relative md:items-end">
             <div className="aspect-[1/1.3] relative overflow-hidden w-full mb-0 md:mb-[3rem]">
               <Image
-                src="/testimg.webp"
+                src="/images/hero/testimg.webp"
                 alt="Profile Image"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -74,7 +74,7 @@ const HomePage = () => {
               {/* Mobile-only image - MOVED BEFORE the paragraph */}
               <div className="block md:hidden w-full aspect-[1/1.2] relative overflow-hidden mb-10">
                 <Image
-                  src="/testimg.webp"
+                  src="/images/hero/testimg.webp"
                   alt="Profile Image"
                   fill
                   sizes="(max-width: 768px) calc(100vw - 6rem), 100vw"

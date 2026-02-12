@@ -5,26 +5,26 @@ import Head from 'next/head';
 const KeycultPage = () => {
     // Array of main image URLs
     const images = [
-        '/ai03-vega.jpg'
-        // '/keycult2.webp',
-        // '/keycult3.webp',
-        // '/keycult4.webp',
-        // '/keycult5.webp',
-        // '/keycult6.webp',
-        // '/keycult7.webp',
-        // '/keycult8.webp',
+        '/images/keyboards/ai03-vega.jpg'
+        // '/images/keyboards/keycult2.webp',
+        // '/images/keyboards/keycult3.webp',
+        // '/images/keyboards/keycult4.webp',
+        // '/images/keyboards/keycult5.webp',
+        // '/images/keyboards/keycult6.webp',
+        // '/images/keyboards/keycult7.webp',
+        // '/images/keyboards/keycult8.webp',
     ];
 
     // Array of thumbnail image URLs
     const thumbnails = [
-        '/vega-square.jpg'
-        // '/thumb-keycult-2.webp',
-        // '/thumb-keycult-3.webp',
-        // '/thumb-keycult-4.webp',
-        // '/thumb-keycult-5.webp',
-        // '/thumb-keycult-6.webp',
-        // '/thumb-keycult-7.webp',
-        // '/thumb-keycult-8.webp',
+        '/images/keyboards/vega-square.jpg'
+        // '/images/keyboards/thumb-keycult-2.webp',
+        // '/images/keyboards/thumb-keycult-3.webp',
+        // '/images/keyboards/thumb-keycult-4.webp',
+        // '/images/keyboards/thumb-keycult-5.webp',
+        // '/images/keyboards/thumb-keycult-6.webp',
+        // '/images/keyboards/thumb-keycult-7.webp',
+        // '/images/keyboards/thumb-keycult-8.webp',
     ];
 
     // State to keep track of current image index
