@@ -109,7 +109,7 @@ export default function Footer() {
                 decoding="async"
                 data-nimg="1"
                 style={{ color: "transparent" }}
-                src="/arrow.svg"
+                src="/images/icons/arrow.svg"
               />
             </span>
             <span className="absolute flex translate-y-20 group-hover:translate-y-0 transition-all ease-in-out-cubic duration-500">
@@ -121,7 +121,7 @@ export default function Footer() {
                 decoding="async"
                 data-nimg="1"
                 style={{ color: "transparent" }}
-                src="/arrow.svg"
+                src="/images/icons/arrow.svg"
               />
             </span>
           </button>

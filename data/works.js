@@ -1,7 +1,7 @@
 export const works = [
     {
       title: "Specialist Plus",
-      imagePath: "/specialist-plus-2.webp",
+      imagePath: "/images/projects/specialist-plus-2.webp",
       link: "https://specialistplus.com.au",
       tags: ["Next.js", "Medical"],
       year: "2025",
@@ -11,7 +11,7 @@ export const works = [
     },
     {
       title: "AlphaBet",
-      imagePath: "/alphabetsite.webp",
+      imagePath: "/images/projects/alphabetsite.webp",
       link: "https://alphabethq.com.au",
       tags: ["Next.js", "Finance"],
       year: "2025",
@@ -21,7 +21,7 @@ export const works = [
     },
     {
       title: "CodeKage",
-      imagePath: "/codekage-1.webp",
+      imagePath: "/images/projects/codekage-1.webp",
       link: "https://codekage.netlify.app",
       tags: ["Gatsby.js", "Social Media"],
       year: "2024",
@@ -31,7 +31,7 @@ export const works = [
     },
     {
       title: "keebclub™",
-      imagePath: "/work1.webp",
+      imagePath: "/images/projects/work1.webp",
       link: "https://uoakeebclub.netlify.app",
       tags: ["Next.js", "Club"],
       year: "2024",
@@ -40,7 +40,7 @@ export const works = [
     },
     {
       title: "digital diary",
-      imagePath: "/proximolife.webp",
+      imagePath: "/images/projects/proximolife.webp",
       link: "https://proximo.life",
       tags: ["Astro", "Blog"],
       year: "2025",
@@ -50,7 +50,7 @@ export const works = [
     },
     {
       title: "portfolio v1",
-      imagePath: "/portfolio-1.webp",
+      imagePath: "/images/projects/portfolio-1.webp",
       link: "https://legacy.elliotkoh.dev",
       tags: ["Next.js", "portfolio"],
       year: "2022",
@@ -60,7 +60,7 @@ export const works = [
     },
     // {
     //   title: "Altitutor UCAT Timer",
-    //   imagePath: "/timer-1.webp",
+    //   imagePath: "/images/projects/timer-1.webp",
     //   link: "https://proximobinks.github.io/UCAT-Timer/",
     //   tags: ["HTML/JS", "Education"],
     //   year: "2023",
@@ -69,7 +69,7 @@ export const works = [
     // },
     // {
     //   title: "Altitutor UCAT TI-108",
-    //   imagePath: "/altitutor-calculator.webp",
+    //   imagePath: "/images/projects/altitutor-calculator.webp",
     //   link: "https://proximobinks.github.io/UCAT-Calculator/",
     //   tags: ["HTML/JS", "Education"],
     //   year: "2023",
@@ -77,7 +77,7 @@ export const works = [
     // },
     {
         title: "HyperTools",
-        imagePath: "/hypertools.webp",
+        imagePath: "/images/projects/hypertools.webp",
         link: "https://hypertools.dev",
         tags: ["Svelte", "SaaS"],
         year: "2025",
@@ -87,7 +87,7 @@ export const works = [
       },
       {
         title: "HyperStake",
-        imagePath: "/hyperstake.webp",
+        imagePath: "/images/projects/hyperstake.webp",
         link: "https://hyperstake.bet",
         tags: ["SaaS", "Tools", "Finance"],
         year: "2025",
@@ -96,7 +96,7 @@ export const works = [
       },
       {
         title: "mergelytics",
-        imagePath: "/mergelytics.webp",
+        imagePath: "/images/projects/mergelytics.webp",
         link: "https://mergelytics.app",
         tags: ["Next.js", "Gaming Tools", "Clash Royale"],
         year: "2025",
@@ -107,7 +107,7 @@ export const works = [
       },
     {
       title: "HyperStyle",
-      imagePath: "/hyperstyle.webp",
+      imagePath: "/images/projects/hyperstyle.webp",
       // link: "https://github.com/ProximoBinks/image-eraser",
       tags: ["Next.js", "FastAPI", "Canvas"],
       year: "2025",
@@ -116,7 +116,7 @@ export const works = [
     },
     // {
     //   title: "HyperGoals",
-    //   imagePath: "/hypergoals-1.webp",
+    //   imagePath: "/images/projects/hypergoals-1.webp",
     //   tags: ["Next.js", "Habit Tracker"],
     //   year: "2025",
     //   color: "#b48df0",
@@ -124,7 +124,7 @@ export const works = [
     // },
     // {
     //   title: "HyperStake",
-    //   imagePath: "/hyperstake.webp",
+    //   imagePath: "/images/projects/hyperstake.webp",
     //   link: "https://hypertools.dev/hyperstake",
     //   tags: ["Next.js", "Finance", "EV Calculator"],
     //   year: "2025",
@@ -133,7 +133,7 @@ export const works = [
     // },
     // {
     //   title: "HyperStep",
-    //   imagePath: "/hyperstep.webp",
+    //   imagePath: "/images/projects/hyperstep.webp",
     //   // link: "https://hypertools.dev/hyperstep",
     //   tags: ["Swift", "Fitness"],
     //   year: "2025",
@@ -142,7 +142,7 @@ export const works = [
     // },
     // {
     //   title: "HyperNotes (Obsidian Script Suite)",
-    //   imagePath: "/hypernotes.webp",
+    //   imagePath: "/images/projects/hypernotes.webp",
     //   link: "https://github.com/ProximoBinks/obsidian-hypernotes",
     //   tags: ["Obsidian", "Scripting", "Automation"],
     //   year: "2025",
@@ -151,7 +151,7 @@ export const works = [
     // },
     {
         title: "HyperStamp",
-        imagePath: "/timestamp.webp",
+        imagePath: "/images/projects/timestamp.webp",
         link: "https://timestamp.hypertools.dev",
         tags: ["HTML/JS", "Tools"],
         year: "2023",
@@ -160,7 +160,7 @@ export const works = [
       },
       {
         title: "Writer ID (Autoencoder)",
-        imagePath: "/autoencoder.webp",
+        imagePath: "/images/projects/autoencoder.webp",
         tags: ["Python", "TensorFlow", "NN"],
         year: "2023",
         color: "#000000",
@@ -170,7 +170,7 @@ export const works = [
       },
       {
         title: "Concept Drift Forecasting",
-        imagePath: "/conceptdrift.webp",
+        imagePath: "/images/projects/conceptdrift.webp",
         tags: ["Python", "GRU", "XGBoost", "ML"],
         year: "2024",
         color: "#000000",
@@ -181,7 +181,7 @@ export const works = [
       },      
       {
         title: "Wordle in MATLAB",
-        imagePath: "/wordle-matlab.webp", // Replace with actual image path
+        imagePath: "/images/projects/wordle-matlab.webp", // Replace with actual image path
         link: "https://github.com/ProximoBinks/Wordle-MATLAB", // Replace with actual repo if needed
         tags: ["MATLAB", "Game"],
         year: "2022",
@@ -191,7 +191,7 @@ export const works = [
       },
       {
         title: "SimCity 1989 in C++",
-        imagePath: "/work3.webp",
+        imagePath: "/images/projects/work3.webp",
         link: "https://github.com/ProximoBinks/SimCity-1989-OOP",
         tags: ["C++", "University"],
         year: "2022",
@@ -201,7 +201,7 @@ export const works = [
       },
       {
         title: "University Club Portal",
-        imagePath: "/work4.webp",
+        imagePath: "/images/projects/work4.webp",
         link: "https://github.com/ProximoBinks/University-Clubs-Website",
         tags: ["HTML/SQL", "University"],
         year: "2023",

@@ -46,7 +46,7 @@ export default function Hobbies() {
             description="Curating and customising mechanical keyboards for the perfect balance of sound, feel, and form."
             category="Technical"
             customTitle="keyboards"
-            imageSrc="/keyboard.jpg"
+            imageSrc="/images/hobbies/keyboard.jpg"
             imageAlt="Mechanical Keyboards"
           />
 
@@ -54,7 +54,7 @@ export default function Hobbies() {
             title="Collectibles"
             description="Collecting iconic pieces—Pokémon cards, figures, and memorabilia that blend nostalgia with design."
             category="Recreational"
-            imageSrc="/cybertruck.jpg"
+            imageSrc="/images/hobbies/cybertruck.jpg"
             imageAlt="Collectibles"
           />
 
@@ -62,7 +62,7 @@ export default function Hobbies() {
             title="Coding"
             description="Building sleek, efficient software and continuously pushing boundaries in development."
             category="Technical"
-            imageSrc="/coding.webp"
+            imageSrc="/images/hobbies/coding.webp"
             imageAlt="Coding"
           />
 
@@ -70,7 +70,7 @@ export default function Hobbies() {
             title="Desk Setup"
             description="Refining my workspace with high-performance peripherals and clean, intentional design."
             category="Technical"
-            imageSrc="/setup.webp"
+            imageSrc="/images/hobbies/setup.webp"
             imageAlt="PC"
           />
 
@@ -78,7 +78,7 @@ export default function Hobbies() {
             title="Clothing Brand"
             description="Designing and experimenting with fashion that reflects identity, story, and cultural influence."
             category="Creative"
-            imageSrc="/prjctbks.jpg"
+            imageSrc="/images/hobbies/prjctbks.jpg"
             imageAlt="Clothing Brand"
           />
 
@@ -86,7 +86,7 @@ export default function Hobbies() {
             title="Origami"
             description="Turning simple paper into complex art—combining patience, precision, and creativity."
             category="Creative"
-            imageSrc="/origami.jpg"
+            imageSrc="/images/hobbies/origami.jpg"
             imageAlt="Origami"
           />
         </div>

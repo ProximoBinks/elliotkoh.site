@@ -56,7 +56,7 @@ export default function Keyboards() {
             title="want to make your own keyboard?"
             description="coming soon..."
             category="guide"
-            imageSrc="/alex-keyboard.webp"
+            imageSrc="/images/keyboards/alex-keyboard.webp"
             imageAlt="Mechanical Keyboards"
             /> */}
           <Keyboard
@@ -64,7 +64,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="owlab-spring"
-            imageSrc="/spring.webp"
+            imageSrc="/images/keyboards/spring.webp"
             imageAlt="Mechanical Keyboards"
           />
           <Keyboard
@@ -72,7 +72,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="keycult-2-65"
-            imageSrc="/keycult-square.jpg"
+            imageSrc="/images/keyboards/keycult-square.jpg"
             imageAlt="Mechanical Keyboards"
           />
           <Keyboard
@@ -80,7 +80,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="ai03-vega"
-            imageSrc="/vega-square.jpg"
+            imageSrc="/images/keyboards/vega-square.jpg"
             imageAlt="Mechanical Keyboards"
           />
         </div>

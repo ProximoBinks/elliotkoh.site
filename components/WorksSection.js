@@ -27,7 +27,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/uoa-logo.png"
+                        src="/images/icons/uoa-logo.png"
                         alt="University of Auckland"
                         width={30}
                         height={30}
@@ -45,7 +45,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/hypertools-nobackground.png"
+                        src="/images/icons/hypertools-nobackground.png"
                         alt="HyperTools"
                         width={30}
                         height={30}
@@ -62,7 +62,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/red-tick.png"
+                        src="/images/icons/red-tick.png"
                         alt="Client Work"
                         width={20}
                         height={20}
@@ -80,7 +80,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/personal-projects.png"
+                        src="/images/icons/personal-projects.png"
                         alt="Personal Projects"
                         width={35}
                         height={35}

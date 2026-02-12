@@ -33,7 +33,7 @@ module.exports = {
         'sans': ['Raleway', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('/herosquare5.webp')",
+        'hero-pattern': "url('/images/hero/herosquare5.webp')",
       },
     },
   },
