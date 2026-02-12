@@ -14,44 +14,10 @@ const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
-  // Define critical images based on the current page
+  // Only preload the hero background — it's the only above-the-fold image.
+  // Everything else lazy loads naturally via the browser and next/image.
   const getCriticalImages = () => {
-    // Always include the base layout images
-    const baseImages = ['/images/hero/herosquare5.webp'];
-    
-    // Add page-specific images
-    switch (router.pathname) {
-      case '/':
-        return [
-          ...baseImages,
-          '/images/hero/testimg.webp',
-          '/images/hero/banner.webp',
-          '/images/projects/hypertools.webp',
-          '/images/projects/specialist-plus-2.webp',
-          '/images/projects/alphabetsite.webp'
-        ];
-      case '/hobbies':
-        return [
-          ...baseImages,
-          '/images/hobbies/keyboard.jpg',
-          '/images/hobbies/cybertruck.jpg',
-          '/images/hobbies/coding.webp',
-          '/images/hobbies/setup.webp',
-          '/images/hobbies/prjctbks.jpg',
-          '/images/hobbies/origami.jpg'
-        ];
-      case '/keyboards':
-        return [
-          ...baseImages,
-          '/images/keyboards/spring.webp',
-          '/images/keyboards/keycult-square.jpg',
-          '/images/keyboards/vega-square.jpg'
-        ];
-      case '/contact':
-        return baseImages; // Only base images for contact page
-      default:
-        return baseImages;
-    }
+    return ['/images/hero/herosquare5.webp'];
   };
 
   const criticalImages = getCriticalImages();
@@ -89,9 +55,7 @@ const Layout = ({ children }) => {
 
   const handleLoadComplete = () => {
     setIsLoading(false);
-    setTimeout(() => {
-      setShowContent(true);
-    }, 200);
+    setShowContent(true);
   };
 
   useEffect(() => {
@@ -178,7 +142,7 @@ const Layout = ({ children }) => {
         <AdvancedLoadingScreen 
           onLoadComplete={handleLoadComplete} 
           criticalImages={criticalImages} 
-          minLoadTime={1000}
+          minLoadTime={300}
         />
       )}
 

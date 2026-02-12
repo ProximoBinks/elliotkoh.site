@@ -46,7 +46,7 @@ export default function Hobbies() {
             description="Curating and customising mechanical keyboards for the perfect balance of sound, feel, and form."
             category="Technical"
             customTitle="keyboards"
-            imageSrc="/images/hobbies/keyboard.jpg"
+            imageSrc="/images/keyboards/keyboard.jpg"
             imageAlt="Mechanical Keyboards"
           />
 
@@ -54,7 +54,7 @@ export default function Hobbies() {
             title="Collectibles"
             description="Collecting iconic pieces—Pokémon cards, figures, and memorabilia that blend nostalgia with design."
             category="Recreational"
-            imageSrc="/images/hobbies/cybertruck.jpg"
+            imageSrc="/images/hobbies/cybertruck.webp"
             imageAlt="Collectibles"
           />
 
@@ -78,7 +78,7 @@ export default function Hobbies() {
             title="Clothing Brand"
             description="Designing and experimenting with fashion that reflects identity, story, and cultural influence."
             category="Creative"
-            imageSrc="/images/hobbies/prjctbks.jpg"
+            imageSrc="/images/hobbies/prjctbks.webp"
             imageAlt="Clothing Brand"
           />
 
@@ -86,7 +86,7 @@ export default function Hobbies() {
             title="Origami"
             description="Turning simple paper into complex art—combining patience, precision, and creativity."
             category="Creative"
-            imageSrc="/images/hobbies/origami.jpg"
+            imageSrc="/images/hobbies/origami.webp"
             imageAlt="Origami"
           />
         </div>

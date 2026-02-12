@@ -22,29 +22,31 @@ const AdvancedLoadingScreen = ({ onLoadComplete, criticalImages = [], minLoadTim
 
     checkFonts();
 
-    // Load critical images
+    // Load critical images in parallel (not sequentially)
     const loadImages = async () => {
-      let completed = 0;
       const totalImages = criticalImages.length;
+      let completed = 0;
 
-      for (const imageSrc of criticalImages) {
-        try {
-          await new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = resolve;
-            img.onerror = resolve; // Continue even if image fails
-            img.src = imageSrc;
-          });
-          completed++;
-          setLoadedImages(completed);
-          setProgress((completed / totalImages) * 80); // Reserve 20% for final steps
-        } catch (error) {
-          console.warn(`Failed to load image: ${imageSrc}`);
-          completed++;
-          setLoadedImages(completed);
-          setProgress((completed / totalImages) * 80);
-        }
-      }
+      const loadSingle = (src) =>
+        new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => {
+            completed++;
+            setLoadedImages(completed);
+            setProgress((completed / totalImages) * 90);
+            resolve();
+          };
+          img.onerror = () => {
+            completed++;
+            setLoadedImages(completed);
+            setProgress((completed / totalImages) * 90);
+            resolve();
+          };
+          img.src = src;
+        });
+
+      // Load all images at once instead of one-by-one
+      await Promise.all(criticalImages.map(loadSingle));
 
       // Wait for minimum load time to prevent flashing
       const elapsedTime = Date.now() - startTime.current;
@@ -52,10 +54,8 @@ const AdvancedLoadingScreen = ({ onLoadComplete, criticalImages = [], minLoadTim
 
       setTimeout(() => {
         setProgress(100);
-        setTimeout(() => {
-          setIsComplete(true);
-          onLoadComplete();
-        }, 500);
+        setIsComplete(true);
+        onLoadComplete();
       }, remainingTime);
     };
 

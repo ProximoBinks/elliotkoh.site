@@ -27,8 +27,8 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/images/icons/uoa-logo.png"
-                        alt="University of Auckland"
+                        src="/images/icons/uoa-logo.webp"
+                        alt="University of Adelaide"
                         width={30}
                         height={30}
                         className="object-contain"
@@ -45,7 +45,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/images/icons/hypertools-nobackground.png"
+                        src="/images/icons/hypertools-nobackground.webp"
                         alt="HyperTools"
                         width={30}
                         height={30}
@@ -62,7 +62,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/images/icons/red-tick.png"
+                        src="/images/icons/red-tick.webp"
                         alt="Client Work"
                         width={20}
                         height={20}
@@ -80,7 +80,7 @@ const WorksSection = ({ works }) => {
             return (
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/images/icons/personal-projects.png"
+                        src="/images/icons/personal-projects.webp"
                         alt="Personal Projects"
                         width={35}
                         height={35}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const WorkCard = ({ 
@@ -32,10 +33,14 @@ const WorkCard = ({
 
     const CardContent = () => (
         <div className="group">
-            <img 
+            <Image 
                 src={imagePath} 
                 alt={title} 
+                width={800}
+                height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className={`transition-transform duration-300 ease-in-out transform group-hover:scale-110 w-full h-auto ${imageClassName}`}
+                quality={75}
             />
             <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col space-y-2 sm:space-y-0 sm:flex-row md:flex-col md:space-y-2 lg:flex-row lg:space-y-0 items-center sm:items-center sm:justify-between">
                 <h3 
