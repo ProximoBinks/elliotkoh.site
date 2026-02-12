@@ -5,6 +5,8 @@ import Link from 'next/link';
 import WorkCard from '../components/WorkCard';
 import WorksSection from '../components/WorksSection';
 import { works } from '../data/works';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../lib/constants';
 
 const HomePage = () => {
   // Create a ref for the "About Us" section
@@ -16,24 +18,35 @@ const HomePage = () => {
 
   return (
     <>
+      <SEO
+        title="Home"
+        description="Developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work."
+      />
       <Head>
-        <title>Home — Elliot Koh</title>
-        <meta name="description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-        <meta name="theme-color" content="#e8ecef" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://elliotkoh.netlify.app/" />
-        <meta property="og:title" content="Home — Elliot Koh" />
-        <meta property="og:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-        <meta property="og:image" content="https://elliotkoh.netlify.app/images/hero/banner.webp" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://elliotkoh.netlify.app/" />
-        <meta property="twitter:title" content="Home — Elliot Koh" />
-        <meta property="twitter:description" content="A skilled Computer Science undergrad specialising in crafting captivating digital experiences, merging technology and creativity to elevate startups in the digital realm." />
-        <meta property="twitter:image" content="https://elliotkoh.netlify.app/images/hero/banner.webp" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Elliot Koh',
+              url: SITE_URL,
+              image: `${SITE_URL}/images/hero/testimg.webp`,
+              jobTitle: 'Developer & Designer',
+              description:
+                'Developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work.',
+              sameAs: [
+                'https://hypertools.dev',
+              ],
+              knowsAbout: [
+                'Web Development',
+                'UI/UX Design',
+                'Software Engineering',
+                'Computer Science',
+              ],
+            }),
+          }}
+        />
       </Head>
 
       <div style={{ height: 'calc(100vh - 100px)' }} className="flex flex-col items-center justify-center relative select-none text-black overflow-hidden">

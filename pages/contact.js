@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -45,9 +45,10 @@ export default function Contact() {
 
   return (
     <div className="font-semibold">
-      <Head>
-        <title>Get in touch — Elliot Koh</title>
-      </Head>
+      <SEO
+        title="Get in Touch"
+        description="Have a project idea or just want to say hello? Get in touch with Elliot Koh — I'd love to hear from you."
+      />
 
       <div className="max-w-4xl mx-auto pt-[5rem] xl:pt-[10rem] px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl p-8 shadow-xl ring-1 ring-gray-100 mb-5">

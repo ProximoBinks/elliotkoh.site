@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import ImageLightbox from '../components/ImageLightbox';
+import SEO from '../components/SEO';
 
 const VegaPage = () => {
     // Small display image (fast loading)
@@ -14,9 +14,11 @@ const VegaPage = () => {
 
     return (
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
-            <Head>
-                <title>ai03 Vega — Elliot Koh</title>
-            </Head>
+            <SEO
+                title="ai03 Vega"
+                description="Rose gold ai03 Vega with GMK Peaches n Cream R1 — featuring Holy Boba switches on a POM plate with hotswap PCB."
+                ogImage="https://elliotkoh.dev/images/keyboards/ai03-vega-small.webp"
+            />
 
             <div className="mt-[1%] mx-auto pb-[5%]">
                 {/* Main Image */}

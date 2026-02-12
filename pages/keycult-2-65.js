@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import ImageLightbox from '../components/ImageLightbox';
+import SEO from '../components/SEO';
 
 const KeycultPage = () => {
     // Small display images (fast loading)
@@ -100,9 +100,11 @@ const KeycultPage = () => {
 
     return (
         <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
-            <Head>
-                <title>Keycult 2-65</title>
-            </Head>
+            <SEO
+                title="Keycult 2/65"
+                description="Ocean grey Keycult 2/65 with GMK Shoko R2 — featuring lubed MX Blacks on an aluminum plate with WT65-A PCB."
+                ogImage="https://elliotkoh.dev/images/keyboards/keycult1-small.webp"
+            />
 
             {/* Image Carousel */}
             <div className="mt-[1%] mx-auto pb-[5%]">
