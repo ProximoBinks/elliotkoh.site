@@ -1,0 +1,6 @@
+keyboard: TGR X Singa Unikorn R2.2
+case: Berlin Blue
+weight: Copper (Signed by Elaine)
+switches: Diamond Polished MX Blacks
+keycaps: GMK Oni Base, Novelties
+artisan: Keyby OG, SM Bang Bowsette Coco

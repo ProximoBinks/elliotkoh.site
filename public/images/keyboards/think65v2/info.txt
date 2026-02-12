@@ -1,0 +1,6 @@
+Board: Think6.5 V2 2U polycarbonate top, alu bottom (hotswap pcb)
+Board insulation: plate foam, case insulation
+Plate: FR4 with gaskets installed
+Keycaps: GMK Frost Witch
+Switches: BCP spacebar (ultraglide mx black top, novelkey cream stem, jwk bottom), Ultraglide Cherry MX Black (320k+ actuations) with 63.5g spirit slow springs. Switches lubed with Krytox 205g0 and springs lubed with Krytox 105 Oil.
+Stabilizers: Durock Stabilizers V2 lubed with Krytox 205g0.

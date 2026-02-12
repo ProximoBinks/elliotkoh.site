@@ -1,0 +1,6 @@
+keyboard: Qwertykeys Neo60
+case: anodised grey coat
+weight: silver weight
+switches: hmx cheese
+keycaps: gmk modern dolch 2 base, command kit, 
+artisan: none

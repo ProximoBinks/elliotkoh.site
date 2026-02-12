@@ -128,9 +128,17 @@ const HomePage = () => {
         <div id="works" className="pt-[5%]">
           <WorksSection works={works} />
         </div>
-        <div className="mt-10 w-auto bg-gradient-to-r from-blue-500 to-teal-400 p-10 text-center rounded-lg shadow-lg mx-auto">
-          <div className="text-white text-xl md:text-2xl font-bold mb-6">Got a project? Want to reach out?</div>
-          <Link href="/contact" className="uppercase bg-white text-blue-500 font-extrabold py-4 px-4 hover:px-8 rounded-[2rem] hover:bg-gray-100 text-sm sm:text-base md:text-lg transition-all hover:rounded-[2rem] focus:outline-none focus:ring-2 shadow-lg focus:ring-blue-500 focus:ring-offset-2">Get in touch</Link>
+        <div className="mt-16 md:mt-24 pb-4 max-w-[900px] mx-auto text-left">
+          <div className="text-[#96928e] text-sm tracking-wider opacity-70 font-bold mb-6">(WORK WITH ME)</div>
+          <h2 className="uppercase text-[clamp(2.5rem,7vw,5rem)] lg:text-[clamp(4rem,5vw,7rem)] font-bold leading-[0.9] tracking-tight text-[#c9c9c1] mb-8">
+            GOT A PROJECT?<br />LET'S TALK<span className="text-[#8fb4dc]">.</span>
+          </h2>
+          <Link
+            href="/contact"
+            className="text-lg sm:text-xl uppercase px-[3%] py-4 border border-[#c9c9c1]/30 text-[#c9c9c1] rounded-full font-bold transition-all duration-300 ease-in-out hover:bg-[#8fb4dc] hover:border-[#8fb4dc] hover:text-white hover:px-[5%]"
+          >
+            Get in touch
+          </Link>
         </div>
       </div>
     </>
