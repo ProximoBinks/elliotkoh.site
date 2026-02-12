@@ -65,7 +65,7 @@ export default function Keyboards() {
             description=""
             category="end-game"
             customTitle="owlab-spring"
-            imageSrc="/images/keyboards/spring-small.webp"
+            imageSrc="/images/keyboards/spring-square.webp"
             imageAlt="Mechanical Keyboards"
           />
           <Keyboard

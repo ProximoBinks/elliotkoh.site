@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ImageLightbox from '../components/ImageLightbox';
 import SEO from '../components/SEO';
@@ -43,50 +43,31 @@ const KeycultPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [loading, setLoading] = useState(true);
-    const [progress, setProgress] = useState(0);
-    const startTime = useRef(Date.now());
+    const [loadingProgress, setLoadingProgress] = useState(0);
 
-    // Phase 1: Preload the first few display images + all thumbnails, then show the page
-    // Phase 2: Silently preload remaining display images in the background
+    // Preload all small display images + thumbnails (not full-res lightbox images)
     useEffect(() => {
         if (typeof window === 'undefined') {
             setLoading(false);
             return;
         }
 
-        const criticalImages = displayImages.slice(0, 3);
-        const phase1 = [...criticalImages, ...thumbnails];
-        const phase2 = displayImages.slice(3);
-        const total = phase1.length;
-        let loaded = 0;
+        const allImages = [...displayImages, ...thumbnails];
+        const totalImages = allImages.length;
+        let loadedCount = 0;
 
-        const preloadImage = (src) =>
-            new Promise((resolve) => {
-                const img = new window.Image();
-                img.onload = resolve;
-                img.onerror = resolve;
-                img.src = src;
-            });
-
-        // Phase 1 — block until first 3 display images + thumbnails are ready
-        const onLoad = () => {
-            loaded++;
-            setProgress(Math.round((loaded / total) * 100));
-            if (loaded === total) {
-                const elapsed = Date.now() - startTime.current;
-                const remaining = Math.max(0, 300 - elapsed);
-                setTimeout(() => {
-                    setLoading(false);
-                    // Phase 2 — preload remaining display images in background
-                    phase2.forEach((src) => preloadImage(src));
-                }, remaining);
+        const handleImageLoad = () => {
+            loadedCount++;
+            setLoadingProgress(Math.round((loadedCount / totalImages) * 100));
+            if (loadedCount === totalImages) {
+                setLoading(false);
             }
         };
 
-        phase1.forEach((src) => {
+        allImages.forEach((src) => {
             const img = new window.Image();
-            img.onload = onLoad;
-            img.onerror = onLoad;
+            img.onload = handleImageLoad;
+            img.onerror = handleImageLoad;
             img.src = src;
         });
     }, []);
@@ -106,10 +87,10 @@ const KeycultPage = () => {
                 <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
                         className="h-full bg-gray-800 transition-all duration-300 ease-out"
-                        style={{ width: `${progress}%` }}
+                        style={{ width: `${loadingProgress}%` }}
                     />
                 </div>
-                <p className="mt-2 text-sm text-gray-400">{progress}%</p>
+                <p className="mt-2 text-sm text-gray-400">{loadingProgress}%</p>
             </div>
         );
     }
