@@ -46,28 +46,44 @@ const KeycultPage = () => {
     const [progress, setProgress] = useState(0);
     const startTime = useRef(Date.now());
 
-    // Preload all small display images + thumbnails in parallel
+    // Phase 1: Preload the first few display images + all thumbnails, then show the page
+    // Phase 2: Silently preload remaining display images in the background
     useEffect(() => {
         if (typeof window === 'undefined') {
             setLoading(false);
             return;
         }
 
-        const allPreload = [...displayImages, ...thumbnails];
-        const total = allPreload.length;
+        const criticalImages = displayImages.slice(0, 3);
+        const phase1 = [...criticalImages, ...thumbnails];
+        const phase2 = displayImages.slice(3);
+        const total = phase1.length;
         let loaded = 0;
 
+        const preloadImage = (src) =>
+            new Promise((resolve) => {
+                const img = new window.Image();
+                img.onload = resolve;
+                img.onerror = resolve;
+                img.src = src;
+            });
+
+        // Phase 1 — block until first 3 display images + thumbnails are ready
         const onLoad = () => {
             loaded++;
             setProgress(Math.round((loaded / total) * 100));
             if (loaded === total) {
                 const elapsed = Date.now() - startTime.current;
                 const remaining = Math.max(0, 300 - elapsed);
-                setTimeout(() => setLoading(false), remaining);
+                setTimeout(() => {
+                    setLoading(false);
+                    // Phase 2 — preload remaining display images in background
+                    phase2.forEach((src) => preloadImage(src));
+                }, remaining);
             }
         };
 
-        allPreload.forEach((src) => {
+        phase1.forEach((src) => {
             const img = new window.Image();
             img.onload = onLoad;
             img.onerror = onLoad;
