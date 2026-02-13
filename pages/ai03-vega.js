@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ImageLightbox from '../components/ImageLightbox';
 import SEO from '../components/SEO';
 
@@ -19,6 +20,13 @@ const VegaPage = () => {
                 description="Rose gold ai03 Vega with GMK Peaches n Cream R1 — featuring Holy Boba switches on a POM plate with hotswap PCB."
                 ogImage="https://elliotkoh.dev/images/keyboards/ai03-vega-small.webp"
             />
+
+            <Link href="/keyboards" className="inline-flex items-center gap-1 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-200 mb-4">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Keyboards
+            </Link>
 
             <div className="mt-[1%] mx-auto pb-[5%]">
                 {/* Main Image */}

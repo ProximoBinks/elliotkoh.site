@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ImageLightbox from '../components/ImageLightbox';
 import SEO from '../components/SEO';
 
@@ -103,6 +104,13 @@ const KeycultPage = () => {
                 ogImage="https://elliotkoh.dev/images/keyboards/keycult1-small.webp"
             />
 
+            <Link href="/keyboards" className="inline-flex items-center gap-1 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-200 mb-4">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Keyboards
+            </Link>
+
             {/* Image Carousel */}
             <div className="mt-[1%] mx-auto pb-[5%]">
                 {/* Main Image */}
@@ -118,8 +126,8 @@ const KeycultPage = () => {
                                 width={1600}
                                 height={1000}
                                 className="object-cover rounded-xl"
-                                priority={currentIndex === 0}
-                                sizes="(max-width: 1296px) 100vw, 1296px"
+                                priority
+                                unoptimized
                             />
                         </div>
                         {/* Left Arrow */}
@@ -150,6 +158,7 @@ const KeycultPage = () => {
                                     alt={`Thumbnail ${index + 1}`}
                                     width={64}
                                     height={64}
+                                    unoptimized
                                     className={`object-cover rounded-lg transition-opacity ${
                                         index === currentIndex ? 'opacity-100' : 'opacity-50'
                                     }`}
