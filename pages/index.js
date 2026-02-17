@@ -100,7 +100,7 @@ const HomePage = () => {
               <p
                 className="text-[clamp(1.2rem,2.5vw,1.5rem)] leading-relaxed mb-12 max-w-[90%] text-[#bdbdb4] pt-md-only lg:max-w-[750px] font-semibold"
               >
-                I'm Elliot — a developer and designer passionate about building meaningful tools, clean interfaces, and systems that elevate how we live and work. With a focus on clarity and intentional design, I take ideas from scratch and turn them into functional, well-crafted solutions that feel good to use.
+                I'm Elliot, a developer and designer passionate about building meaningful tools, clean interfaces, and systems that improve how we live and work. I focus on clarity and intentional design, taking ideas from scratch and turning them into functional, well-crafted solutions that feel good to use.
               </p>
             </div>
 
@@ -114,10 +114,10 @@ const HomePage = () => {
               {/* Right column (Paragraphs) */}
               <div>
                 <p className="text-base md:text-lg leading-relaxed max-w-[90%]">
-                  I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#399ded] hover:text-[#78b6e9] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools — from visual utilities to goal trackers — designed to simplify workflows and support personal growth.
+                  I'm currently building <Link href="https://hypertools.dev" target="_blank" className="text-[#399ded] hover:text-[#78b6e9] transition-all duration-300 ease-in-out">HyperTools</Link>, a growing suite of purposeful tools, from visual utilities to goal trackers, designed to simplify workflows and support personal growth.
                 </p>
                 <p className="text-base md:text-lg leading-relaxed mt-6 max-w-[90%]">
-                  Outside of tech, you'll find me designing pieces for my clothing brand, collecting peripherals, refining my desk setup, or deep in Japanese study as I prepare for my upcoming exchange in Tokyo.
+                  Outside of tech, I design pieces for my clothing brand, collect peripherals, refine my desk setup, and continue studying Japanese after completing my exchange in Tokyo.
                 </p>
               </div>
             </div>
