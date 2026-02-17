@@ -53,7 +53,7 @@ export default function Hobbies() {
 
           <Hobby
             title="Collectibles"
-            description="Collecting iconic pieces—Pokémon cards, figures, and memorabilia that blend nostalgia with design."
+            description="Collecting iconic pieces, like Pokémon cards, figures, and memorabilia that blend nostalgia with design."
             category="Recreational"
             imageSrc="/images/hobbies/cybertruck.webp"
             imageAlt="Collectibles"
@@ -85,7 +85,7 @@ export default function Hobbies() {
 
           <Hobby
             title="Origami"
-            description="Turning simple paper into complex art—combining patience, precision, and creativity."
+            description="Turning simple paper into complex art, combining patience, precision, and creativity."
             category="Creative"
             imageSrc="/images/hobbies/origami.webp"
             imageAlt="Origami"
