@@ -51,6 +51,28 @@ body {
   }
 }
 
+/* Falling letters: bounce-drop animation for production/saved-layout mode */
+@keyframes letterDrop {
+  0% {
+    opacity: 0;
+    transform: translate(var(--letter-dx), calc(var(--letter-dy) - 100vh)) rotate(var(--letter-angle));
+  }
+  55% {
+    opacity: 1;
+    transform: translate(var(--letter-dx), calc(var(--letter-dy) + 25px)) rotate(var(--letter-angle));
+  }
+  72% {
+    transform: translate(var(--letter-dx), calc(var(--letter-dy) - 14px)) rotate(var(--letter-angle));
+  }
+  86% {
+    transform: translate(var(--letter-dx), calc(var(--letter-dy) + 6px)) rotate(var(--letter-angle));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--letter-dx), var(--letter-dy)) rotate(var(--letter-angle));
+  }
+}
+
 /* Header turns white when lightbox is open */
 body.lightbox-open .header-class,
 body.lightbox-open .header-class * {

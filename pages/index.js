@@ -2,11 +2,16 @@ import React, { useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import WorkCard from '../components/WorkCard';
 import WorksSection from '../components/WorksSection';
 import { works } from '../data/works';
 import SEO from '../components/SEO';
 import { SITE_URL } from '../lib/constants';
+
+const FallingLetters = dynamic(() => import('../components/FallingLetters'), {
+  ssr: false,
+});
 
 const HomePage = () => {
   // Create a ref for the "About Us" section
@@ -50,13 +55,7 @@ const HomePage = () => {
       </Head>
 
       <div style={{ height: 'calc(100vh - 100px)' }} className="flex flex-col items-center justify-center relative select-none text-black overflow-hidden">
-
-        <div className="w-full max-w-screen-lg mx-auto mt-[-4%] px-5 pb-14 text-center flex flex-col items-center justify-center h-full">
-          <div className="py-10 sm:p-10 text-5xl md:text-7xl lg:text-8xl xl:text-9xl uppercase font-extrabold justify-left">
-            Hi there, I'm<br></br>Elliot Koh.
-          </div>
-          <button onClick={scrollToAboutUs} className="text-lg sm:text-xl uppercase mt-0 sm:mt-7 px-[3%] py-4 sm:py-4 bg-white bg-opacity-10 shadow-lg backdrop-blur-sm rounded-full font-bold transition-all duration-300 ease-in-out hover:bg-[#8fb4dc] hover:px-[5%] shadow-[#8fb4dc]/50">Learn more</button>
-        </div>
+        <FallingLetters text={"Hi there, I'm\nElliot Koh."} onScrollToAbout={scrollToAboutUs} />
       </div>
       <div id="about" ref={aboutMeRef} className="about-class p-[3rem] 3xl:px-[14rem] md:py-[6rem] text-[#ebecf0] text-left bg-[#080807] rounded-tl-[1.6rem] rounded-tr-[1.6rem] relative">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16">
