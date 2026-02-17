@@ -179,10 +179,15 @@ const FallingLetters = ({ text, onScrollToAbout }) => {
     };
   }, [resetPhysics]);
 
-  // On resize: reset everything so letters return to readable positions
+  // On horizontal resize only: reset letters (ignore vertical — Safari mobile toolbar)
+  const lastWidthRef = useRef(typeof window !== 'undefined' ? window.innerWidth : 0);
   useEffect(() => {
     let resizeTimer;
     const handleResize = () => {
+      const newWidth = window.innerWidth;
+      if (newWidth === lastWidthRef.current) return; // vertical-only change, ignore
+      lastWidthRef.current = newWidth;
+
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
         if (hasTriggeredRef.current) {
