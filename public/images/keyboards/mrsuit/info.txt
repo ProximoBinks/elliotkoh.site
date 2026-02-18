@@ -1,0 +1,10 @@
+Board: OwLab Mr. Suit TKL Babypowder Silver
+Board insulation: all foams
+Plate: pom with gasket socks installed
+PCB: hot swap wkl pcb
+Keycaps: GMK Frost Witch
+Switches: Creamsicle 63.5g spirit slow extreme springs (novelkey cream stem (old batch) in tangerine housing). Switches lubed with Krytox 205g0 and springs lubed with Krytox 105 Oil.
+Stabilizers: Durock Stabilizers V2 lubed with Krytox 205g0.
+Mat: GMK Frost Witch Deskmat
+
+Sound test: https://www.youtube.com/watch?v=n5Yr_RBdGlM

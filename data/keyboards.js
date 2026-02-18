@@ -15,7 +15,7 @@ export const keyboardPosts = [
   {
     slug: 'owlab-spring-2',
     title: 'Owlab Spring #2',
-    category: 'end-game',
+    category: 'ergo',
     folder: '/images/keyboards/owlab-spring-2',
     prefix: 'spring',
     imageCount: 5,
@@ -82,6 +82,43 @@ export const keyboardPosts = [
     seoDescription:
       'Berlin Blue TGR x Singa Unikorn R2.2 with GMK Oni — featuring diamond polished MX Blacks and a signed copper weight.',
     videoUrl: null,
+  },
+  {
+    slug: 'tgrshi',
+    title: 'TGR Shi',
+    category: 'end-game',
+    folder: '/images/keyboards/tgrshi',
+    prefix: 'shi',
+    imageCount: 1,
+    specs: [
+      'Design by TGR.',
+      'Aluminium plate.',
+      'Diamond polished Cherry MX Brown switches.',
+      'TX stabilisers.',
+      'GMK Oni.',
+    ],
+    seoDescription:
+      'TGR Shi with GMK Oni — featuring diamond polished Cherry MX Browns on an aluminium plate.',
+    videoUrl: null,
+  },
+  {
+    slug: 'mrsuit',
+    title: 'OwLab Mr. Suit',
+    category: '2022 end-game',
+    folder: '/images/keyboards/mrsuit',
+    prefix: 'mr-suit',
+    imageCount: 1,
+    specs: [
+      'Design by OwLab.',
+      'Babypowder Silver TKL case with all foams.',
+      'POM plate with gasket socks installed, hotswap WKL PCB.',
+      'Creamsicle switches (Novelkeys Cream stem, C3 Tangerine housing, 63.5g Spirit Slow Extreme springs, lubed with Krytox 205g0 and 105 oil).',
+      'Durock V2 stabilisers lubed with Krytox 205g0.',
+      'GMK Frost Witch.',
+    ],
+    seoDescription:
+      'Babypowder Silver OwLab Mr. Suit TKL with GMK Frost Witch — featuring Creamsicle switches on a POM plate.',
+    videoUrl: 'https://www.youtube.com/embed/n5Yr_RBdGlM',
   },
 ];
 

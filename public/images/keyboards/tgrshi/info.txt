@@ -1,0 +1,5 @@
+Board: TGR Shi
+Plate: Aluminium
+Keycaps: GMK Oni
+Switches: Cherry MX Brown (Diamond Polished)
+Stabilizers: TX Stabs
