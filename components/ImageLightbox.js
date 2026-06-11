@@ -54,7 +54,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
             {images.length > 1 && (
                 <>
                     <button
-                        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl cursor-pointer"
+                        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-900 shadow-xl rounded-full w-12 h-12 flex items-center justify-center text-3xl leading-none pb-1 transition-all duration-200 hover:scale-110 cursor-pointer"
                         onClick={(e) => {
                             e.stopPropagation();
                             onNavigate((currentIndex - 1 + images.length) % images.length);
@@ -64,7 +64,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
                         &#8249;
                     </button>
                     <button
-                        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors bg-black/30 hover:bg-black/50 rounded-full w-12 h-12 flex items-center justify-center text-2xl cursor-pointer"
+                        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-gray-900 shadow-xl rounded-full w-12 h-12 flex items-center justify-center text-3xl leading-none pb-1 transition-all duration-200 hover:scale-110 cursor-pointer"
                         onClick={(e) => {
                             e.stopPropagation();
                             onNavigate((currentIndex + 1) % images.length);
