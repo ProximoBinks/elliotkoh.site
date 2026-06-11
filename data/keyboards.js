@@ -120,6 +120,65 @@ export const keyboardPosts = [
       'Babypowder Silver OwLab Mr. Suit TKL with GMK Frost Witch — featuring Creamsicle switches on a POM plate.',
     videoUrl: 'https://www.youtube.com/embed/n5Yr_RBdGlM',
   },
+  {
+    slug: 'owlab-spring',
+    title: 'Owlab Spring',
+    category: 're:zero build',
+    folder: '/images/keyboards/owlab-spring',
+    prefix: 'spring',
+    imageCount: 1,
+    specs: [
+      'Design by Owlab.',
+      'Lilac coated aluminum case with purple mirror weight bottom.',
+      'Lubed (205g0, dielectric grease) TX clip-in stabilisers.',
+      'Creamsicle Frankenstein Switch (C3 Tangerine Housing, 63.5g Sprit Slow Extreme Springs, Novelkeys Cream Stem) (housing and stem 205g0, 105 on the springs).',
+      'Hotswap PCB (QMK/VIA).',
+      'GMK Frost Witch R1.',
+    ],
+    seoDescription:
+      'Lilac Owlab Spring with GMK Frost Witch R1 — featuring Creamsicle Frankenswitch on a hotswap PCB.',
+    videoUrl: 'https://www.youtube.com/embed/2IfhuZq8n1w',
+  },
+  {
+    slug: 'keycult-2-65',
+    title: 'Keycult 2/65',
+    category: 'end-game',
+    folder: '/images/keyboards/keycult',
+    prefix: 'keycult',
+    imageCount: 8,
+    specs: [
+      'Design by Keycult.',
+      'Ocean grey-anodized aluminum case with "Unfinish silver"-anodized bottom piece.',
+      'Lubed (205g0, dielectric grease) TX clip-in stabilisers.',
+      'Broken-in MX Black linear switches, with 68g springs and laserninja films, lubed (205g0) - mounted on an aluminum full plate.',
+      'WT65-A PCB (QMK/VIA).',
+      'GMK Shoko R2.',
+    ],
+    seoDescription:
+      'Ocean grey Keycult 2/65 with GMK Shoko R2 — featuring lubed MX Blacks on an aluminum plate with WT65-A PCB.',
+    videoUrl: 'https://www.youtube.com/embed/1sujkpKXem0',
+  },
+  {
+    slug: 'ai03-vega',
+    title: 'ai03 Vega',
+    category: '2019 end-game',
+    folder: '/images/keyboards/ai03-vega',
+    prefix: 'vega',
+    imageCount: 1,
+    specs: [
+      'Design by ai03 and kevinplus.',
+      'Rose gold anodized aluminum case with black bottom weight.',
+      'Lubed (205g0, dielectric grease) C3 screw-in stabilisers.',
+      'Holy Boba Switches (Halo true stem, Boba U4T Opaque Top with 62g springs. Switches lubed with Krytox 205g0 and springs lubed with Krytox 105 Oil.)',
+      'Hotswap PCB (QMK/VIA).',
+      'POM Plate.',
+      'Plate & case foam.',
+      'GMK Peaches n Cream R1.',
+    ],
+    seoDescription:
+      'Rose gold ai03 Vega with GMK Peaches n Cream R1 — featuring Holy Boba switches on a POM plate with hotswap PCB.',
+    videoUrl: 'https://www.youtube.com/embed/XrqDb7-uKL4',
+  },
 ];
 
 /** Look up a single keyboard by its URL slug. */

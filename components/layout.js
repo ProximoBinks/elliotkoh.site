@@ -6,6 +6,12 @@ import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
 import AdvancedLoadingScreen from './AdvancedLoadingScreen';
 
+// Only gate on the shared hero background — it's the LCP element and the one
+// image referenced by its raw URL (CSS background). Page content images go
+// through next/image with their own priority/lazy loading, so preloading raw
+// copies here would just download everything twice.
+const criticalImages = ['/images/hero/herosquare5.webp'];
+
 const Layout = ({ children }) => {
   const router = useRouter();
   const [showHamburger, setShowHamburger] = useState(false);
@@ -13,28 +19,6 @@ const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
-
-  // Preload above-the-fold hero BG + first visible work images per page.
-  const getCriticalImages = () => {
-    const baseImages = ['/images/hero/herosquare5.webp'];
-
-    switch (router.pathname) {
-      case '/':
-        return [
-          ...baseImages,
-          '/images/hero/testimg.webp',
-          // First 2 HyperTools + first 2 Client (top of works section)
-          '/images/projects/hypertools.webp',
-          '/images/projects/hyperstake.webp',
-          '/images/projects/specialist-plus-2.webp',
-          '/images/projects/alphabetsite.webp',
-        ];
-      default:
-        return baseImages;
-    }
-  };
-
-  const criticalImages = getCriticalImages();
 
   // Cache detection function
   const checkImageCache = (src) => {
@@ -68,6 +52,9 @@ const Layout = ({ children }) => {
   };
 
   const handleLoadComplete = () => {
+    try {
+      sessionStorage.setItem('ek-loaded', '1');
+    } catch (e) { /* private browsing — overlay will just show again next time */ }
     setIsLoading(false);
     setShowContent(true);
   };
@@ -107,20 +94,34 @@ const Layout = ({ children }) => {
 
   // Loading screen logic - re-run when route changes
   useEffect(() => {
+    if (!router.isReady) return;
+
+    // Only show the loading screen on the first visit of a browser session
+    let alreadySeen = false;
+    try {
+      alreadySeen = sessionStorage.getItem('ek-loaded') === '1';
+    } catch (e) { /* sessionStorage unavailable — fall through to cache check */ }
+
+    if (alreadySeen) {
+      setIsLoading(false);
+      setShowContent(true);
+      return;
+    }
+
     const checkCacheAndLoad = async () => {
       try {
-        // Get current page's critical images
-        const currentCriticalImages = getCriticalImages();
-        
         // Check if all critical images are cached
         const cacheResults = await Promise.all(
-          currentCriticalImages.map(src => checkImageCache(src))
+          criticalImages.map(src => checkImageCache(src))
         );
-        
+
         // If all images are cached, skip loading screen
         const allCached = cacheResults.every(cached => cached);
-        
+
         if (allCached) {
+          try {
+            sessionStorage.setItem('ek-loaded', '1');
+          } catch (e) { /* ignore */ }
           // Small delay to prevent flash
           setTimeout(() => {
             setIsLoading(false);
@@ -139,10 +140,7 @@ const Layout = ({ children }) => {
       }
     };
 
-    // Only run cache check if router is ready
-    if (router.isReady) {
-      checkCacheAndLoad();
-    }
+    checkCacheAndLoad();
   }, [router.isReady, router.pathname]);
 
   return (

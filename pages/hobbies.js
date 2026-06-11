@@ -3,23 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
-const Hobby = ({ title, description, imageSrc, imageAlt, category, customTitle }) => (
-  customTitle ? (
-    <Link href={`/${customTitle}`} passHref>
-      <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
-        <Image src={imageSrc} alt={imageAlt} width={500} height={300} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-5">
-          <h2 className="text-2xl font-bold text-white">{title}</h2>
-          <div className="mt-1 inline-block">
-            <span className="outline outline-[#8fb4dc] outline-[1px] text-[#8fb4dc] text-xs font-semibold px-2.5 py-0.5 rounded-lg" style={{ textAlign: 'left' }}>{category}</span>
-          </div>
-          <p className="text-white mt-2">{description}</p>
-        </div>
-      </div>
-    </Link>
-  ) : (
+const Hobby = ({ title, description, imageSrc, imageAlt, category, customTitle }) => {
+  const card = (
     <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
-      <Image src={imageSrc} alt={imageAlt} width={500} height={300} />
+      <Image
+        src={imageSrc}
+        alt={imageAlt}
+        width={500}
+        height={300}
+        sizes="(max-width: 768px) 100vw, 576px"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-5">
         <h2 className="text-2xl font-bold text-white">{title}</h2>
         <div className="mt-1 inline-block">
@@ -28,8 +21,16 @@ const Hobby = ({ title, description, imageSrc, imageAlt, category, customTitle }
         <p className="text-white mt-2">{description}</p>
       </div>
     </div>
-  )
-);
+  );
+
+  return customTitle ? (
+    <Link href={`/${customTitle}`} passHref>
+      {card}
+    </Link>
+  ) : (
+    card
+  );
+};
 
 export default function Hobbies() {
   return (
@@ -47,7 +48,7 @@ export default function Hobbies() {
             description="Curating and customising mechanical keyboards for the perfect balance of sound, feel, and form."
             category="Technical"
             customTitle="keyboards"
-            imageSrc="/images/keyboards/keyboard.jpg"
+            imageSrc="/images/keyboards/keyboard.webp"
             imageAlt="Mechanical Keyboards"
           />
 

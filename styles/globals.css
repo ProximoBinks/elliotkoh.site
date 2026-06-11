@@ -13,9 +13,7 @@
   animation: shimmer 2s infinite;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
-}
+/* Font family is set globally in pages/_app.js via next/font (Raleway). */
 
 html {
   scroll-behavior: smooth !important;
@@ -48,28 +46,6 @@ body {
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .pt-md-only {
     padding-top: clamp(13rem, 27vw, 15rem);
-  }
-}
-
-/* Falling letters: bounce-drop animation for production/saved-layout mode */
-@keyframes letterDrop {
-  0% {
-    opacity: 0;
-    transform: translate(var(--letter-dx), calc(var(--letter-dy) - 100vh)) rotate(var(--letter-angle));
-  }
-  55% {
-    opacity: 1;
-    transform: translate(var(--letter-dx), calc(var(--letter-dy) + 25px)) rotate(var(--letter-angle));
-  }
-  72% {
-    transform: translate(var(--letter-dx), calc(var(--letter-dy) - 14px)) rotate(var(--letter-angle));
-  }
-  86% {
-    transform: translate(var(--letter-dx), calc(var(--letter-dy) + 6px)) rotate(var(--letter-angle));
-  }
-  100% {
-    opacity: 1;
-    transform: translate(var(--letter-dx), var(--letter-dy)) rotate(var(--letter-angle));
   }
 }
 

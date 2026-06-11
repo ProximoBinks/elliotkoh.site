@@ -64,11 +64,10 @@ const HomePage = () => {
             <div className="aspect-[1/1.3] relative overflow-hidden w-full mb-0 md:mb-[3rem]">
               <Image
                 src="/images/hero/testimg.webp"
-                alt="Profile Image"
+                alt="Black and white portrait of Elliot Koh"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover grayscale"
-                priority
               />
               <div className="absolute bottom-4 left-4 text-xs opacity-50">39</div>
             </div>
@@ -87,11 +86,10 @@ const HomePage = () => {
               <div className="block md:hidden w-full aspect-[1/1.2] relative overflow-hidden mb-10">
                 <Image
                   src="/images/hero/testimg.webp"
-                  alt="Profile Image"
+                  alt="Black and white portrait of Elliot Koh"
                   fill
                   sizes="(max-width: 768px) calc(100vw - 6rem), 100vw"
                   className="object-cover grayscale"
-                  priority
                 />
                 <div className="absolute bottom-4 left-4 text-xs opacity-50">43</div>
               </div>

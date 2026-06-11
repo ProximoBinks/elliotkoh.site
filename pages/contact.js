@@ -6,6 +6,7 @@ export default function Contact() {
     name: '',
     email: '',
     message: '',
+    website: '', // honeypot — humans never see or fill this
   });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
   const [errorMsg, setErrorMsg] = useState('');
@@ -35,7 +36,7 @@ export default function Contact() {
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', website: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
@@ -73,6 +74,19 @@ export default function Contact() {
             </div>
           ) : (
             <form name="contact" onSubmit={handleSubmit} className="space-y-8">
+              {/* Honeypot field — hidden from humans, bots fill it in */}
+              <div aria-hidden="true" className="absolute w-px h-px overflow-hidden -left-[9999px]">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  name="website"
+                  id="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  onChange={handleChange}
+                  value={formData.website}
+                />
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-[#96928e] text-sm tracking-wider uppercase font-bold mb-2">
@@ -83,6 +97,7 @@ export default function Contact() {
                     name="name"
                     id="name"
                     required
+                    maxLength={100}
                     onChange={handleChange}
                     value={formData.name}
                     disabled={status === 'sending'}
@@ -99,6 +114,7 @@ export default function Contact() {
                     name="email"
                     id="email"
                     required
+                    maxLength={254}
                     onChange={handleChange}
                     value={formData.email}
                     disabled={status === 'sending'}
@@ -117,6 +133,7 @@ export default function Contact() {
                   id="message"
                   rows="5"
                   required
+                  maxLength={5000}
                   onChange={handleChange}
                   value={formData.message}
                   disabled={status === 'sending'}

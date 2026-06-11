@@ -6,8 +6,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
           {/* Favicons */}
           <link rel="icon" href="/favicon.ico" sizes="any" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -21,19 +19,6 @@ class MyDocument extends Document {
 
           {/* Theme color for browser chrome */}
           <meta name="theme-color" content="#080807" />
-
-          {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJW0JEJSJH" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-MJW0JEJSJH');
-              `,
-            }}
-          />
         </Head>
         <body>
           <Main />
