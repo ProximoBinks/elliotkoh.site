@@ -33,8 +33,6 @@ const WorksSection = ({ works }) => {
                         height={30}
                         className="object-contain"
                         style={{ width: 'auto', height: 'auto' }}
-                        quality={100}
-                        priority
                     />
                     <span>UNIVERSITY WORK</span>
                 </div>
@@ -50,8 +48,6 @@ const WorksSection = ({ works }) => {
                         width={30}
                         height={30}
                         className="object-contain"
-                        quality={100}
-                        priority
                     />
                     <span>HYPERTOOLS</span>
                 </div>
@@ -68,8 +64,6 @@ const WorksSection = ({ works }) => {
                         height={20}
                         className="object-contain"
                         style={{ width: 'auto', height: 'auto' }}
-                        quality={100}
-                        priority
                     />
                     <span>CLIENT WORK</span>
                 </div>
@@ -86,8 +80,6 @@ const WorksSection = ({ works }) => {
                         height={35}
                         className="object-contain"
                         style={{ width: 'auto', height: 'auto' }}
-                        quality={100}
-                        priority
                     />
                     <span className="mt-[0.3rem]">PERSONAL PROJECTS</span>
                 </div>

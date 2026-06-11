@@ -6,6 +6,9 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   exclude: ['/api/*'],
+  // No lastmod: stamping every page with the build date tells search engines
+  // everything changed on every deploy, which devalues the signal entirely.
+  autoLastmod: false,
   transform: async (config, path) => {
     // Give the homepage highest priority
     if (path === '/') {
@@ -13,7 +16,6 @@ module.exports = {
         loc: path,
         changefreq: 'weekly',
         priority: 1.0,
-        lastmod: new Date().toISOString(),
       };
     }
 
@@ -21,7 +23,6 @@ module.exports = {
       loc: path,
       changefreq: config.changefreq,
       priority: config.priority,
-      lastmod: new Date().toISOString(),
     };
   },
 };

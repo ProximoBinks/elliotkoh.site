@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://elliotkoh.dev</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>weekly</changefreq><priority>1</priority></url>
-<url><loc>https://elliotkoh.dev/ai03-vega</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/contact</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/hobbies</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keycult-2-65</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/owlab-spring</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/owlab-spring-2</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/think65v2</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/neo60</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/unikorn</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/tgrshi</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://elliotkoh.dev/keyboards/mrsuit</loc><lastmod>2026-06-01T08:15:52.503Z</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://elliotkoh.dev/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/hobbies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/owlab-spring-2</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/think65v2</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/neo60</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/unikorn</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/tgrshi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/mrsuit</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/owlab-spring</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/keycult-2-65</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://elliotkoh.dev/keyboards/ai03-vega</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

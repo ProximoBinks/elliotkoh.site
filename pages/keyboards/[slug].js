@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import ImageLightbox from '../../components/ImageLightbox';
 import SEO from '../../components/SEO';
 import { keyboardPosts, getKeyboardBySlug, getKeyboardImages } from '../../data/keyboards';
 import { SITE_URL } from '../../lib/constants';
+
+const DISPLAY_SIZES = '(max-width: 1296px) 100vw, 1296px';
 
 export async function getStaticPaths() {
   const paths = keyboardPosts.map((kb) => ({ params: { slug: kb.slug } }));
@@ -24,35 +27,6 @@ export default function KeyboardPage({ keyboard, images }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [loadingProgress, setLoadingProgress] = useState(0);
-
-  // Preload all small display images + thumbnails (not full-res lightbox images)
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      setLoading(false);
-      return;
-    }
-
-    const allImages = [...display, ...thumbs];
-    const totalImages = allImages.length;
-    let loadedCount = 0;
-
-    const handleImageLoad = () => {
-      loadedCount++;
-      setLoadingProgress(Math.round((loadedCount / totalImages) * 100));
-      if (loadedCount === totalImages) {
-        setLoading(false);
-      }
-    };
-
-    allImages.forEach((src) => {
-      const img = new window.Image();
-      img.onload = handleImageLoad;
-      img.onerror = handleImageLoad;
-      img.src = src;
-    });
-  }, [display, thumbs]);
 
   const handleLeftArrowClick = () => {
     setCurrentIndex((prev) => (prev === 0 ? display.length - 1 : prev - 1));
@@ -62,21 +36,6 @@ export default function KeyboardPage({ keyboard, images }) {
     setCurrentIndex((prev) => (prev === display.length - 1 ? 0 : prev + 1));
   };
 
-  if (loading) {
-    return (
-      <div className="flex flex-col items-center justify-center h-screen bg-white">
-        <h2 className="text-2xl font-bold mb-4">Loading {keyboard.title}</h2>
-        <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gray-800 transition-all duration-300 ease-out"
-            style={{ width: `${loadingProgress}%` }}
-          />
-        </div>
-        <p className="mt-2 text-sm text-gray-400">{loadingProgress}%</p>
-      </div>
-    );
-  }
-
   return (
     <div className="mt-[5rem] xl:mt-[10rem] mx-auto p-6 sm:px-6 lg:px-8 bg-white rounded-t-3xl relative">
       <SEO
@@ -84,6 +43,22 @@ export default function KeyboardPage({ keyboard, images }) {
         description={keyboard.seoDescription}
         ogImage={`${SITE_URL}${display[0]}`}
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+                { '@type': 'ListItem', position: 2, name: 'Keyboards', item: `${SITE_URL}/keyboards` },
+                { '@type': 'ListItem', position: 3, name: keyboard.title },
+              ],
+            }),
+          }}
+        />
+      </Head>
 
       <Link href="/keyboards" className="inline-flex items-center gap-1 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-200 mb-4">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,8 +71,10 @@ export default function KeyboardPage({ keyboard, images }) {
         {/* Main Image */}
         <div className="max-w-[81rem] mx-auto">
           <div className="relative">
-            <div
-              className="cursor-zoom-in"
+            <button
+              type="button"
+              aria-label="View full size image"
+              className="cursor-zoom-in block w-full"
               onClick={() => setLightboxOpen(true)}
             >
               <Image
@@ -106,20 +83,42 @@ export default function KeyboardPage({ keyboard, images }) {
                 width={1600}
                 height={1000}
                 className="object-cover rounded-xl"
-                priority
-                unoptimized
+                sizes={DISPLAY_SIZES}
+                priority={currentIndex === 0}
               />
-            </div>
+            </button>
+            {/* Warm the cache for the other carousel images without blocking render */}
+            {display.length > 1 && (
+              <div className="hidden" aria-hidden="true">
+                {display.map((src, index) =>
+                  index === currentIndex ? null : (
+                    <Image
+                      key={src}
+                      src={src}
+                      alt=""
+                      width={1600}
+                      height={1000}
+                      sizes={DISPLAY_SIZES}
+                      loading="eager"
+                    />
+                  )
+                )}
+              </div>
+            )}
             {/* Arrows — only show if more than 1 image */}
             {display.length > 1 && (
               <>
                 <button
+                  type="button"
+                  aria-label="Previous image"
                   className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-gray-900 rounded-full w-10 h-10 text-white flex items-center justify-center z-10"
                   onClick={handleLeftArrowClick}
                 >
                   &lt;
                 </button>
                 <button
+                  type="button"
+                  aria-label="Next image"
                   className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 bg-gray-900 rounded-full w-10 h-10 text-white flex items-center justify-center z-10"
                   onClick={handleRightArrowClick}
                 >
@@ -132,22 +131,25 @@ export default function KeyboardPage({ keyboard, images }) {
           {thumbs.length > 1 && (
             <div className="md:flex hidden justify-center mt-4 space-x-4">
               {thumbs.map((thumbnail, index) => (
-                <div
+                <button
+                  type="button"
                   key={index}
+                  aria-label={`View image ${index + 1} of ${thumbs.length}`}
+                  aria-current={index === currentIndex}
                   className="w-16 h-16 bg-gray-300 rounded-lg cursor-pointer"
                   onClick={() => setCurrentIndex(index)}
                 >
                   <Image
                     src={thumbnail}
-                    alt={`Thumbnail ${index + 1}`}
+                    alt=""
                     width={64}
                     height={64}
-                    unoptimized
+                    sizes="64px"
                     className={`object-cover rounded-lg transition-opacity ${
                       index === currentIndex ? 'opacity-100' : 'opacity-50'
                     }`}
                   />
-                </div>
+                </button>
               ))}
             </div>
           )}
@@ -175,6 +177,7 @@ export default function KeyboardPage({ keyboard, images }) {
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                   className="absolute top-0 left-0 w-full h-full rounded-xl"
                 />
               </div>
