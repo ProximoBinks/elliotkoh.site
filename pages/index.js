@@ -42,6 +42,8 @@ const HomePage = () => {
                 'Founder and developer building in public — 100 days to $10k/month online to close the distance to Tokyo.',
               sameAs: [
                 'https://hypertools.dev',
+                'https://www.linkedin.com/in/elliotkoh1/',
+                'https://instagram.com/elliot.koh',
               ],
               knowsAbout: [
                 'Web Development',

@@ -92,9 +92,9 @@ const WorksSection = ({ works }) => {
     return (
         <>
             <div className="flex items-center justify-between mb-10">
-                <h1 className="uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">
+                <h2 className="uppercase font-extrabold text-4xl sm:text-6xl md:text-7xl">
                     selected works.
-                </h1>
+                </h2>
                 <button
                     onClick={() => setShowAll(!showAll)}
                     className="px-4 py-2 border border-[#8fb4dc]/30 rounded-full text-sm font-medium hover:bg-[#8fb4dc]/10 transition-all duration-300 text-[#8fb4dc]"

@@ -1,12 +1,12 @@
-# Elliot Koh - Portfolio Website
+# Elliot Koh - Personal Site
 
-![Portfolio Screenshot](/public/screenshot.png)
+![Portfolio Screenshot](/screenshot.png)
 
 ## 🚀 Live Site
 [elliotkoh.dev](https://elliotkoh.dev)
 
 ## 📋 Overview
-This is my personal portfolio website showcasing my projects, skills, and experience as a developer. Originally created during my second year of Bachelor of Computer Science (Advanced) at the University of Adelaide, it now serves as my professional portfolio to display my work to potential clients and employers.
+My personal site — the story behind what I'm building (all in on one bet: $10k/month online to close the distance to Tokyo), plus my projects, client work, and interests. Originally built during my Bachelor of Computer Science (Advanced) at the University of Adelaide, now the landing point for people arriving from my content.
 
 ## 🛠️ Tech Stack
 - **Framework**: Next.js (React)

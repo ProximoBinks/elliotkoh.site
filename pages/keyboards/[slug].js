@@ -159,9 +159,9 @@ export default function KeyboardPage({ keyboard, images }) {
         <div className="px-[2%] mx-auto max-w-[1700px] mt-8 md:mt-[6.5%]">
           <div className={keyboard.videoUrl ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : ''}>
             <div>
-              <h2 className="text-3xl font-extrabold lg:text-5xl lg:font-extrabold">
+              <h1 className="text-3xl font-extrabold lg:text-5xl lg:font-extrabold">
                 {keyboard.title}
-              </h2>
+              </h1>
               <ul className="ml-4 list-disc pl-5 mt-4 lg:mt-8">
                 {keyboard.specs.map((spec, i) => (
                   <li key={i} className="text-lg md:text-xl lg:text-xl xl:text-xl mb-2">
