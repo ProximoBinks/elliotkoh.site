@@ -37,9 +37,6 @@ export default function Header() {
             </div>
           </div>
           <div className="font-[600] text-md xl:text-[24px] flex items-start flex-col gap-y-1">
-            <a href="/#about" onClick={(e) => smoothScrollToSection('.about-class', e, '/#about')} className="block relative overflow-hidden group h-fit leading-base link-text">
-              <span className="link1">About</span>
-            </a>
             <a href="/#story" onClick={(e) => smoothScrollToSection('.story-class', e, '/#story')} className="block relative overflow-hidden group h-fit leading-base link-text">
               <span className="link1">Story</span>
             </a>
