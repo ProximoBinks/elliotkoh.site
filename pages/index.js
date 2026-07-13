@@ -44,7 +44,7 @@ const HomePage = () => {
               sameAs: [
                 'https://hypertools.dev',
                 'https://www.linkedin.com/in/elliotkoh1/',
-                'https://instagram.com/elliot.koh',
+                'https://instagram.com/elliotkohdev',
               ],
               knowsAbout: [
                 'Web Development',

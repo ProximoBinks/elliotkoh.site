@@ -87,7 +87,7 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
                     {/* Footer with Email and Social Links */}
                     <div className="pb-12 mt-auto">
                         <p className="text-[#a29e9a] text-sm md:text-lg font-bold uppercase ">Email Address</p>
-                        <p className="text-white/90 mb-6 text-sm md:text-lg"><a href="mailto:elliot@proximo.life">elliot@proximo.life</a></p>
+                        <p className="text-white/90 mb-6 text-sm md:text-lg"><a href="mailto:elliotkoh.dev@gmail.com">elliotkoh.dev@gmail.com</a></p>
 
                         <div className="flex space-x-2 md:space-x-4 text-sm md:text-base">
                             <Link
@@ -99,7 +99,7 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
                                 LINKEDIN
                             </Link>
                             <Link
-                                href="https://instagram.com/elliot.koh"
+                                href="https://instagram.com/elliotkohdev"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/90 border border-white/30 px-3 md:px-4 py-[0.6rem] rounded-full hover:bg-white/10 transition-colors duration-300"
