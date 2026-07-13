@@ -40,6 +40,9 @@ export default function Header() {
             <a href="/#about" onClick={(e) => smoothScrollToSection('.about-class', e, '/#about')} className="block relative overflow-hidden group h-fit leading-base link-text">
               <span className="link1">About</span>
             </a>
+            <a href="/#story" onClick={(e) => smoothScrollToSection('.story-class', e, '/#story')} className="block relative overflow-hidden group h-fit leading-base link-text">
+              <span className="link1">Story</span>
+            </a>
             <a href="/#works" onClick={(e) => smoothScrollToSection('.works-class', e, '/#works')} className="block relative overflow-hidden group h-fit leading-base link-text">
               <span className="link1">Works</span>
             </a>

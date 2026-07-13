@@ -47,6 +47,15 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
                             </li>
                             <li>
                                 <Link
+                                    href="/#story"
+                                    className="font-bold text-white/90 hover:text-[#8fb4dc] transition-colors duration-300 block"
+                                    onClick={toggleMenu}
+                                >
+                                    STORY
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/keyboards"
                                     className="font-bold text-white/90 hover:text-[#8fb4dc] transition-colors duration-300 block"
                                     onClick={toggleMenu}
