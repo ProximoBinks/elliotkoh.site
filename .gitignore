@@ -34,3 +34,4 @@ yarn-error.log*
 .netlify
 .readmes
 *.psd
+potential-pictures/
