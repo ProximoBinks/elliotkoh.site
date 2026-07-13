@@ -5,6 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import WorkCard from '../components/WorkCard';
 import WorksSection from '../components/WorksSection';
+import StoryRoad from '../components/StoryRoad';
 import { works } from '../data/works';
 import SEO from '../components/SEO';
 import { SITE_URL } from '../lib/constants';
@@ -125,51 +126,93 @@ const HomePage = () => {
         </div>
 
         {/* MY STORY */}
-        <div id="story" className="story-class pt-[8%] max-w-[900px] mx-auto">
+        <div id="story" className="story-class pt-[8%] max-w-[1100px] mx-auto">
           <div className="text-[#96928e] text-sm tracking-wider opacity-70 font-bold mb-6">(MY STORY)</div>
-          <h2 className="uppercase text-[clamp(2.5rem,7vw,5rem)] lg:text-[clamp(4rem,5vw,7rem)] font-bold leading-[0.9] tracking-tight text-[#c9c9c1] mb-12">
+          <h2 className="uppercase text-[clamp(2.5rem,7vw,5rem)] lg:text-[clamp(4rem,5vw,7rem)] font-bold leading-[0.9] tracking-tight text-[#c9c9c1] mb-6">
             BUYING BACK MY<br />FREEDOM IN MY 20s<span className="text-[#8fb4dc]">.</span>
           </h2>
-          <div className="space-y-10 font-semibold">
-            {[
+          <div className="flex flex-wrap gap-x-8 gap-y-2 font-mono text-[11px] md:text-xs tracking-[0.2em] text-[#787673] border-y border-[#c9c9c1]/10 py-4 mb-4 md:mb-8">
+            <span>ROUTE: ADL ✈ TYO</span>
+            <span>DISTANCE: 7,853 KM</span>
+            <span className="text-[#8fb4dc]">STATUS: EN ROUTE</span>
+          </div>
+          <StoryRoad
+            waypoints={[
               {
+                stop: 'STOP 01 /',
                 marker: 'ADELAIDE',
+                meta: '34.93°S 138.60°E — ORIGIN',
+                title: 'Adelaide',
                 text: 'Born and raised in Adelaide, Australia. Studied computer science, freelanced as a developer, and spent my degree building things for the internet — client sites, uni projects, and my own tools.',
               },
               {
+                stop: 'STOP 02 /',
                 marker: 'TOKYO',
+                meta: '35.68°N 139.65°E — THE TURN',
+                title: 'Tokyo',
                 text: 'An exchange semester in Tokyo changed the trajectory. I met Mana there. Then the semester ended, and I flew home to finish my degree — and we’ve been long distance ever since.',
               },
               {
+                stop: 'STOP 03 /',
                 marker: 'THE BET',
+                meta: '100 DAYS — ALL IN',
+                title: 'The Bet',
                 text: 'I graduated, and instead of settling into the safe path, I went all in on one bet: 100 days to hit $10k a month online. Enough to work from anywhere, move to Japan, and stay.',
               },
               {
+                stop: 'STOP 04 /',
                 marker: 'IN PUBLIC',
+                meta: 'POSTING DAILY — LIVE',
+                title: 'In Public',
                 text: 'I’m posting everything along the way — the ups, the downs, and where every dollar is made. No fake urgency, no overnight-success story. Just the real numbers and the real work.',
+                here: true,
               },
-            ].map(({ marker, text }) => (
-              <div key={marker} className="lg:grid lg:grid-cols-[140px_1fr] lg:gap-12 border-t border-[#c9c9c1]/10 pt-8">
-                <div className="text-[#8fb4dc] text-sm tracking-wider font-bold mb-3 lg:mb-0 lg:mt-1">{marker}</div>
-                <p className="text-base md:text-lg leading-relaxed text-[#a3a19c] max-w-[650px]">{text}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
 
         {/* NOW */}
-        <div id="now" className="pt-[8%] max-w-[900px] mx-auto">
+        <div id="now" className="pt-[8%] max-w-[1100px] mx-auto">
           <div className="text-[#96928e] text-sm tracking-wider opacity-70 font-bold mb-6">(RIGHT NOW)</div>
-          <p className="text-[clamp(1.2rem,2.5vw,1.5rem)] leading-relaxed text-[#bdbdb4] font-semibold max-w-[750px] mb-10">
-            Every day runs on four non-negotiables: train, eat clean, post, and ship. A day only counts if all four happen.
+          <p className="text-[clamp(1.2rem,2.5vw,1.5rem)] leading-relaxed text-[#bdbdb4] font-semibold max-w-[750px] mb-12">
+            Every day runs on four non-negotiables. A day only counts if all four happen.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {['TRAIN', 'EAT CLEAN', 'POST', 'SHIP'].map((rule, i) => (
-              <div key={rule} className="border border-[#c9c9c1]/15 rounded-2xl p-5 text-center">
-                <div className="text-[#787673] text-xs font-bold mb-2">0{i + 1}</div>
-                <div className="text-[#c9c9c1] font-bold tracking-wider text-sm md:text-base">{rule}</div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4">
+            {[
+              { word: 'TRAIN', sub: 'BODY FIRST' },
+              { word: 'EAT CLEAN', sub: 'FUEL, NOT COMFORT' },
+              { word: 'POST', sub: 'ONE PIECE, DAILY' },
+              { word: 'SHIP', sub: 'CODE OR SALES' },
+            ].map(({ word, sub }, i) => (
+              <div
+                key={word}
+                className="group relative overflow-hidden rounded-2xl border border-[#c9c9c1]/15 p-5 md:p-6 min-h-[150px] md:min-h-[190px] flex flex-col justify-end transition-all duration-300 hover:border-[#8fb4dc]/60 hover:bg-[#8fb4dc]/[0.05] hover:-translate-y-1"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-5 -right-2 text-[5.5rem] md:text-[7rem] font-extrabold leading-none text-transparent transition-all duration-300 [-webkit-text-stroke:1px_rgba(143,180,220,0.22)] group-hover:[-webkit-text-stroke:1px_rgba(143,180,220,0.65)]"
+                >
+                  0{i + 1}
+                </span>
+                <div className="relative">
+                  <div className="text-[#c9c9c1] font-extrabold tracking-wide text-lg md:text-2xl">{word}</div>
+                  <div className="font-mono text-[10px] md:text-[11px] tracking-[0.2em] text-[#787673] mt-2">{sub}</div>
+                </div>
               </div>
             ))}
+          </div>
+          <div className="relative overflow-hidden border-y border-[#c9c9c1]/10 py-3 mb-12 select-none" aria-hidden="true">
+            <div className="now-marquee-track flex w-max whitespace-nowrap font-mono text-xs tracking-[0.3em] text-[#5f5d59]">
+              {[0, 1].map((copy) => (
+                <span key={copy} className="flex">
+                  {Array.from({ length: 4 }).map((_, r) => (
+                    <span key={r}>
+                      TRAIN <span className="text-[#8fb4dc]">✦</span> EAT CLEAN <span className="text-[#8fb4dc]">✦</span> POST <span className="text-[#8fb4dc]">✦</span> SHIP <span className="text-[#8fb4dc]">✦</span> REPEAT <span className="text-[#8fb4dc] pr-2">✦</span>{' '}
+                    </span>
+                  ))}
+                </span>
+              ))}
+            </div>
           </div>
           <p className="text-base md:text-lg leading-relaxed text-[#787673] font-semibold max-w-[650px]">
             The journey is documented daily at{' '}
