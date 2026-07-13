@@ -29,7 +29,7 @@ const StoryRoad = ({ waypoints }) => {
 
       // Weave amplitude: wide sweeps on desktop, a gentle wobble on mobile
       // (nodes sit ~28px from the left edge there, so keep the curve on-canvas).
-      const amp = cRect.width < 640 ? 22 : Math.min(cRect.width * 0.22, 170);
+      const amp = cRect.width < 640 ? 22 : Math.min(cRect.width * 0.18, 140);
       let path = `M ${pts[0].x} ${pts[0].y}`;
       for (let i = 1; i < pts.length; i++) {
         const a = pts[i - 1];
@@ -205,7 +205,7 @@ const StoryRoad = ({ waypoints }) => {
                   flip
                     ? 'md:col-start-1 md:text-right md:justify-self-end'
                     : 'md:col-start-3 md:justify-self-start'
-                } max-w-[520px]`}
+                } max-w-[520px] md:bg-[#080807] md:p-6 md:-m-6 md:rounded-2xl`}
               >
                 <div className="font-mono text-[11px] md:text-xs tracking-[0.2em] text-[#8fb4dc]/80 mb-3">
                   <span className="text-[#787673]">{stop}</span> {meta}
