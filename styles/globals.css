@@ -66,11 +66,31 @@
   }
 }
 
+/* No !important here: Next.js suppresses smooth scrolling with an inline
+   style during route changes, and !important would defeat that — page
+   navigations would animate from the old scroll position instead of
+   snapping to the top. */
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
-body {
-  scroll-behavior: smooth !important;
+
+/* Apple-style "liquid glass" dock: heavy blur + saturation boost so whatever
+   scrolls beneath tints the pill, with an inner top highlight for the lensed
+   edge. The solid fallback keeps it legible where backdrop-filter is absent. */
+.glass-dock {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .glass-dock {
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+  }
 }
 
 .asterisk {

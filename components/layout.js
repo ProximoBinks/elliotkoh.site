@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
+import GlassDock from './GlassDock';
 import AdvancedLoadingScreen from './AdvancedLoadingScreen';
 
 // Only gate on the shared hero background — it's the LCP element and the one
@@ -14,7 +15,8 @@ const criticalImages = ['/images/hero/herosquare5.webp'];
 
 const Layout = ({ children }) => {
   const router = useRouter();
-  const [showHamburger, setShowHamburger] = useState(false);
+  const isHome = router.pathname === '/';
+  const [showFloatingNav, setShowFloatingNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,19 +67,15 @@ const Layout = ({ children }) => {
     setIsMobile(isIOS);
 
     const handleScroll = () => {
-      // Get viewport height
-      const vh = window.innerHeight;
-      // Get current scroll position
-      const scrollPosition = window.scrollY;
-      // Calculate 90% of viewport height
-      const threshold = vh * 0.9;
+      // Home: floating nav only appears once the tall hero is mostly gone.
+      // Sub-pages: appear as soon as the in-flow header scrolls out of view.
+      const threshold = isHome ? window.innerHeight * 0.9 : 150;
 
-      // Show hamburger menu if scrolled past threshold
-      const shouldShowHamburger = scrollPosition > threshold;
-      setShowHamburger(shouldShowHamburger);
+      const shouldShowFloatingNav = window.scrollY > threshold;
+      setShowFloatingNav(shouldShowFloatingNav);
 
       // Close menu if hamburger is hidden
-      if (!shouldShowHamburger && isMenuOpen) {
+      if (!shouldShowFloatingNav && isMenuOpen) {
         setIsMenuOpen(false);
       }
     };
@@ -90,7 +88,7 @@ const Layout = ({ children }) => {
 
     // Cleanup
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isHome]);
 
   // Loading screen logic - re-run when route changes
   useEffect(() => {
@@ -183,17 +181,21 @@ const Layout = ({ children }) => {
           }}
         >
           <Header />
-          
-          {/* Fixed position wrapper for hamburger menu */}
-          <div className="fixed top-0 right-0 z-50">
-            <div 
+
+          {/* Sub-pages get a floating glass dock on desktop instead of the hamburger */}
+          {!isHome && <GlassDock visible={showFloatingNav} />}
+
+          {/* Fixed position wrapper for hamburger menu — on sub-pages the dock
+              takes over on md+ screens, so the hamburger stays mobile-only there */}
+          <div className={`fixed top-0 right-0 z-50 ${isHome ? '' : 'md:hidden'}`}>
+            <div
               className={`transition-transform duration-300 ease-in-out transform origin-top-right ${
-                showHamburger 
-                  ? 'scale-100' 
+                showFloatingNav
+                  ? 'scale-100'
                   : 'scale-0'
               }`}
             >
-              <HamburgerMenu 
+              <HamburgerMenu
                 isOpen={isMenuOpen}
                 setIsOpen={setIsMenuOpen}
               />
