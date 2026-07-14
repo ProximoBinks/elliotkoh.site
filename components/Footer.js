@@ -61,7 +61,7 @@ export default function Footer() {
             <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.linkedin.com/in/elliotkoh1/">
               <span className="link1">LinkedIn</span>
             </a>
-            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.youtube.com/@codekagehq">
+            <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://youtube.com/@elliotkohdev">
               <span className="link1">YouTube</span>
             </a>
             <a target="_blank" className="hover:text-black block relative overflow-hidden group h-fit link-text leading-base text-[#6b7280] w-fit" href="https://www.instagram.com/elliotkohdev/">
