@@ -19,10 +19,10 @@ export default function GlassDock({ visible }) {
 
   return (
     <div
-      className={`fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden md:block transition-all duration-500 ease-out ${
+      className={`fixed top-5 left-1/2 z-50 hidden md:block transition-transform duration-300 ease-out ${
         visible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 -translate-y-8 pointer-events-none'
+          ? '-translate-x-1/2 translate-y-0'
+          : '-translate-x-1/2 -translate-y-24 pointer-events-none'
       }`}
     >
       <nav aria-label="Floating navigation" className="glass-dock flex items-center gap-1 rounded-full p-2">
