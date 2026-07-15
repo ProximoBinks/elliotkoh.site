@@ -32,6 +32,12 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Local dev storage for the pokemon collection API
+/.data
 .readmes
 *.psd
 potential-pictures/
+
+# personal reference photos
+stamp-pika-clean.PNG

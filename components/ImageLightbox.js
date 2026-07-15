@@ -44,7 +44,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
 
     return (
         <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center cursor-pointer pt-[100px]"
+            className="fixed inset-0 z-[9999] flex items-center justify-center cursor-pointer p-4"
             onClick={onClose}
         >
             {/* Backdrop */}
@@ -78,7 +78,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
 
             {/* Full resolution image */}
             <div
-                className="relative max-w-[90vw] max-h-[calc(100vh-120px)] z-[1] cursor-default flex flex-col items-center"
+                className="relative max-w-[90vw] z-[1] cursor-default flex flex-col items-center"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Image counter */}
@@ -98,7 +98,12 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNavigate }) =>
                     alt={`Full resolution ${currentIndex + 1}`}
                     width={1920}
                     height={1280}
-                    className={`object-contain max-h-[calc(100vh-140px)] w-auto rounded-lg transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                    // Inline auto width/height so the rendered box always follows the
+                    // loaded image's real ratio (portrait cards vs the landscape hint
+                    // above), and a hard viewport cap so tall images never spill past
+                    // the bottom edge — Safari clipped portrait cards without this.
+                    style={{ width: 'auto', height: 'auto' }}
+                    className={`object-contain max-h-[82vh] max-w-full w-auto rounded-lg transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
                     quality={95}
                     priority
                     onLoad={() => setLoaded(true)}

@@ -19,7 +19,7 @@ export default function GlassDock({ visible }) {
 
   return (
     <div
-      className={`fixed top-5 left-1/2 z-50 hidden md:block transition-transform duration-300 ease-out ${
+      className={`floating-nav fixed top-5 left-1/2 z-50 hidden md:block transition-transform duration-300 ease-out ${
         visible
           ? '-translate-x-1/2 translate-y-0'
           : '-translate-x-1/2 -translate-y-24 pointer-events-none'

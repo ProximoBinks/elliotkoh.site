@@ -133,3 +133,9 @@ body.lightbox-open .header-class * {
   color: white !important;
   transition: color 0.3s ease;
 }
+
+/* Floating nav (glass dock / hamburger) sits above <main>'s stacking context,
+   so the lightbox can't cover it — hide it outright while a lightbox is open */
+body.lightbox-open .floating-nav {
+  visibility: hidden;
+}

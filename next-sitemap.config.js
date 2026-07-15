@@ -5,7 +5,7 @@ module.exports = {
   changefreq: 'monthly',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/api/*'],
+  exclude: ['/api/*', '/admin'],
   // No lastmod: stamping every page with the build date tells search engines
   // everything changed on every deploy, which devalues the signal entirely.
   autoLastmod: false,

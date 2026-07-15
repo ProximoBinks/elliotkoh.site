@@ -187,7 +187,7 @@ const Layout = ({ children }) => {
 
           {/* Fixed position wrapper for hamburger menu — on sub-pages the dock
               takes over on md+ screens, so the hamburger stays mobile-only there */}
-          <div className={`fixed top-0 right-0 z-50 ${isHome ? '' : 'md:hidden'}`}>
+          <div className={`floating-nav fixed top-0 right-0 z-50 ${isHome ? '' : 'md:hidden'}`}>
             <div
               className={`transition-transform duration-300 ease-in-out transform origin-top-right ${
                 showFloatingNav

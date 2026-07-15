@@ -13,6 +13,14 @@ const HOBBIES = [
     imageAlt: 'Mechanical Keyboards',
   },
   {
+    title: 'Pokémon Cards',
+    description: 'Collecting every Lillie card ever printed — tracking the hunt one pull at a time.',
+    category: 'Recreational',
+    customTitle: 'hobbies/pokemon',
+    imageSrc: '/images/hobbies/pokemon-psa.webp',
+    imageAlt: 'Lillie Pokémon card artwork',
+  },
+  {
     title: 'Collectibles',
     description: 'Collecting iconic pieces, like Pokémon cards, figures, and memorabilia that blend nostalgia with design.',
     category: 'Recreational',
